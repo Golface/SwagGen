@@ -33,8 +33,10 @@ public struct Property {
     public let name: String
     public let required: Bool
     public let schema: Schema
+    public let deprecated: Bool
 
     public init(name: String, required: Bool, schema: Schema) {
+        self.deprecated = (schema.metadata.json.json(atKeyPath: "deprecated")) ?? false
         self.name = name
         self.required = required
         self.schema = schema
