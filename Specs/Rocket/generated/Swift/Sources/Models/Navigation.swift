@@ -22,7 +22,13 @@ public class Navigation: APIModel {
     /** The footer navigation. */
     public var footer: NavEntry?
 
-    public init(header: [NavEntry], account: NavEntry? = nil, copyright: String? = nil, customFields: [String: Any]? = nil, footer: NavEntry? = nil) {
+    public init(
+        header: [NavEntry], 
+        account: NavEntry? = nil, 
+        copyright: String? = nil, 
+        customFields: [String: Any]? = nil, 
+        footer: NavEntry? = nil
+    ) {
         self.header = header
         self.account = account
         self.copyright = copyright

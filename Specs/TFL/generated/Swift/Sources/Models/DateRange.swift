@@ -11,7 +11,10 @@ public class DateRange: APIModel {
 
     public var startDate: DateTime?
 
-    public init(endDate: DateTime? = nil, startDate: DateTime? = nil) {
+    public init(
+        endDate: DateTime? = nil, 
+        startDate: DateTime? = nil
+    ) {
         self.endDate = endDate
         self.startDate = startDate
     }

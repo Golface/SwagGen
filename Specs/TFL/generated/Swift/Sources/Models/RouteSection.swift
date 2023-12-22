@@ -33,7 +33,17 @@ public class RouteSection: APIModel {
 
     public var routeSectionNaptanEntrySequence: [RouteSectionNaptanEntrySequence]?
 
-    public init(destinationName: String? = nil, direction: String? = nil, id: String? = nil, lineId: String? = nil, lineString: String? = nil, name: String? = nil, originationName: String? = nil, routeCode: String? = nil, routeSectionNaptanEntrySequence: [RouteSectionNaptanEntrySequence]? = nil) {
+    public init(
+        destinationName: String? = nil, 
+        direction: String? = nil, 
+        id: String? = nil, 
+        lineId: String? = nil, 
+        lineString: String? = nil, 
+        name: String? = nil, 
+        originationName: String? = nil, 
+        routeCode: String? = nil, 
+        routeSectionNaptanEntrySequence: [RouteSectionNaptanEntrySequence]? = nil
+    ) {
         self.destinationName = destinationName
         self.direction = direction
         self.id = id

@@ -11,7 +11,10 @@ public class LineSpecificServiceType: APIModel {
 
     public var stopServesServiceType: Bool?
 
-    public init(serviceType: LineServiceTypeInfo? = nil, stopServesServiceType: Bool? = nil) {
+    public init(
+        serviceType: LineServiceTypeInfo? = nil, 
+        stopServesServiceType: Bool? = nil
+    ) {
         self.serviceType = serviceType
         self.stopServesServiceType = stopServesServiceType
     }

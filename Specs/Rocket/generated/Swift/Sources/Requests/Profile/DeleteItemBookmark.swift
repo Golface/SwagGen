@@ -19,7 +19,9 @@ extension Rocket.Profile {
                 /** The identifier of the bookmark to delete. */
                 public var itemId: String
 
-                public init(itemId: String) {
+                public init(
+                    itemId: String
+                ) {
                     self.itemId = itemId
                 }
             }

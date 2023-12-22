@@ -72,7 +72,35 @@ public class StopPoint: APIModel {
     /** The unique location of this resource. */
     public var url: String?
 
-    public init(accessibilitySummary: String? = nil, additionalProperties: [AdditionalProperties]? = nil, children: [Place]? = nil, childrenUrls: [String]? = nil, commonName: String? = nil, distance: Double? = nil, fullName: String? = nil, hubNaptanCode: String? = nil, icsCode: String? = nil, id: String? = nil, indicator: String? = nil, lat: Double? = nil, lineGroup: [LineGroup]? = nil, lineModeGroups: [LineModeGroup]? = nil, lines: [Identifier]? = nil, lon: Double? = nil, modes: [String]? = nil, naptanId: String? = nil, naptanMode: String? = nil, placeType: String? = nil, platformName: String? = nil, smsCode: String? = nil, stationNaptan: String? = nil, status: Bool? = nil, stopLetter: String? = nil, stopType: String? = nil, url: String? = nil) {
+    public init(
+        accessibilitySummary: String? = nil, 
+        additionalProperties: [AdditionalProperties]? = nil, 
+        children: [Place]? = nil, 
+        childrenUrls: [String]? = nil, 
+        commonName: String? = nil, 
+        distance: Double? = nil, 
+        fullName: String? = nil, 
+        hubNaptanCode: String? = nil, 
+        icsCode: String? = nil, 
+        id: String? = nil, 
+        indicator: String? = nil, 
+        lat: Double? = nil, 
+        lineGroup: [LineGroup]? = nil, 
+        lineModeGroups: [LineModeGroup]? = nil, 
+        lines: [Identifier]? = nil, 
+        lon: Double? = nil, 
+        modes: [String]? = nil, 
+        naptanId: String? = nil, 
+        naptanMode: String? = nil, 
+        placeType: String? = nil, 
+        platformName: String? = nil, 
+        smsCode: String? = nil, 
+        stationNaptan: String? = nil, 
+        status: Bool? = nil, 
+        stopLetter: String? = nil, 
+        stopType: String? = nil, 
+        url: String? = nil
+    ) {
         self.accessibilitySummary = accessibilitySummary
         self.additionalProperties = additionalProperties
         self.children = children

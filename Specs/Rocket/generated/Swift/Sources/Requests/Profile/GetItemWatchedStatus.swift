@@ -19,7 +19,9 @@ extension Rocket.Profile {
                 /** The id of the item to get the watched status for. */
                 public var itemId: String
 
-                public init(itemId: String) {
+                public init(
+                    itemId: String
+                ) {
                     self.itemId = itemId
                 }
             }

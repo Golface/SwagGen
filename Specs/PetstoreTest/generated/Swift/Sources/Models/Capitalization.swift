@@ -21,7 +21,14 @@ public class Capitalization: APIModel {
 
     public var smallSnake: String?
 
-    public init(attName: String? = nil, capitalCamel: String? = nil, capitalSnake: String? = nil, sCAETHFlowPoints: String? = nil, smallCamel: String? = nil, smallSnake: String? = nil) {
+    public init(
+        attName: String? = nil, 
+        capitalCamel: String? = nil, 
+        capitalSnake: String? = nil, 
+        sCAETHFlowPoints: String? = nil, 
+        smallCamel: String? = nil, 
+        smallSnake: String? = nil
+    ) {
         self.attName = attName
         self.capitalCamel = capitalCamel
         self.capitalSnake = capitalSnake

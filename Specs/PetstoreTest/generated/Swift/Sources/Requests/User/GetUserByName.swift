@@ -19,7 +19,9 @@ extension PetstoreTest.User {
                 /** The name that needs to be fetched. Use user1 for testing.  */
                 public var username: String
 
-                public init(username: String) {
+                public init(
+                    username: String
+                ) {
                     self.username = username
                 }
             }

@@ -17,7 +17,10 @@ Often known as quartiles when four equaly spread event points.
  */
     public var viewEventPoints: [Double]
 
-    public init(heartbeatFrequency: Int, viewEventPoints: [Double]) {
+    public init(
+        heartbeatFrequency: Int, 
+        viewEventPoints: [Double]
+    ) {
         self.heartbeatFrequency = heartbeatFrequency
         self.viewEventPoints = viewEventPoints
     }

@@ -31,7 +31,20 @@ public class StopPointRouteSection: APIModel {
 
     public var vehicleDestinationText: String?
 
-    public init(destinationName: String? = nil, direction: String? = nil, isActive: Bool? = nil, lineId: String? = nil, lineString: String? = nil, mode: String? = nil, naptanId: String? = nil, routeSectionName: String? = nil, serviceType: String? = nil, validFrom: DateTime? = nil, validTo: DateTime? = nil, vehicleDestinationText: String? = nil) {
+    public init(
+        destinationName: String? = nil, 
+        direction: String? = nil, 
+        isActive: Bool? = nil, 
+        lineId: String? = nil, 
+        lineString: String? = nil, 
+        mode: String? = nil, 
+        naptanId: String? = nil, 
+        routeSectionName: String? = nil, 
+        serviceType: String? = nil, 
+        validFrom: DateTime? = nil, 
+        validTo: DateTime? = nil, 
+        vehicleDestinationText: String? = nil
+    ) {
         self.destinationName = destinationName
         self.direction = direction
         self.isActive = isActive

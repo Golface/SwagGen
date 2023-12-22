@@ -21,7 +21,11 @@ extension TBX.DeviceService {
 
                 public var deviceType: String
 
-                public init(apiKey: String, deviceToken: String, deviceType: String) {
+                public init(
+                    apiKey: String, 
+                    deviceToken: String, 
+                    deviceType: String
+                ) {
                     self.apiKey = apiKey
                     self.deviceToken = deviceToken
                     self.deviceType = deviceType

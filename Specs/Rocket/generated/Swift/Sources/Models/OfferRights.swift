@@ -57,7 +57,17 @@ public class OfferRights: APIModel {
     /** The length of time in minutes which the rental will last once purchased. */
     public var rentalPeriod: Int?
 
-    public init(deliveryType: DeliveryType, scopes: [String], resolution: Resolution, ownership: Ownership, exclusionRules: [ExclusionRule]? = nil, maxDownloads: Int? = nil, maxPlays: Int? = nil, playPeriod: Int? = nil, rentalPeriod: Int? = nil) {
+    public init(
+        deliveryType: DeliveryType, 
+        scopes: [String], 
+        resolution: Resolution, 
+        ownership: Ownership, 
+        exclusionRules: [ExclusionRule]? = nil, 
+        maxDownloads: Int? = nil, 
+        maxPlays: Int? = nil, 
+        playPeriod: Int? = nil, 
+        rentalPeriod: Int? = nil
+    ) {
         self.deliveryType = deliveryType
         self.scopes = scopes
         self.resolution = resolution

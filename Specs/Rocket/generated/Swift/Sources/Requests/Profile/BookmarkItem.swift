@@ -21,7 +21,9 @@ Creates one if it doesn't exist, overwrites one if it does.
                 /** The id of the item to bookmark. */
                 public var itemId: String
 
-                public init(itemId: String) {
+                public init(
+                    itemId: String
+                ) {
                     self.itemId = itemId
                 }
             }

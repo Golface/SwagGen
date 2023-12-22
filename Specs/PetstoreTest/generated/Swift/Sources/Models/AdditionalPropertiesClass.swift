@@ -11,7 +11,10 @@ public class AdditionalPropertiesClass: APIModel {
 
     public var mapProperty: [String: String]?
 
-    public init(mapOfMapProperty: [String: [String: String]]? = nil, mapProperty: [String: String]? = nil) {
+    public init(
+        mapOfMapProperty: [String: [String: String]]? = nil, 
+        mapProperty: [String: String]? = nil
+    ) {
         self.mapOfMapProperty = mapOfMapProperty
         self.mapProperty = mapProperty
     }

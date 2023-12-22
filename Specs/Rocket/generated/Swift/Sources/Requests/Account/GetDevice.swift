@@ -19,7 +19,9 @@ extension Rocket.Account {
                 /** The unique identifier for the registered device e.g. serial number. */
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

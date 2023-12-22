@@ -34,7 +34,14 @@ extension TBX.Auth {
                 /** Token created by one Identity Provider to login a client without send the client to him */
                 public var token: String?
 
-                public init(cp: String, idp: String, `return`: String? = nil, cancel: String? = nil, country: String? = nil, token: String? = nil) {
+                public init(
+                    cp: String, 
+                    idp: String, 
+                    `return`: String? = nil, 
+                    cancel: String? = nil, 
+                    country: String? = nil, 
+                    token: String? = nil
+                ) {
                     self.cp = cp
                     self.idp = idp
                     self.`return` = `return`

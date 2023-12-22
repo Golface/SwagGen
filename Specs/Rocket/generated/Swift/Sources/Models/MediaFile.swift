@@ -52,7 +52,18 @@ public class MediaFile: APIModel {
     /** The number of audio channels. */
     public var channels: Int?
 
-    public init(name: String, deliveryType: DeliveryType, url: URL, drm: String, format: String, resolution: Resolution, width: Int, height: Int, language: String, channels: Int? = nil) {
+    public init(
+        name: String, 
+        deliveryType: DeliveryType, 
+        url: URL, 
+        drm: String, 
+        format: String, 
+        resolution: Resolution, 
+        width: Int, 
+        height: Int, 
+        language: String, 
+        channels: Int? = nil
+    ) {
         self.name = name
         self.deliveryType = deliveryType
         self.url = url

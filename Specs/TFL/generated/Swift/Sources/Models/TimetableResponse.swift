@@ -25,7 +25,17 @@ public class TimetableResponse: APIModel {
 
     public var timetable: Timetable?
 
-    public init(direction: String? = nil, disambiguation: Disambiguation? = nil, lineId: String? = nil, lineName: String? = nil, pdfUrl: String? = nil, stations: [MatchedStop]? = nil, statusErrorMessage: String? = nil, stops: [MatchedStop]? = nil, timetable: Timetable? = nil) {
+    public init(
+        direction: String? = nil, 
+        disambiguation: Disambiguation? = nil, 
+        lineId: String? = nil, 
+        lineName: String? = nil, 
+        pdfUrl: String? = nil, 
+        stations: [MatchedStop]? = nil, 
+        statusErrorMessage: String? = nil, 
+        stops: [MatchedStop]? = nil, 
+        timetable: Timetable? = nil
+    ) {
         self.direction = direction
         self.disambiguation = disambiguation
         self.lineId = lineId

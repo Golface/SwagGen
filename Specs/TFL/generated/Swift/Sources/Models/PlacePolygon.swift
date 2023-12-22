@@ -11,7 +11,10 @@ public class PlacePolygon: APIModel {
 
     public var geoPoints: [GeoPoint]?
 
-    public init(commonName: String? = nil, geoPoints: [GeoPoint]? = nil) {
+    public init(
+        commonName: String? = nil, 
+        geoPoints: [GeoPoint]? = nil
+    ) {
         self.commonName = commonName
         self.geoPoints = geoPoints
     }

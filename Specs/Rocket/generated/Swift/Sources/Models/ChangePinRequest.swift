@@ -10,7 +10,9 @@ public class ChangePinRequest: APIModel {
     /** The new pin to set. */
     public var pin: String
 
-    public init(pin: String) {
+    public init(
+        pin: String
+    ) {
         self.pin = pin
     }
 

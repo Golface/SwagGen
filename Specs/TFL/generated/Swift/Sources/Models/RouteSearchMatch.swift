@@ -29,7 +29,19 @@ public class RouteSearchMatch: APIModel {
 
     public var url: String?
 
-    public init(id: String? = nil, lat: Double? = nil, lineId: String? = nil, lineName: String? = nil, lineRouteSection: [LineRouteSection]? = nil, lon: Double? = nil, matchedRouteSections: [MatchedRouteSections]? = nil, matchedStops: [MatchedStop]? = nil, mode: String? = nil, name: String? = nil, url: String? = nil) {
+    public init(
+        id: String? = nil, 
+        lat: Double? = nil, 
+        lineId: String? = nil, 
+        lineName: String? = nil, 
+        lineRouteSection: [LineRouteSection]? = nil, 
+        lon: Double? = nil, 
+        matchedRouteSections: [MatchedRouteSections]? = nil, 
+        matchedStops: [MatchedStop]? = nil, 
+        mode: String? = nil, 
+        name: String? = nil, 
+        url: String? = nil
+    ) {
         self.id = id
         self.lat = lat
         self.lineId = lineId

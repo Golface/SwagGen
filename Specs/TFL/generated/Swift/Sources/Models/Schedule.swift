@@ -17,7 +17,13 @@ public class Schedule: APIModel {
 
     public var periods: [Period]?
 
-    public init(firstJourney: KnownJourney? = nil, knownJourneys: [KnownJourney]? = nil, lastJourney: KnownJourney? = nil, name: String? = nil, periods: [Period]? = nil) {
+    public init(
+        firstJourney: KnownJourney? = nil, 
+        knownJourneys: [KnownJourney]? = nil, 
+        lastJourney: KnownJourney? = nil, 
+        name: String? = nil, 
+        periods: [Period]? = nil
+    ) {
         self.firstJourney = firstJourney
         self.knownJourneys = knownJourneys
         self.lastJourney = lastJourney

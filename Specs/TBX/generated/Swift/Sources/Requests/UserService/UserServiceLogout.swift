@@ -19,7 +19,9 @@ extension TBX.UserService {
                 /** The device token */
                 public var device: String
 
-                public init(device: String) {
+                public init(
+                    device: String
+                ) {
                     self.device = device
                 }
             }
@@ -48,7 +50,9 @@ extension TBX.UserService {
 
                 public var status: Bool?
 
-                public init(status: Bool? = nil) {
+                public init(
+                    status: Bool? = nil
+                ) {
                     self.status = status
                 }
 

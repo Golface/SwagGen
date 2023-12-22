@@ -24,7 +24,15 @@ public class RegistrationRequest: APIModel {
     /** The segments to apply to the primary profile. */
     public var segments: [String]?
 
-    public init(email: String, password: String, firstName: String? = nil, lastName: String? = nil, marketing: Bool? = nil, pin: String? = nil, segments: [String]? = nil) {
+    public init(
+        email: String, 
+        password: String, 
+        firstName: String? = nil, 
+        lastName: String? = nil, 
+        marketing: Bool? = nil, 
+        pin: String? = nil, 
+        segments: [String]? = nil
+    ) {
         self.email = email
         self.password = password
         self.firstName = firstName

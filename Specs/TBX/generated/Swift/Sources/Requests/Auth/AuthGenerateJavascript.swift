@@ -19,7 +19,9 @@ extension TBX.Auth {
                 /** ShortName of Content Provider */
                 public var cp: String
 
-                public init(cp: String) {
+                public init(
+                    cp: String
+                ) {
                     self.cp = cp
                 }
             }

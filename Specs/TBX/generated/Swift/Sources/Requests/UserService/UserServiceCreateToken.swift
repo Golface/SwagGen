@@ -34,7 +34,14 @@ extension TBX.UserService {
                 /** Token expiration date */
                 public var expiration: DateTime?
 
-                public init(subscriberId: String, country: String, type: String, attributes: String? = nil, credits: Double? = nil, expiration: DateTime? = nil) {
+                public init(
+                    subscriberId: String, 
+                    country: String, 
+                    type: String, 
+                    attributes: String? = nil, 
+                    credits: Double? = nil, 
+                    expiration: DateTime? = nil
+                ) {
                     self.subscriberId = subscriberId
                     self.country = country
                     self.type = type

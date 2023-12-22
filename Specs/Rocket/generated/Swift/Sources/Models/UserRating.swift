@@ -13,7 +13,10 @@ public class UserRating: APIModel {
     /** The rating out of 10 */
     public var rating: Int
 
-    public init(itemId: String, rating: Int) {
+    public init(
+        itemId: String, 
+        rating: Int
+    ) {
         self.itemId = itemId
         self.rating = rating
     }

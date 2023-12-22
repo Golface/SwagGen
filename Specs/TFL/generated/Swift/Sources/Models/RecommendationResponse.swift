@@ -9,7 +9,9 @@ public class RecommendationResponse: APIModel {
 
     public var recommendations: [Recommendation]?
 
-    public init(recommendations: [Recommendation]? = nil) {
+    public init(
+        recommendations: [Recommendation]? = nil
+    ) {
         self.recommendations = recommendations
     }
 

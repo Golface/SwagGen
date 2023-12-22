@@ -21,7 +21,15 @@ public class RoadDisruptionImpactArea: APIModel {
 
     public var startTime: String?
 
-    public init(endDate: DateTime? = nil, endTime: String? = nil, id: Int? = nil, polygon: DbGeography? = nil, roadDisruptionId: String? = nil, startDate: DateTime? = nil, startTime: String? = nil) {
+    public init(
+        endDate: DateTime? = nil, 
+        endTime: String? = nil, 
+        id: Int? = nil, 
+        polygon: DbGeography? = nil, 
+        roadDisruptionId: String? = nil, 
+        startDate: DateTime? = nil, 
+        startTime: String? = nil
+    ) {
         self.endDate = endDate
         self.endTime = endTime
         self.id = id

@@ -25,7 +25,17 @@ public class LineStatus: APIModel {
 
     public var validityPeriods: [ValidityPeriod]?
 
-    public init(created: DateTime? = nil, disruption: Disruption? = nil, id: Int? = nil, lineId: String? = nil, modified: DateTime? = nil, reason: String? = nil, statusSeverity: Int? = nil, statusSeverityDescription: String? = nil, validityPeriods: [ValidityPeriod]? = nil) {
+    public init(
+        created: DateTime? = nil, 
+        disruption: Disruption? = nil, 
+        id: Int? = nil, 
+        lineId: String? = nil, 
+        modified: DateTime? = nil, 
+        reason: String? = nil, 
+        statusSeverity: Int? = nil, 
+        statusSeverityDescription: String? = nil, 
+        validityPeriods: [ValidityPeriod]? = nil
+    ) {
         self.created = created
         self.disruption = disruption
         self.id = id

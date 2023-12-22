@@ -57,7 +57,9 @@ public class Zoo: APIModel {
 
             public var id: String
 
-            public init(id: String) {
+            public init(
+                id: String
+            ) {
                 self.id = id
             }
 
@@ -84,7 +86,11 @@ public class Zoo: APIModel {
             }
         }
 
-        public init(id: Int? = nil, name: String? = nil, value: Value? = nil) {
+        public init(
+            id: Int? = nil, 
+            name: String? = nil, 
+            value: Value? = nil
+        ) {
             self.value = value
             super.init(id: id, name: name)
         }
@@ -110,7 +116,15 @@ public class Zoo: APIModel {
         }
     }
 
-    public init(allOfDog: Dog? = nil, anyOfDog: Dog? = nil, inlineAnimal: Animal? = nil, inlineAnimals: [InlineAnimals]? = nil, manager: Manager? = nil, oneOfDog: Dog? = nil, schemaAnimals: [SingleAnimal]? = nil) {
+    public init(
+        allOfDog: Dog? = nil, 
+        anyOfDog: Dog? = nil, 
+        inlineAnimal: Animal? = nil, 
+        inlineAnimals: [InlineAnimals]? = nil, 
+        manager: Manager? = nil, 
+        oneOfDog: Dog? = nil, 
+        schemaAnimals: [SingleAnimal]? = nil
+    ) {
         self.allOfDog = allOfDog
         self.anyOfDog = anyOfDog
         self.inlineAnimal = inlineAnimal

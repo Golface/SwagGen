@@ -19,7 +19,9 @@ extension Petstore.Pets {
                 /** The id of the pet to retrieve */
                 public var petId: String
 
-                public init(petId: String) {
+                public init(
+                    petId: String
+                ) {
                     self.petId = petId
                 }
             }

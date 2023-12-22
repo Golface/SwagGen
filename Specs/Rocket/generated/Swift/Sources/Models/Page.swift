@@ -31,7 +31,20 @@ on list detail pages. See `feature-flags.md` for further details.*
 
     public var metadata: PageMetadata?
 
-    public init(id: String, path: String, title: String, template: String, isStatic: Bool, isSystemPage: Bool, entries: [PageEntry], key: String? = nil, customFields: [String: Any]? = nil, item: ItemDetail? = nil, list: ItemList? = nil, metadata: PageMetadata? = nil) {
+    public init(
+        id: String, 
+        path: String, 
+        title: String, 
+        template: String, 
+        isStatic: Bool, 
+        isSystemPage: Bool, 
+        entries: [PageEntry], 
+        key: String? = nil, 
+        customFields: [String: Any]? = nil, 
+        item: ItemDetail? = nil, 
+        list: ItemList? = nil, 
+        metadata: PageMetadata? = nil
+    ) {
         self.entries = entries
         self.customFields = customFields
         self.item = item

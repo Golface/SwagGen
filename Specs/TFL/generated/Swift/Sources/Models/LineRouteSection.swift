@@ -21,7 +21,15 @@ public class LineRouteSection: APIModel {
 
     public var vehicleDestinationText: String?
 
-    public init(destination: String? = nil, direction: String? = nil, fromStation: String? = nil, routeId: Int? = nil, serviceType: String? = nil, toStation: String? = nil, vehicleDestinationText: String? = nil) {
+    public init(
+        destination: String? = nil, 
+        direction: String? = nil, 
+        fromStation: String? = nil, 
+        routeId: Int? = nil, 
+        serviceType: String? = nil, 
+        toStation: String? = nil, 
+        vehicleDestinationText: String? = nil
+    ) {
         self.destination = destination
         self.direction = direction
         self.fromStation = fromStation

@@ -27,7 +27,10 @@ public class TokenObject: APIModel {
 
         public var description: String?
 
-        public init(code: String? = nil, description: String? = nil) {
+        public init(
+            code: String? = nil, 
+            description: String? = nil
+        ) {
             self.code = code
             self.description = description
         }
@@ -58,7 +61,14 @@ public class TokenObject: APIModel {
         }
     }
 
-    public init(token: String, idp: Idp, type: String, expiration: DateTime? = nil, remainingCredits: Double? = nil, uses: Double? = nil) {
+    public init(
+        token: String, 
+        idp: Idp, 
+        type: String, 
+        expiration: DateTime? = nil, 
+        remainingCredits: Double? = nil, 
+        uses: Double? = nil
+    ) {
         self.token = token
         self.idp = idp
         self.type = type

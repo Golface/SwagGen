@@ -37,7 +37,14 @@ property will not exist.
  */
     public var endDate: DateTime?
 
-    public init(code: String, startDate: DateTime, isTrialPeriod: Bool, planId: String, status: Status, endDate: DateTime? = nil) {
+    public init(
+        code: String, 
+        startDate: DateTime, 
+        isTrialPeriod: Bool, 
+        planId: String, 
+        status: Status, 
+        endDate: DateTime? = nil
+    ) {
         self.code = code
         self.startDate = startDate
         self.isTrialPeriod = isTrialPeriod

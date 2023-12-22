@@ -28,7 +28,12 @@ extension TFL.StopPoint {
                 /** Specify true to associate all disruptions with parent stop point. (Only applicable when getFamily is true). */
                 public var flattenResponse: Bool?
 
-                public init(ids: [String], getFamily: Bool? = nil, includeRouteBlockedStops: Bool? = nil, flattenResponse: Bool? = nil) {
+                public init(
+                    ids: [String], 
+                    getFamily: Bool? = nil, 
+                    includeRouteBlockedStops: Bool? = nil, 
+                    flattenResponse: Bool? = nil
+                ) {
                     self.ids = ids
                     self.getFamily = getFamily
                     self.includeRouteBlockedStops = includeRouteBlockedStops

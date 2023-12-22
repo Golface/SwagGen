@@ -19,7 +19,9 @@ extension TFL.Vehicle {
                 /** The Vehicle Registration Mark */
                 public var vrm: String
 
-                public init(vrm: String) {
+                public init(
+                    vrm: String
+                ) {
                     self.vrm = vrm
                 }
             }

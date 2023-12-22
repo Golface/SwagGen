@@ -21,7 +21,11 @@ extension TBX.AuthorizationService {
 
                 public var days: String
 
-                public init(apiKey: String, userToken: String, days: String) {
+                public init(
+                    apiKey: String, 
+                    userToken: String, 
+                    days: String
+                ) {
                     self.apiKey = apiKey
                     self.userToken = userToken
                     self.days = days

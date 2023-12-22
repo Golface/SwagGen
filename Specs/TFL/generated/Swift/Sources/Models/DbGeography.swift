@@ -9,7 +9,9 @@ public class DbGeography: APIModel {
 
     public var geography: DbGeographyWellKnownValue?
 
-    public init(geography: DbGeographyWellKnownValue? = nil) {
+    public init(
+        geography: DbGeographyWellKnownValue? = nil
+    ) {
         self.geography = geography
     }
 

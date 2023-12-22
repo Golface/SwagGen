@@ -19,7 +19,12 @@ public class StreetSegment: APIModel {
     /** A 16 digit unique integer identifying a OS ITN (Ordnance Survey Integrated Transport Network) road link. */
     public var toid: String?
 
-    public init(lineString: String? = nil, sourceSystemId: Int? = nil, sourceSystemKey: String? = nil, toid: String? = nil) {
+    public init(
+        lineString: String? = nil, 
+        sourceSystemId: Int? = nil, 
+        sourceSystemKey: String? = nil, 
+        toid: String? = nil
+    ) {
         self.lineString = lineString
         self.sourceSystemId = sourceSystemId
         self.sourceSystemKey = sourceSystemKey

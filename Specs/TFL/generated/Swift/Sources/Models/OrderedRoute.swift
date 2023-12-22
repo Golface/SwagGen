@@ -13,7 +13,11 @@ public class OrderedRoute: APIModel {
 
     public var serviceType: String?
 
-    public init(name: String? = nil, naptanIds: [String]? = nil, serviceType: String? = nil) {
+    public init(
+        name: String? = nil, 
+        naptanIds: [String]? = nil, 
+        serviceType: String? = nil
+    ) {
         self.name = name
         self.naptanIds = naptanIds
         self.serviceType = serviceType

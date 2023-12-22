@@ -63,7 +63,22 @@ extension TFL.TravelTime {
 
                 public var compareValue: String
 
-                public init(z: Int, pinLat: Double, pinLon: Double, mapCenterLat: Double, mapCenterLon: Double, scenarioTitle: String, timeOfDayId: String, modeId: String, width: Int, height: Int, direction: Direction, travelTimeInterval: Int, compareType: String, compareValue: String) {
+                public init(
+                    z: Int, 
+                    pinLat: Double, 
+                    pinLon: Double, 
+                    mapCenterLat: Double, 
+                    mapCenterLon: Double, 
+                    scenarioTitle: String, 
+                    timeOfDayId: String, 
+                    modeId: String, 
+                    width: Int, 
+                    height: Int, 
+                    direction: Direction, 
+                    travelTimeInterval: Int, 
+                    compareType: String, 
+                    compareValue: String
+                ) {
                     self.z = z
                     self.pinLat = pinLat
                     self.pinLon = pinLon

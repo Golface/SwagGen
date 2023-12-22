@@ -15,7 +15,12 @@ public class MultiHasAccessToObject: APIModel {
 
     public var details: [HasAccessToObject]
 
-    public init(granted: [String], denied: [String], failed: [String], details: [HasAccessToObject]) {
+    public init(
+        granted: [String], 
+        denied: [String], 
+        failed: [String], 
+        details: [HasAccessToObject]
+    ) {
         self.granted = granted
         self.denied = denied
         self.failed = failed

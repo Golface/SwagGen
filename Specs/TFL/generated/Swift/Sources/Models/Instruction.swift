@@ -13,7 +13,11 @@ public class Instruction: APIModel {
 
     public var summary: String?
 
-    public init(detailed: String? = nil, steps: [InstructionStep]? = nil, summary: String? = nil) {
+    public init(
+        detailed: String? = nil, 
+        steps: [InstructionStep]? = nil, 
+        summary: String? = nil
+    ) {
         self.detailed = detailed
         self.steps = steps
         self.summary = summary

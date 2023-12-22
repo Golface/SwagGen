@@ -22,7 +22,10 @@ extension TFL.Line {
                 /** Include details of the disruptions that are causing the line status including the affected stops and routes */
                 public var detail: Bool?
 
-                public init(ids: [String], detail: Bool? = nil) {
+                public init(
+                    ids: [String], 
+                    detail: Bool? = nil
+                ) {
                     self.ids = ids
                     self.detail = detail
                 }

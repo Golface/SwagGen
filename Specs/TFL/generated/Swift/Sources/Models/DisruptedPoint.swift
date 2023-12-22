@@ -27,7 +27,18 @@ public class DisruptedPoint: APIModel {
 
     public var type: String?
 
-    public init(additionalInformation: String? = nil, appearance: String? = nil, atcoCode: String? = nil, commonName: String? = nil, description: String? = nil, fromDate: DateTime? = nil, mode: String? = nil, stationAtcoCode: String? = nil, toDate: DateTime? = nil, type: String? = nil) {
+    public init(
+        additionalInformation: String? = nil, 
+        appearance: String? = nil, 
+        atcoCode: String? = nil, 
+        commonName: String? = nil, 
+        description: String? = nil, 
+        fromDate: DateTime? = nil, 
+        mode: String? = nil, 
+        stationAtcoCode: String? = nil, 
+        toDate: DateTime? = nil, 
+        type: String? = nil
+    ) {
         self.additionalInformation = additionalInformation
         self.appearance = appearance
         self.atcoCode = atcoCode

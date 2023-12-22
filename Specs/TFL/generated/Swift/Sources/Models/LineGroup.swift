@@ -13,7 +13,11 @@ public class LineGroup: APIModel {
 
     public var stationAtcoCode: String?
 
-    public init(lineIdentifier: [String]? = nil, naptanIdReference: String? = nil, stationAtcoCode: String? = nil) {
+    public init(
+        lineIdentifier: [String]? = nil, 
+        naptanIdReference: String? = nil, 
+        stationAtcoCode: String? = nil
+    ) {
         self.lineIdentifier = lineIdentifier
         self.naptanIdReference = naptanIdReference
         self.stationAtcoCode = stationAtcoCode

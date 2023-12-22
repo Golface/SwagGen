@@ -19,7 +19,14 @@ public class JourneyPlannerCycleHireDockingStationData: APIModel {
 
     public var originNumberOfEmptySlots: Int?
 
-    public init(destinationId: String? = nil, destinationNumberOfBikes: Int? = nil, destinationNumberOfEmptySlots: Int? = nil, originId: String? = nil, originNumberOfBikes: Int? = nil, originNumberOfEmptySlots: Int? = nil) {
+    public init(
+        destinationId: String? = nil, 
+        destinationNumberOfBikes: Int? = nil, 
+        destinationNumberOfEmptySlots: Int? = nil, 
+        originId: String? = nil, 
+        originNumberOfBikes: Int? = nil, 
+        originNumberOfEmptySlots: Int? = nil
+    ) {
         self.destinationId = destinationId
         self.destinationNumberOfBikes = destinationNumberOfBikes
         self.destinationNumberOfEmptySlots = destinationNumberOfEmptySlots

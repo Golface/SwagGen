@@ -40,7 +40,14 @@ public class ExclusionRule: APIModel {
 
     public var excludeMinResolution: ExcludeMinResolution?
 
-    public init(description: String? = nil, device: String? = nil, excludeAirplay: Bool? = nil, excludeChromecast: Bool? = nil, excludeDelivery: ExcludeDelivery? = nil, excludeMinResolution: ExcludeMinResolution? = nil) {
+    public init(
+        description: String? = nil, 
+        device: String? = nil, 
+        excludeAirplay: Bool? = nil, 
+        excludeChromecast: Bool? = nil, 
+        excludeDelivery: ExcludeDelivery? = nil, 
+        excludeMinResolution: ExcludeMinResolution? = nil
+    ) {
         self.description = description
         self.device = device
         self.excludeAirplay = excludeAirplay

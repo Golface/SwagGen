@@ -38,7 +38,16 @@ extension TFL.StopPoint {
 
                 public var locationLon: Double
 
-                public init(stopTypes: [String], radius: Int? = nil, useStopPointHierarchy: Bool? = nil, modes: [String]? = nil, categories: [String]? = nil, returnLines: Bool? = nil, locationLat: Double, locationLon: Double) {
+                public init(
+                    stopTypes: [String], 
+                    radius: Int? = nil, 
+                    useStopPointHierarchy: Bool? = nil, 
+                    modes: [String]? = nil, 
+                    categories: [String]? = nil, 
+                    returnLines: Bool? = nil, 
+                    locationLat: Double, 
+                    locationLon: Double
+                ) {
                     self.stopTypes = stopTypes
                     self.radius = radius
                     self.useStopPointHierarchy = useStopPointHierarchy

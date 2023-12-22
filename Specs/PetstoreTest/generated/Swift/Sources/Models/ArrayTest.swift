@@ -13,7 +13,11 @@ public class ArrayTest: APIModel {
 
     public var arrayOfString: [String]?
 
-    public init(arrayArrayOfInteger: [[Int]]? = nil, arrayArrayOfModel: [[ReadOnlyFirst]]? = nil, arrayOfString: [String]? = nil) {
+    public init(
+        arrayArrayOfInteger: [[Int]]? = nil, 
+        arrayArrayOfModel: [[ReadOnlyFirst]]? = nil, 
+        arrayOfString: [String]? = nil
+    ) {
         self.arrayArrayOfInteger = arrayArrayOfInteger
         self.arrayArrayOfModel = arrayArrayOfModel
         self.arrayOfString = arrayOfString

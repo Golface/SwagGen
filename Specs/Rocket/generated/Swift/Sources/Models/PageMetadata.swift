@@ -12,7 +12,10 @@ public class PageMetadata: APIModel {
 
     public var keywords: [String]?
 
-    public init(description: String? = nil, keywords: [String]? = nil) {
+    public init(
+        description: String? = nil, 
+        keywords: [String]? = nil
+    ) {
         self.description = description
         self.keywords = keywords
     }

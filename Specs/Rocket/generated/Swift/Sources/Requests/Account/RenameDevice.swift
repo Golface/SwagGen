@@ -22,7 +22,10 @@ extension Rocket.Account {
                 /** The new name for the device. */
                 public var name: String
 
-                public init(id: String, name: String) {
+                public init(
+                    id: String, 
+                    name: String
+                ) {
                     self.id = id
                     self.name = name
                 }

@@ -11,7 +11,10 @@ public class LineModeGroup: APIModel {
 
     public var modeName: String?
 
-    public init(lineIdentifier: [String]? = nil, modeName: String? = nil) {
+    public init(
+        lineIdentifier: [String]? = nil, 
+        modeName: String? = nil
+    ) {
         self.lineIdentifier = lineIdentifier
         self.modeName = modeName
     }

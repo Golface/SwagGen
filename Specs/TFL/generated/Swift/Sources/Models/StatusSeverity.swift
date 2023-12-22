@@ -13,7 +13,11 @@ public class StatusSeverity: APIModel {
 
     public var severityLevel: Int?
 
-    public init(description: String? = nil, modeName: String? = nil, severityLevel: Int? = nil) {
+    public init(
+        description: String? = nil, 
+        modeName: String? = nil, 
+        severityLevel: Int? = nil
+    ) {
         self.description = description
         self.modeName = modeName
         self.severityLevel = severityLevel

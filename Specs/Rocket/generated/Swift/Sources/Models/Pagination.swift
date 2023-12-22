@@ -45,7 +45,15 @@ by a CDN. For example a Bookmarks list.
  */
     public var size: Int?
 
-    public init(total: Int, page: Int, authorization: PaginationAuth? = nil, next: String? = nil, options: PaginationOptions? = nil, previous: String? = nil, size: Int? = nil) {
+    public init(
+        total: Int, 
+        page: Int, 
+        authorization: PaginationAuth? = nil, 
+        next: String? = nil, 
+        options: PaginationOptions? = nil, 
+        previous: String? = nil, 
+        size: Int? = nil
+    ) {
         self.total = total
         self.page = page
         self.authorization = authorization

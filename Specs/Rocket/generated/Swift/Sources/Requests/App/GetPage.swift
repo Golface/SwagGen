@@ -127,7 +127,20 @@ See the `feature-flags.md` for available flag details.
  */
                 public var ff: [FeatureFlags]?
 
-                public init(path: String, listPageSize: Int? = nil, listPageSizeLarge: Int? = nil, maxListPrefetch: Int? = nil, itemDetailExpand: ItemDetailExpand? = nil, itemDetailSelectSeason: ItemDetailSelectSeason? = nil, textEntryFormat: TextEntryFormat? = nil, maxRating: String? = nil, device: String? = nil, sub: String? = nil, segments: [String]? = nil, ff: [FeatureFlags]? = nil) {
+                public init(
+                    path: String, 
+                    listPageSize: Int? = nil, 
+                    listPageSizeLarge: Int? = nil, 
+                    maxListPrefetch: Int? = nil, 
+                    itemDetailExpand: ItemDetailExpand? = nil, 
+                    itemDetailSelectSeason: ItemDetailSelectSeason? = nil, 
+                    textEntryFormat: TextEntryFormat? = nil, 
+                    maxRating: String? = nil, 
+                    device: String? = nil, 
+                    sub: String? = nil, 
+                    segments: [String]? = nil, 
+                    ff: [FeatureFlags]? = nil
+                ) {
                     self.path = path
                     self.listPageSize = listPageSize
                     self.listPageSizeLarge = listPageSizeLarge

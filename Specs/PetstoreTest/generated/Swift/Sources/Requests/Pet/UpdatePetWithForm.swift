@@ -25,7 +25,11 @@ extension PetstoreTest.Pet {
                 /** Updated status of the pet */
                 public var status: String?
 
-                public init(petId: Int, name: String? = nil, status: String? = nil) {
+                public init(
+                    petId: Int, 
+                    name: String? = nil, 
+                    status: String? = nil
+                ) {
                     self.petId = petId
                     self.name = name
                     self.status = status

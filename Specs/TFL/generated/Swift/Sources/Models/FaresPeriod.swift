@@ -17,7 +17,13 @@ public class FaresPeriod: APIModel {
 
     public var viewableDate: DateTime?
 
-    public init(endDate: DateTime? = nil, id: Int? = nil, isFuture: Bool? = nil, startDate: DateTime? = nil, viewableDate: DateTime? = nil) {
+    public init(
+        endDate: DateTime? = nil, 
+        id: Int? = nil, 
+        isFuture: Bool? = nil, 
+        startDate: DateTime? = nil, 
+        viewableDate: DateTime? = nil
+    ) {
         self.endDate = endDate
         self.id = id
         self.isFuture = isFuture

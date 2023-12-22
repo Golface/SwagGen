@@ -21,7 +21,14 @@ Each classification in a system should have a unique level.
     /** Parental advisort text. */
     public var advisoryText: String?
 
-    public init(code: String, name: String, level: Int, system: String, images: [String: URL], advisoryText: String? = nil) {
+    public init(
+        code: String, 
+        name: String, 
+        level: Int, 
+        system: String, 
+        images: [String: URL], 
+        advisoryText: String? = nil
+    ) {
         self.level = level
         self.system = system
         self.images = images

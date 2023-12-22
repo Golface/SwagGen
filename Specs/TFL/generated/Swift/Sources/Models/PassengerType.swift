@@ -15,7 +15,12 @@ public class PassengerType: APIModel {
 
     public var type: String?
 
-    public init(description: String? = nil, displayName: String? = nil, displayOrder: Int? = nil, type: String? = nil) {
+    public init(
+        description: String? = nil, 
+        displayName: String? = nil, 
+        displayOrder: Int? = nil, 
+        type: String? = nil
+    ) {
         self.description = description
         self.displayName = displayName
         self.displayOrder = displayOrder

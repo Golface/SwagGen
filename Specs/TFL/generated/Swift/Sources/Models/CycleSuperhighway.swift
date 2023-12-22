@@ -25,7 +25,14 @@ public class CycleSuperhighway: APIModel {
     /** True if the route is split into segments */
     public var segmented: Bool?
 
-    public init(geography: DbGeography? = nil, id: String? = nil, label: String? = nil, labelShort: String? = nil, modified: DateTime? = nil, segmented: Bool? = nil) {
+    public init(
+        geography: DbGeography? = nil, 
+        id: String? = nil, 
+        label: String? = nil, 
+        labelShort: String? = nil, 
+        modified: DateTime? = nil, 
+        segmented: Bool? = nil
+    ) {
         self.geography = geography
         self.id = id
         self.label = label

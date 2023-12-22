@@ -37,7 +37,16 @@ extension TFL.Place {
 
                 public var bbBoxpointsNeLon: Double
 
-                public init(categories: [String]? = nil, includeChildren: Bool? = nil, type: [String]? = nil, activeOnly: Bool? = nil, bbBoxpointsSwLat: Double, bbBoxpointsSwLon: Double, bbBoxpointsNeLat: Double, bbBoxpointsNeLon: Double) {
+                public init(
+                    categories: [String]? = nil, 
+                    includeChildren: Bool? = nil, 
+                    type: [String]? = nil, 
+                    activeOnly: Bool? = nil, 
+                    bbBoxpointsSwLat: Double, 
+                    bbBoxpointsSwLon: Double, 
+                    bbBoxpointsNeLat: Double, 
+                    bbBoxpointsNeLon: Double
+                ) {
                     self.categories = categories
                     self.includeChildren = includeChildren
                     self.type = type

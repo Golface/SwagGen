@@ -13,7 +13,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass: APIModel {
 
     public var uuid: ID?
 
-    public init(dateTime: DateTime? = nil, map: [String: Animal]? = nil, uuid: ID? = nil) {
+    public init(
+        dateTime: DateTime? = nil, 
+        map: [String: Animal]? = nil, 
+        uuid: ID? = nil
+    ) {
         self.dateTime = dateTime
         self.map = map
         self.uuid = uuid

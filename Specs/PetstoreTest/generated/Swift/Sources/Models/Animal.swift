@@ -11,7 +11,10 @@ public class Animal: APIModel {
 
     public var color: String?
 
-    public init(className: String, color: String? = nil) {
+    public init(
+        className: String, 
+        color: String? = nil
+    ) {
         self.className = className
         self.color = color
     }

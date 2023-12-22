@@ -15,7 +15,12 @@ public class Mode: APIModel {
 
     public var modeName: String?
 
-    public init(isFarePaying: Bool? = nil, isScheduledService: Bool? = nil, isTflService: Bool? = nil, modeName: String? = nil) {
+    public init(
+        isFarePaying: Bool? = nil, 
+        isScheduledService: Bool? = nil, 
+        isTflService: Bool? = nil, 
+        modeName: String? = nil
+    ) {
         self.isFarePaying = isFarePaying
         self.isScheduledService = isScheduledService
         self.isTflService = isTflService

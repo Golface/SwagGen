@@ -68,7 +68,28 @@ public class Prediction: APIModel {
     /** The actual vehicle in transit (for train modes, the leading car of the rolling set) */
     public var vehicleId: String?
 
-    public init(bearing: String? = nil, currentLocation: String? = nil, destinationName: String? = nil, destinationNaptanId: String? = nil, direction: String? = nil, expectedArrival: DateTime? = nil, id: String? = nil, lineId: String? = nil, lineName: String? = nil, modeName: String? = nil, naptanId: String? = nil, operationType: Int? = nil, platformName: String? = nil, stationName: String? = nil, timeToLive: DateTime? = nil, timeToStation: Int? = nil, timestamp: DateTime? = nil, timing: PredictionTiming? = nil, towards: String? = nil, vehicleId: String? = nil) {
+    public init(
+        bearing: String? = nil, 
+        currentLocation: String? = nil, 
+        destinationName: String? = nil, 
+        destinationNaptanId: String? = nil, 
+        direction: String? = nil, 
+        expectedArrival: DateTime? = nil, 
+        id: String? = nil, 
+        lineId: String? = nil, 
+        lineName: String? = nil, 
+        modeName: String? = nil, 
+        naptanId: String? = nil, 
+        operationType: Int? = nil, 
+        platformName: String? = nil, 
+        stationName: String? = nil, 
+        timeToLive: DateTime? = nil, 
+        timeToStation: Int? = nil, 
+        timestamp: DateTime? = nil, 
+        timing: PredictionTiming? = nil, 
+        towards: String? = nil, 
+        vehicleId: String? = nil
+    ) {
         self.bearing = bearing
         self.currentLocation = currentLocation
         self.destinationName = destinationName

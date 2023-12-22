@@ -17,7 +17,11 @@ public class ValidityPeriod: APIModel {
     /** Gets or sets the end date. */
     public var toDate: DateTime?
 
-    public init(fromDate: DateTime? = nil, isNow: Bool? = nil, toDate: DateTime? = nil) {
+    public init(
+        fromDate: DateTime? = nil, 
+        isNow: Bool? = nil, 
+        toDate: DateTime? = nil
+    ) {
         self.fromDate = fromDate
         self.isNow = isNow
         self.toDate = toDate

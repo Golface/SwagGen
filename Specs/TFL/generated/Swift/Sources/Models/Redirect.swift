@@ -13,7 +13,11 @@ public class Redirect: APIModel {
 
     public var shortUrl: String?
 
-    public init(active: Bool? = nil, longUrl: String? = nil, shortUrl: String? = nil) {
+    public init(
+        active: Bool? = nil, 
+        longUrl: String? = nil, 
+        shortUrl: String? = nil
+    ) {
         self.active = active
         self.longUrl = longUrl
         self.shortUrl = shortUrl

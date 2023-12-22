@@ -12,7 +12,12 @@ public class UserSubclass: User {
     /** last error reported to user object, or null if they have not seen an error. */
     public var lastError: ErrorType?
 
-    public init(id: Int? = nil, name: String? = nil, age: Int? = nil, lastError: ErrorType? = nil) {
+    public init(
+        id: Int? = nil, 
+        name: String? = nil, 
+        age: Int? = nil, 
+        lastError: ErrorType? = nil
+    ) {
         self.age = age
         self.lastError = lastError
         super.init(id: id, name: name)

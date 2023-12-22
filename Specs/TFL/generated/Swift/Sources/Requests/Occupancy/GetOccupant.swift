@@ -18,7 +18,9 @@ extension TFL.Occupancy {
 
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

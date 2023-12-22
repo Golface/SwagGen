@@ -9,7 +9,9 @@ public class Client: APIModel {
 
     public var client: String?
 
-    public init(client: String? = nil) {
+    public init(
+        client: String? = nil
+    ) {
         self.client = client
     }
 

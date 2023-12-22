@@ -15,7 +15,12 @@ public class TimeAdjustment: APIModel {
 
     public var uri: String?
 
-    public init(date: String? = nil, time: String? = nil, timeIs: String? = nil, uri: String? = nil) {
+    public init(
+        date: String? = nil, 
+        time: String? = nil, 
+        timeIs: String? = nil, 
+        uri: String? = nil
+    ) {
         self.date = date
         self.time = time
         self.timeIs = timeIs

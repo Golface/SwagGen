@@ -17,7 +17,13 @@ public class AdditionalProperties: APIModel {
 
     public var value: String?
 
-    public init(category: String? = nil, key: String? = nil, modified: DateTime? = nil, sourceSystemKey: String? = nil, value: String? = nil) {
+    public init(
+        category: String? = nil, 
+        key: String? = nil, 
+        modified: DateTime? = nil, 
+        sourceSystemKey: String? = nil, 
+        value: String? = nil
+    ) {
         self.category = category
         self.key = key
         self.modified = modified

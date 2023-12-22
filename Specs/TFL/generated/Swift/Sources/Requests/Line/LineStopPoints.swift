@@ -19,7 +19,9 @@ extension TFL.Line {
                 /** A single line id e.g. victoria */
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

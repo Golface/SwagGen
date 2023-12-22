@@ -29,7 +29,15 @@ public class TrainLoading: APIModel {
              1 = Very quiet, 2 = Quiet, 3 = Fairly busy, 4 = Busy, 5 = Very busy, 6 = Exceptionally busy */
     public var value: Int?
 
-    public init(direction: String? = nil, line: String? = nil, lineDirection: String? = nil, naptanTo: String? = nil, platformDirection: String? = nil, timeSlice: String? = nil, value: Int? = nil) {
+    public init(
+        direction: String? = nil, 
+        line: String? = nil, 
+        lineDirection: String? = nil, 
+        naptanTo: String? = nil, 
+        platformDirection: String? = nil, 
+        timeSlice: String? = nil, 
+        value: Int? = nil
+    ) {
         self.direction = direction
         self.line = line
         self.lineDirection = lineDirection

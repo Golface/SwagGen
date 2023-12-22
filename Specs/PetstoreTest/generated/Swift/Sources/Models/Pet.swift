@@ -27,7 +27,14 @@ public class Pet: APIModel {
 
     public var tags: [Tag]?
 
-    public init(name: String, photoUrls: [String], category: Category? = nil, id: Int? = nil, status: Status? = nil, tags: [Tag]? = nil) {
+    public init(
+        name: String, 
+        photoUrls: [String], 
+        category: Category? = nil, 
+        id: Int? = nil, 
+        status: Status? = nil, 
+        tags: [Tag]? = nil
+    ) {
         self.name = name
         self.photoUrls = photoUrls
         self.category = category

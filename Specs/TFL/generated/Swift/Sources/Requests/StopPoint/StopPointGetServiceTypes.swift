@@ -25,7 +25,11 @@ extension TFL.StopPoint {
                 /** The modes which the lines are relevant to (all if empty) */
                 public var modes: [String]?
 
-                public init(id: String, lineIds: [String]? = nil, modes: [String]? = nil) {
+                public init(
+                    id: String, 
+                    lineIds: [String]? = nil, 
+                    modes: [String]? = nil
+                ) {
                     self.id = id
                     self.lineIds = lineIds
                     self.modes = modes

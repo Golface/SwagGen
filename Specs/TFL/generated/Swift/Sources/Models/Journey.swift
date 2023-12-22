@@ -16,7 +16,12 @@ public class Journey: APIModel {
 
     public var startDateTime: DateTime?
 
-    public init(arrivalDateTime: DateTime? = nil, duration: Int? = nil, legs: [Leg]? = nil, startDateTime: DateTime? = nil) {
+    public init(
+        arrivalDateTime: DateTime? = nil, 
+        duration: Int? = nil, 
+        legs: [Leg]? = nil, 
+        startDateTime: DateTime? = nil
+    ) {
         self.arrivalDateTime = arrivalDateTime
         self.duration = duration
         self.legs = legs

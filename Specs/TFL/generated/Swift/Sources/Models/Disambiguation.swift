@@ -9,7 +9,9 @@ public class Disambiguation: APIModel {
 
     public var disambiguationOptions: [DisambiguationOption]?
 
-    public init(disambiguationOptions: [DisambiguationOption]? = nil) {
+    public init(
+        disambiguationOptions: [DisambiguationOption]? = nil
+    ) {
         self.disambiguationOptions = disambiguationOptions
     }
 

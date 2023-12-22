@@ -22,7 +22,10 @@ extension TFL.Mode {
                 /** A number of arrivals to return for each stop, -1 to return all available. */
                 public var count: Int?
 
-                public init(mode: String, count: Int? = nil) {
+                public init(
+                    mode: String, 
+                    count: Int? = nil
+                ) {
                     self.mode = mode
                     self.count = count
                 }

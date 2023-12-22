@@ -14,7 +14,10 @@ public class Point: APIModel {
     /** WGS84 longitude of the location. */
     public var lon: Double?
 
-    public init(lat: Double? = nil, lon: Double? = nil) {
+    public init(
+        lat: Double? = nil, 
+        lon: Double? = nil
+    ) {
         self.lat = lat
         self.lon = lon
     }

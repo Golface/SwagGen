@@ -19,7 +19,9 @@ extension TFL.Line {
                 /** A comma-separated list of modes e.g. tube,dlr */
                 public var modes: [String]
 
-                public init(modes: [String]) {
+                public init(
+                    modes: [String]
+                ) {
                     self.modes = modes
                 }
             }

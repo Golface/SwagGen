@@ -14,7 +14,10 @@ public class ItemCustomMetadata: APIModel {
     /** The value of the custom metadata. */
     public var value: String
 
-    public init(name: String, value: String) {
+    public init(
+        name: String, 
+        value: String
+    ) {
         self.name = name
         self.value = value
     }

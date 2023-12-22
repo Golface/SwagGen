@@ -25,7 +25,11 @@ extension PetstoreTest.Pet {
                 /** file to upload */
                 public var file: File?
 
-                public init(petId: Int, additionalMetadata: String? = nil, file: File? = nil) {
+                public init(
+                    petId: Int, 
+                    additionalMetadata: String? = nil, 
+                    file: File? = nil
+                ) {
                     self.petId = petId
                     self.additionalMetadata = additionalMetadata
                     self.file = file

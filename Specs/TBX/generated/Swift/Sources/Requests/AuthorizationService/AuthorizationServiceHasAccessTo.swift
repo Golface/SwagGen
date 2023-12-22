@@ -25,7 +25,13 @@ extension TBX.AuthorizationService {
 
                 public var ip: String
 
-                public init(apiKey: String, userToken: String, urn: String, action: String, ip: String) {
+                public init(
+                    apiKey: String, 
+                    userToken: String, 
+                    urn: String, 
+                    action: String, 
+                    ip: String
+                ) {
                     self.apiKey = apiKey
                     self.userToken = userToken
                     self.urn = urn

@@ -9,7 +9,9 @@ public class Animal: APIModel {
 
     public var animal: String?
 
-    public init(animal: String? = nil) {
+    public init(
+        animal: String? = nil
+    ) {
         self.animal = animal
     }
 

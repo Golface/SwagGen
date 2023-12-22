@@ -19,7 +19,14 @@ public class Coordinate: APIModel {
 
     public var yCoord: Int?
 
-    public init(easting: Double? = nil, latitude: Double? = nil, longitude: Double? = nil, northing: Double? = nil, xCoord: Int? = nil, yCoord: Int? = nil) {
+    public init(
+        easting: Double? = nil, 
+        latitude: Double? = nil, 
+        longitude: Double? = nil, 
+        northing: Double? = nil, 
+        xCoord: Int? = nil, 
+        yCoord: Int? = nil
+    ) {
         self.easting = easting
         self.latitude = latitude
         self.longitude = longitude

@@ -21,7 +21,15 @@ public class JpElevation: APIModel {
 
     public var startLon: Double?
 
-    public init(distance: Int? = nil, endLat: Double? = nil, endLon: Double? = nil, gradient: Double? = nil, heightFromPreviousPoint: Int? = nil, startLat: Double? = nil, startLon: Double? = nil) {
+    public init(
+        distance: Int? = nil, 
+        endLat: Double? = nil, 
+        endLon: Double? = nil, 
+        gradient: Double? = nil, 
+        heightFromPreviousPoint: Int? = nil, 
+        startLat: Double? = nil, 
+        startLon: Double? = nil
+    ) {
         self.distance = distance
         self.endLat = endLat
         self.endLon = endLon

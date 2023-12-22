@@ -9,7 +9,9 @@ public class Vehicle: APIModel {
 
     public var type: String?
 
-    public init(type: String? = nil) {
+    public init(
+        type: String? = nil
+    ) {
         self.type = type
     }
 

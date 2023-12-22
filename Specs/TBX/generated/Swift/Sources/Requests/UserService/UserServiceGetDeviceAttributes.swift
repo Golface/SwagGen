@@ -19,7 +19,9 @@ extension TBX.UserService {
                 /** The device token */
                 public var device: String
 
-                public init(device: String) {
+                public init(
+                    device: String
+                ) {
                     self.device = device
                 }
             }

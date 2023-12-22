@@ -13,7 +13,10 @@ public class ClassificationSummary: APIModel {
     /** The name of the classification for display. */
     public var name: String
 
-    public init(code: String, name: String) {
+    public init(
+        code: String, 
+        name: String
+    ) {
         self.code = code
         self.name = name
     }

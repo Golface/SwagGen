@@ -29,7 +29,16 @@ public class ItemSchedule: APIModel {
     /** True if this has been aired previously on the same channel. */
     public var `repeat`: Bool?
 
-    public init(id: String, channelId: String, startDate: DateTime, endDate: DateTime, featured: Bool? = nil, item: ItemSummary? = nil, live: Bool? = nil, `repeat`: Bool? = nil) {
+    public init(
+        id: String, 
+        channelId: String, 
+        startDate: DateTime, 
+        endDate: DateTime, 
+        featured: Bool? = nil, 
+        item: ItemSummary? = nil, 
+        live: Bool? = nil, 
+        `repeat`: Bool? = nil
+    ) {
         self.id = id
         self.channelId = channelId
         self.startDate = startDate

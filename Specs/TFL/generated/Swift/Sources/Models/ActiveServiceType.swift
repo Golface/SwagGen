@@ -11,7 +11,10 @@ public class ActiveServiceType: APIModel {
 
     public var serviceType: String?
 
-    public init(mode: String? = nil, serviceType: String? = nil) {
+    public init(
+        mode: String? = nil, 
+        serviceType: String? = nil
+    ) {
         self.mode = mode
         self.serviceType = serviceType
     }

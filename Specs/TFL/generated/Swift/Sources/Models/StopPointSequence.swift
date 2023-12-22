@@ -33,7 +33,16 @@ public class StopPointSequence: APIModel {
 
     public var stopPoint: [MatchedStop]?
 
-    public init(branchId: Int? = nil, direction: String? = nil, lineId: String? = nil, lineName: String? = nil, nextBranchIds: [Int]? = nil, prevBranchIds: [Int]? = nil, serviceType: ServiceType? = nil, stopPoint: [MatchedStop]? = nil) {
+    public init(
+        branchId: Int? = nil, 
+        direction: String? = nil, 
+        lineId: String? = nil, 
+        lineName: String? = nil, 
+        nextBranchIds: [Int]? = nil, 
+        prevBranchIds: [Int]? = nil, 
+        serviceType: ServiceType? = nil, 
+        stopPoint: [MatchedStop]? = nil
+    ) {
         self.branchId = branchId
         self.direction = direction
         self.lineId = lineId

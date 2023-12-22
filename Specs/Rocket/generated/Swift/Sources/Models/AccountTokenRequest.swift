@@ -58,7 +58,13 @@ Either a pin or password should be supplied. If both are supplied the password w
  */
     public var pin: String?
 
-    public init(email: String, scopes: [Scopes], cookieType: CookieType? = nil, password: String? = nil, pin: String? = nil) {
+    public init(
+        email: String, 
+        scopes: [Scopes], 
+        cookieType: CookieType? = nil, 
+        password: String? = nil, 
+        pin: String? = nil
+    ) {
         self.email = email
         self.scopes = scopes
         self.cookieType = cookieType

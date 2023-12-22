@@ -33,7 +33,21 @@ public class Device: APIModel {
 
     public var updated: DateTime?
 
-    public init(id: String, created: DateTime? = nil, customer: ObjectID? = nil, customerId: ObjectID? = nil, data: [String: Any]? = nil, deactivateDate: DateTime? = nil, description: String? = nil, deviceType: ObjectID? = nil, expirationDate: DateTime? = nil, identifier: String? = nil, lastLogin: DateTime? = nil, loggedOutDate: DateTime? = nil, updated: DateTime? = nil) {
+    public init(
+        id: String, 
+        created: DateTime? = nil, 
+        customer: ObjectID? = nil, 
+        customerId: ObjectID? = nil, 
+        data: [String: Any]? = nil, 
+        deactivateDate: DateTime? = nil, 
+        description: String? = nil, 
+        deviceType: ObjectID? = nil, 
+        expirationDate: DateTime? = nil, 
+        identifier: String? = nil, 
+        lastLogin: DateTime? = nil, 
+        loggedOutDate: DateTime? = nil, 
+        updated: DateTime? = nil
+    ) {
         self.id = id
         self.created = created
         self.customer = customer

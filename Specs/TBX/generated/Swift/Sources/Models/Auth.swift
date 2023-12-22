@@ -12,7 +12,10 @@ public class Auth: APIModel {
     /** this appears if the user is logged in */
     public var userToken: String?
 
-    public init(status: Bool, userToken: String? = nil) {
+    public init(
+        status: Bool, 
+        userToken: String? = nil
+    ) {
         self.status = status
         self.userToken = userToken
     }

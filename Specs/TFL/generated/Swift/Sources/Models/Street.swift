@@ -37,7 +37,14 @@ public class Street: APIModel {
     /** The key of the source system of the disruption that this street belongs to. */
     public var sourceSystemKey: String?
 
-    public init(closure: String? = nil, directions: String? = nil, name: String? = nil, segments: [StreetSegment]? = nil, sourceSystemId: Int? = nil, sourceSystemKey: String? = nil) {
+    public init(
+        closure: String? = nil, 
+        directions: String? = nil, 
+        name: String? = nil, 
+        segments: [StreetSegment]? = nil, 
+        sourceSystemId: Int? = nil, 
+        sourceSystemKey: String? = nil
+    ) {
         self.closure = closure
         self.directions = directions
         self.name = name

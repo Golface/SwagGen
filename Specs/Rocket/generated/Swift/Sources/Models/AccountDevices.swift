@@ -39,7 +39,12 @@ days old.
  */
     public var registrationWindow: DeviceRegistrationWindow?
 
-    public init(devices: [Device], maxRegistered: Int, deregistrationWindow: DeviceRegistrationWindow? = nil, registrationWindow: DeviceRegistrationWindow? = nil) {
+    public init(
+        devices: [Device], 
+        maxRegistered: Int, 
+        deregistrationWindow: DeviceRegistrationWindow? = nil, 
+        registrationWindow: DeviceRegistrationWindow? = nil
+    ) {
         self.devices = devices
         self.maxRegistered = maxRegistered
         self.deregistrationWindow = deregistrationWindow

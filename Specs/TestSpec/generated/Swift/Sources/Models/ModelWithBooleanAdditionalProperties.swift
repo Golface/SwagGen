@@ -12,7 +12,9 @@ public class ModelWithBooleanAdditionalProperties: APIModel {
 
     public var additionalProperties: [String: Bool] = [:]
 
-    public init(name: String? = nil) {
+    public init(
+        name: String? = nil
+    ) {
         self.name = name
     }
 

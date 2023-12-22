@@ -25,7 +25,14 @@ public class AppConfigGeneral: APIModel {
     /** The url of the primary website. */
     public var websiteUrl: URL?
 
-    public init(currencyCode: String? = nil, customFields: [String: Any]? = nil, gaToken: String? = nil, itemImageTypes: [String: String]? = nil, stripeKey: String? = nil, websiteUrl: URL? = nil) {
+    public init(
+        currencyCode: String? = nil, 
+        customFields: [String: Any]? = nil, 
+        gaToken: String? = nil, 
+        itemImageTypes: [String: String]? = nil, 
+        stripeKey: String? = nil, 
+        websiteUrl: URL? = nil
+    ) {
         self.currencyCode = currencyCode
         self.customFields = customFields
         self.gaToken = gaToken
