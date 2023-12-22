@@ -1,0 +1,73 @@
+name: Create and publish a Docker image
+
+on:
+  push:
+    branches: ['master', 'add-container-image']
+    tags: ['v*']
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  CHANNEL_ID: ${{ vars.SLACK_CHANNEL_ID }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - linux/amd64
+          - linux/arm64
+          - darwin/amd64
+
+    permissions:
+      contents: read
+      packages: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Build and push Docker image
+        id: build_and_push_docker_image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          platforms: ${{ matrix.platform }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Send a message on Slack channel
+        id: slack
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          channel-id: ${{ env.CHANNEL_ID }}
+          payload: |
+            {
+              "text": "Build and push Docker image succeeded",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "A new Docker ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} image  was built and deployed\n${{ steps.build_and_push_docker_image.outputs }}"
+                  }
+                }
+              ]
+            }
