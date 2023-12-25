@@ -32,7 +32,12 @@ public class Credit: Person {
     /** The name of the character. */
     public var character: String?
 
-    public init(name: String, path: String, role: Role, character: String? = nil) {
+    public init(
+        name: String, 
+        path: String, 
+        role: Role, 
+        character: String? = nil
+    ) {
         self.role = role
         self.character = character
         super.init(name: name, path: path)

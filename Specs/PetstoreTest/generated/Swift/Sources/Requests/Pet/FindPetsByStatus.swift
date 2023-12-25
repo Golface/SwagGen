@@ -30,7 +30,9 @@ extension PetstoreTest.Pet {
                 /** Status values that need to be considered for filter */
                 public var status: [Status]
 
-                public init(status: [Status]) {
+                public init(
+                    status: [Status]
+                ) {
                     self.status = status
                 }
             }

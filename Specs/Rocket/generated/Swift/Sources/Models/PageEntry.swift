@@ -56,7 +56,18 @@ For example the images of an `ImageEntry`.
     /** If 'type' is 'TextEntry' then this is the text to be represented. */
     public var text: String?
 
-    public init(id: String, type: `Type`, title: String, template: String, customFields: [String: Any]? = nil, images: [String: URL]? = nil, item: ItemSummary? = nil, list: ItemList? = nil, people: [Person]? = nil, text: String? = nil) {
+    public init(
+        id: String, 
+        type: `Type`, 
+        title: String, 
+        template: String, 
+        customFields: [String: Any]? = nil, 
+        images: [String: URL]? = nil, 
+        item: ItemSummary? = nil, 
+        list: ItemList? = nil, 
+        people: [Person]? = nil, 
+        text: String? = nil
+    ) {
         self.id = id
         self.type = type
         self.title = title

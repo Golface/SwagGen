@@ -31,7 +31,11 @@ extension TFL.StopPoint {
                 /** A comma-separated list of service types to filter on. If not specified. Supported values: Regular, Night. Defaulted to 'Regular' if not specified */
                 public var serviceTypes: [ServiceTypes]?
 
-                public init(id: String, lineId: String, serviceTypes: [ServiceTypes]? = nil) {
+                public init(
+                    id: String, 
+                    lineId: String, 
+                    serviceTypes: [ServiceTypes]? = nil
+                ) {
                     self.id = id
                     self.lineId = lineId
                     self.serviceTypes = serviceTypes

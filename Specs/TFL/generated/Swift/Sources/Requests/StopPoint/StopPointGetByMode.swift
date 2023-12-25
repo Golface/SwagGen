@@ -22,7 +22,10 @@ extension TFL.StopPoint {
                 /** The data set page to return. Page 1 equates to the first 1000 stop points, page 2 equates to 1001-2000 etc. Must be entered for bus mode as data set is too large. */
                 public var page: Int?
 
-                public init(modes: [String], page: Int? = nil) {
+                public init(
+                    modes: [String], 
+                    page: Int? = nil
+                ) {
                     self.modes = modes
                     self.page = page
                 }

@@ -22,7 +22,10 @@ extension TFL.StopPoint {
                 /** If set to "web", a 302 redirect to relevant website bus stop page is returned. Valid values are : web. All other values are ignored. */
                 public var output: String?
 
-                public init(id: String, output: String? = nil) {
+                public init(
+                    id: String, 
+                    output: String? = nil
+                ) {
                     self.id = id
                     self.output = output
                 }

@@ -23,7 +23,10 @@ extension TFL.StopPoint {
                 /** Include the crowding data (static). To Filter further use: /StopPoint/{ids}/Crowding/{line} */
                 public var includeCrowdingData: Bool?
 
-                public init(ids: [String], includeCrowdingData: Bool? = nil) {
+                public init(
+                    ids: [String], 
+                    includeCrowdingData: Bool? = nil
+                ) {
                     self.ids = ids
                     self.includeCrowdingData = includeCrowdingData
                 }

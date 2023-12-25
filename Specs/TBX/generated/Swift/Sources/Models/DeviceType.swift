@@ -19,7 +19,14 @@ public class DeviceType: APIModel {
 
     public var needActivation: Bool?
 
-    public init(shortName: String, contentProvider: ObjectID? = nil, defaultExpireDays: Double? = nil, deviceType: String? = nil, id: ObjectID? = nil, needActivation: Bool? = nil) {
+    public init(
+        shortName: String, 
+        contentProvider: ObjectID? = nil, 
+        defaultExpireDays: Double? = nil, 
+        deviceType: String? = nil, 
+        id: ObjectID? = nil, 
+        needActivation: Bool? = nil
+    ) {
         self.shortName = shortName
         self.contentProvider = contentProvider
         self.defaultExpireDays = defaultExpireDays

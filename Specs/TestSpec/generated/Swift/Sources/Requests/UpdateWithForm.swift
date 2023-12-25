@@ -22,7 +22,10 @@ extension TestSpec {
                 /** Updated status of the pet */
                 public var status: String?
 
-                public init(name: String? = nil, status: String? = nil) {
+                public init(
+                    name: String? = nil, 
+                    status: String? = nil
+                ) {
                     self.name = name
                     self.status = status
                 }

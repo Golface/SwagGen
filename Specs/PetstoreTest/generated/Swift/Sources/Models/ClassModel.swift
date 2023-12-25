@@ -10,7 +10,9 @@ public class ClassModel: APIModel {
 
     public var `class`: String?
 
-    public init(`class`: String? = nil) {
+    public init(
+        `class`: String? = nil
+    ) {
         self.`class` = `class`
     }
 

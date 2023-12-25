@@ -23,7 +23,9 @@ extension PetstoreTest.Store {
                 /** ID of pet that needs to be fetched */
                 public var orderId: Int
 
-                public init(orderId: Int) {
+                public init(
+                    orderId: Int
+                ) {
                     self.orderId = orderId
                 }
             }

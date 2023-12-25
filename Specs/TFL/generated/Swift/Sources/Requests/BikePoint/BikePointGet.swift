@@ -19,7 +19,9 @@ extension TFL.BikePoint {
                 /** A bike point id (a list of ids can be obtained from the above BikePoint call) */
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

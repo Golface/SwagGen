@@ -25,7 +25,12 @@ public class AccessToken: APIModel {
     /** The type of the token. */
     public var type: `Type`
 
-    public init(value: String, refreshable: Bool, expirationDate: DateTime, type: `Type`) {
+    public init(
+        value: String, 
+        refreshable: Bool, 
+        expirationDate: DateTime, 
+        type: `Type`
+    ) {
         self.value = value
         self.refreshable = refreshable
         self.expirationDate = expirationDate

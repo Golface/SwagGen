@@ -22,7 +22,10 @@ extension TBX.UserService {
                 /** Device Description */
                 public var description: String
 
-                public init(device: String, description: String) {
+                public init(
+                    device: String, 
+                    description: String
+                ) {
                     self.device = device
                     self.description = description
                 }

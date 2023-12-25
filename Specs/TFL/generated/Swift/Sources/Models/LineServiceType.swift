@@ -11,7 +11,10 @@ public class LineServiceType: APIModel {
 
     public var lineSpecificServiceTypes: [LineSpecificServiceType]?
 
-    public init(lineName: String? = nil, lineSpecificServiceTypes: [LineSpecificServiceType]? = nil) {
+    public init(
+        lineName: String? = nil, 
+        lineSpecificServiceTypes: [LineSpecificServiceType]? = nil
+    ) {
         self.lineName = lineName
         self.lineSpecificServiceTypes = lineSpecificServiceTypes
     }

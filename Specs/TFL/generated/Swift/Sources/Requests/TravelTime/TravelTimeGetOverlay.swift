@@ -59,7 +59,20 @@ extension TFL.TravelTime {
                 /** The total minutes between the travel time bands */
                 public var travelTimeInterval: Int
 
-                public init(z: Int, pinLat: Double, pinLon: Double, mapCenterLat: Double, mapCenterLon: Double, scenarioTitle: String, timeOfDayId: String, modeId: String, width: Int, height: Int, direction: Direction, travelTimeInterval: Int) {
+                public init(
+                    z: Int, 
+                    pinLat: Double, 
+                    pinLon: Double, 
+                    mapCenterLat: Double, 
+                    mapCenterLon: Double, 
+                    scenarioTitle: String, 
+                    timeOfDayId: String, 
+                    modeId: String, 
+                    width: Int, 
+                    height: Int, 
+                    direction: Direction, 
+                    travelTimeInterval: Int
+                ) {
                     self.z = z
                     self.pinLat = pinLat
                     self.pinLon = pinLon

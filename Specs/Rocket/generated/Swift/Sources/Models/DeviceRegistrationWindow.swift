@@ -28,7 +28,13 @@ This is based on the value of `startDate` plus the number of days defined by  `p
  */
     public var endDate: DateTime
 
-    public init(periodDays: Int, limit: Int, remaining: Int, startDate: DateTime, endDate: DateTime) {
+    public init(
+        periodDays: Int, 
+        limit: Int, 
+        remaining: Int, 
+        startDate: DateTime, 
+        endDate: DateTime
+    ) {
         self.periodDays = periodDays
         self.limit = limit
         self.remaining = remaining

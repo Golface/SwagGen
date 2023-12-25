@@ -19,7 +19,12 @@ public class ItemScheduleList: APIModel {
     /** The list of item schedules. */
     public var schedules: [ItemSchedule]
 
-    public init(channelId: String, startDate: DateTime, endDate: DateTime, schedules: [ItemSchedule]) {
+    public init(
+        channelId: String, 
+        startDate: DateTime, 
+        endDate: DateTime, 
+        schedules: [ItemSchedule]
+    ) {
         self.channelId = channelId
         self.startDate = startDate
         self.endDate = endDate

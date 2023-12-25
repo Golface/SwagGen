@@ -9,7 +9,9 @@ public class dollarspecialmodelName: APIModel {
 
     public var dollarspecialpropertyName: Int?
 
-    public init(dollarspecialpropertyName: Int? = nil) {
+    public init(
+        dollarspecialpropertyName: Int? = nil
+    ) {
         self.dollarspecialpropertyName = dollarspecialpropertyName
     }
 

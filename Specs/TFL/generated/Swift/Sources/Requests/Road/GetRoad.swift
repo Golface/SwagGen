@@ -19,7 +19,9 @@ extension TFL.Road {
                 /** Comma-separated list of road identifiers e.g. "A406, A2" (a full list of supported road identifiers can be found at the /Road/ endpoint) */
                 public var ids: [String]
 
-                public init(ids: [String]) {
+                public init(
+                    ids: [String]
+                ) {
                     self.ids = ids
                 }
             }

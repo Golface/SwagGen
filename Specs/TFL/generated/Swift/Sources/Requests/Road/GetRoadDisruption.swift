@@ -31,7 +31,13 @@ extension TFL.Road {
                 /** Optional, defaults to true. When true, always includes disruptions that have road closures, regardless of the severity filter. When false, the severity filter works as normal. */
                 public var closures: Bool?
 
-                public init(ids: [String], stripContent: Bool? = nil, severities: [String]? = nil, categories: [String]? = nil, closures: Bool? = nil) {
+                public init(
+                    ids: [String], 
+                    stripContent: Bool? = nil, 
+                    severities: [String]? = nil, 
+                    categories: [String]? = nil, 
+                    closures: Bool? = nil
+                ) {
                     self.ids = ids
                     self.stripContent = stripContent
                     self.severities = severities

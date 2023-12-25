@@ -11,7 +11,10 @@ public class DisambiguationOption: APIModel {
 
     public var uri: String?
 
-    public init(description: String? = nil, uri: String? = nil) {
+    public init(
+        description: String? = nil, 
+        uri: String? = nil
+    ) {
         self.description = description
         self.uri = uri
     }

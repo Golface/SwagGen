@@ -24,7 +24,16 @@ public class User: APIModel {
 
     public var username: String?
 
-    public init(email: String? = nil, firstName: String? = nil, id: Int? = nil, lastName: String? = nil, password: String? = nil, phone: String? = nil, userStatus: Int? = nil, username: String? = nil) {
+    public init(
+        email: String? = nil, 
+        firstName: String? = nil, 
+        id: Int? = nil, 
+        lastName: String? = nil, 
+        password: String? = nil, 
+        phone: String? = nil, 
+        userStatus: Int? = nil, 
+        username: String? = nil
+    ) {
         self.email = email
         self.firstName = firstName
         self.id = id

@@ -22,7 +22,14 @@ public class SearchResults: APIModel {
 
     public var tv: ItemList?
 
-    public init(term: String, total: Int, items: ItemList? = nil, movies: ItemList? = nil, people: [Person]? = nil, tv: ItemList? = nil) {
+    public init(
+        term: String, 
+        total: Int, 
+        items: ItemList? = nil, 
+        movies: ItemList? = nil, 
+        people: [Person]? = nil, 
+        tv: ItemList? = nil
+    ) {
         self.term = term
         self.total = total
         self.items = items

@@ -23,7 +23,9 @@ extension PetstoreTest.User {
                 /** name that need to be deleted */
                 public var username: String
 
-                public init(username: String) {
+                public init(
+                    username: String
+                ) {
                     self.username = username
                 }
             }

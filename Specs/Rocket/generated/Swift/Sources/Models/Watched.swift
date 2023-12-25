@@ -17,7 +17,12 @@ public class Watched: APIModel {
     /** The id of the item watched. */
     public var itemId: String?
 
-    public init(position: Int, firstWatchedDate: DateTime, lastWatchedDate: DateTime, itemId: String? = nil) {
+    public init(
+        position: Int, 
+        firstWatchedDate: DateTime, 
+        lastWatchedDate: DateTime, 
+        itemId: String? = nil
+    ) {
         self.position = position
         self.firstWatchedDate = firstWatchedDate
         self.lastWatchedDate = lastWatchedDate

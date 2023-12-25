@@ -59,7 +59,23 @@ If you want to disable this guard pass an empty string or `null`.
     /** Whether the account has used up their free trial period of a plan. */
     public var usedFreeTrial: Bool?
 
-    public init(id: String, email: String, trackingEnabled: Bool, pinEnabled: Bool, marketingEnabled: Bool, primaryProfileId: String, subscriptionCode: String, profiles: [ProfileSummary], defaultPaymentInstrumentId: String? = nil, entitlements: [Entitlement]? = nil, firstName: String? = nil, lastName: String? = nil, minRatingPlaybackGuard: String? = nil, subscriptions: [Subscription]? = nil, usedFreeTrial: Bool? = nil) {
+    public init(
+        id: String, 
+        email: String, 
+        trackingEnabled: Bool, 
+        pinEnabled: Bool, 
+        marketingEnabled: Bool, 
+        primaryProfileId: String, 
+        subscriptionCode: String, 
+        profiles: [ProfileSummary], 
+        defaultPaymentInstrumentId: String? = nil, 
+        entitlements: [Entitlement]? = nil, 
+        firstName: String? = nil, 
+        lastName: String? = nil, 
+        minRatingPlaybackGuard: String? = nil, 
+        subscriptions: [Subscription]? = nil, 
+        usedFreeTrial: Bool? = nil
+    ) {
         self.id = id
         self.email = email
         self.trackingEnabled = trackingEnabled

@@ -23,7 +23,16 @@ public class SearchResponse: APIModel {
 
     public var total: Int?
 
-    public init(from: Int? = nil, matches: [SearchMatch]? = nil, maxScore: Double? = nil, page: Int? = nil, pageSize: Int? = nil, provider: String? = nil, query: String? = nil, total: Int? = nil) {
+    public init(
+        from: Int? = nil, 
+        matches: [SearchMatch]? = nil, 
+        maxScore: Double? = nil, 
+        page: Int? = nil, 
+        pageSize: Int? = nil, 
+        provider: String? = nil, 
+        query: String? = nil, 
+        total: Int? = nil
+    ) {
         self.from = from
         self.matches = matches
         self.maxScore = maxScore

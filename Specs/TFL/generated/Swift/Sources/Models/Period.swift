@@ -22,7 +22,12 @@ public class Period: APIModel {
 
     public var type: `Type`?
 
-    public init(frequency: ServiceFrequency? = nil, fromTime: TwentyFourHourClockTime? = nil, toTime: TwentyFourHourClockTime? = nil, type: `Type`? = nil) {
+    public init(
+        frequency: ServiceFrequency? = nil, 
+        fromTime: TwentyFourHourClockTime? = nil, 
+        toTime: TwentyFourHourClockTime? = nil, 
+        type: `Type`? = nil
+    ) {
         self.frequency = frequency
         self.fromTime = fromTime
         self.toTime = toTime

@@ -19,7 +19,9 @@ extension TBX.AuthorizationService {
                 /** The Rule ID */
                 public var ruleId: String
 
-                public init(ruleId: String) {
+                public init(
+                    ruleId: String
+                ) {
                     self.ruleId = ruleId
                 }
             }
@@ -48,7 +50,9 @@ extension TBX.AuthorizationService {
 
                 public var status: Bool?
 
-                public init(status: Bool? = nil) {
+                public init(
+                    status: Bool? = nil
+                ) {
                     self.status = status
                 }
 

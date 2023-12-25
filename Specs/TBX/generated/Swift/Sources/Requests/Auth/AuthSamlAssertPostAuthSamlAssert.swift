@@ -20,7 +20,10 @@ extension TBX.Auth {
 
                 public var sAMLResponse: String?
 
-                public init(relayState: String? = nil, sAMLResponse: String? = nil) {
+                public init(
+                    relayState: String? = nil, 
+                    sAMLResponse: String? = nil
+                ) {
                     self.relayState = relayState
                     self.sAMLResponse = sAMLResponse
                 }

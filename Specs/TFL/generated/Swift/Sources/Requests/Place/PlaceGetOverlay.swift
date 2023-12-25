@@ -36,7 +36,16 @@ extension TFL.Place {
 
                 public var locationLon: Double
 
-                public init(z: Int, type: [String], width: Int, height: Int, lat: String, lon: String, locationLat: Double, locationLon: Double) {
+                public init(
+                    z: Int, 
+                    type: [String], 
+                    width: Int, 
+                    height: Int, 
+                    lat: String, 
+                    lon: String, 
+                    locationLat: Double, 
+                    locationLon: Double
+                ) {
                     self.z = z
                     self.type = type
                     self.width = width

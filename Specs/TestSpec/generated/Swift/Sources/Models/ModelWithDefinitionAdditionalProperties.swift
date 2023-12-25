@@ -12,7 +12,9 @@ public class ModelWithDefinitionAdditionalProperties: APIModel {
 
     public var additionalProperties: [String: User] = [:]
 
-    public init(name: String? = nil) {
+    public init(
+        name: String? = nil
+    ) {
         self.name = name
     }
 

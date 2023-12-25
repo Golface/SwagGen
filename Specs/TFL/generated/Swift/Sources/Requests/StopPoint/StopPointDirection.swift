@@ -25,7 +25,11 @@ extension TFL.StopPoint {
                 /** Optional line id filter e.g. victoria */
                 public var lineId: String?
 
-                public init(id: String, toStopPointId: String, lineId: String? = nil) {
+                public init(
+                    id: String, 
+                    toStopPointId: String, 
+                    lineId: String? = nil
+                ) {
                     self.id = id
                     self.toStopPointId = toStopPointId
                     self.lineId = lineId

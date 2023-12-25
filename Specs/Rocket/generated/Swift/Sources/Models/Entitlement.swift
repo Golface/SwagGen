@@ -34,7 +34,26 @@ public class Entitlement: OfferRights {
     /** How many more downloads of this media are available. */
     public var remainingDownloads: Int?
 
-    public init(deliveryType: DeliveryType, scopes: [String], resolution: Resolution, ownership: Ownership, exclusionRules: [ExclusionRule]? = nil, maxDownloads: Int? = nil, maxPlays: Int? = nil, playPeriod: Int? = nil, rentalPeriod: Int? = nil, activationDate: DateTime? = nil, classification: ClassificationSummary? = nil, creationDate: DateTime? = nil, expirationDate: DateTime? = nil, itemId: String? = nil, itemType: ItemType? = nil, mediaDuration: Int? = nil, playCount: Int? = nil, remainingDownloads: Int? = nil) {
+    public init(
+        deliveryType: DeliveryType, 
+        scopes: [String], 
+        resolution: Resolution, 
+        ownership: Ownership, 
+        exclusionRules: [ExclusionRule]? = nil, 
+        maxDownloads: Int? = nil, 
+        maxPlays: Int? = nil, 
+        playPeriod: Int? = nil, 
+        rentalPeriod: Int? = nil, 
+        activationDate: DateTime? = nil, 
+        classification: ClassificationSummary? = nil, 
+        creationDate: DateTime? = nil, 
+        expirationDate: DateTime? = nil, 
+        itemId: String? = nil, 
+        itemType: ItemType? = nil, 
+        mediaDuration: Int? = nil, 
+        playCount: Int? = nil, 
+        remainingDownloads: Int? = nil
+    ) {
         self.activationDate = activationDate
         self.classification = classification
         self.creationDate = creationDate

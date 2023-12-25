@@ -12,7 +12,10 @@ public class _200Response: APIModel {
 
     public var name: Int?
 
-    public init(`class`: String? = nil, name: Int? = nil) {
+    public init(
+        `class`: String? = nil, 
+        name: Int? = nil
+    ) {
         self.`class` = `class`
         self.name = name
     }

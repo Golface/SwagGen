@@ -19,7 +19,14 @@ public class ContentIdentityCountry: APIModel {
 
     public var showInList: Bool?
 
-    public init(order: Double, contentProvider: ObjectID? = nil, country: ObjectID? = nil, id: ObjectID? = nil, identityProvider: ObjectID? = nil, showInList: Bool? = nil) {
+    public init(
+        order: Double, 
+        contentProvider: ObjectID? = nil, 
+        country: ObjectID? = nil, 
+        id: ObjectID? = nil, 
+        identityProvider: ObjectID? = nil, 
+        showInList: Bool? = nil
+    ) {
         self.order = order
         self.contentProvider = contentProvider
         self.country = country

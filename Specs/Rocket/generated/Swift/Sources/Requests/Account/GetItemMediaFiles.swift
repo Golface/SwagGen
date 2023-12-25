@@ -66,7 +66,15 @@ See the `feature-flags.md` for available flag details.
  */
                 public var ff: [FeatureFlags]?
 
-                public init(id: String, delivery: [MediaFileDelivery], resolution: MediaFileResolution, device: String? = nil, sub: String? = nil, segments: [String]? = nil, ff: [FeatureFlags]? = nil) {
+                public init(
+                    id: String, 
+                    delivery: [MediaFileDelivery], 
+                    resolution: MediaFileResolution, 
+                    device: String? = nil, 
+                    sub: String? = nil, 
+                    segments: [String]? = nil, 
+                    ff: [FeatureFlags]? = nil
+                ) {
                     self.id = id
                     self.delivery = delivery
                     self.resolution = resolution

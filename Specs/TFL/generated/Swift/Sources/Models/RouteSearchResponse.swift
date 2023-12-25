@@ -11,7 +11,10 @@ public class RouteSearchResponse: APIModel {
 
     public var searchMatches: [RouteSearchMatch]?
 
-    public init(input: String? = nil, searchMatches: [RouteSearchMatch]? = nil) {
+    public init(
+        input: String? = nil, 
+        searchMatches: [RouteSearchMatch]? = nil
+    ) {
         self.input = input
         self.searchMatches = searchMatches
     }

@@ -63,6 +63,11 @@ public {{ options.modelType }} {{ type }}: {% if parent %}{{ parent.type }}{% el
     {% if options.nullCodable and options.mutableModels and property.required == false %}@NullCodable{% endif %}
     public {% if options.mutableModels %}var{% else %}let{% endif %} {{ property.name }}: {{ property.optionalType }}
     {% endfor %}
+    {% for property in deprecatedProperties %}
+
+    /// This property is deprecated.
+    /// - `public {% if options.mutableModels %}var{% else %}let{% endif %} {{ property.name }}: {{ property.optionalType }}`
+    {% endfor %}
     {% if additionalPropertiesType %}
 
     public {% if options.mutableModels %}var{% else %}let{% endif %} additionalProperties: [String: {{ additionalPropertiesType }}] = [:]
@@ -72,7 +77,10 @@ public {{ options.modelType }} {{ type }}: {% if parent %}{{ parent.type }}{% el
     {% filter indent:4 %}{% include "Includes/Model.stencil" schema %}{% endfilter %}
     {% endfor %}
 
-    public {% if parent %}{% if properties.count == 0 %}override {% endif %}{% endif %}init({% for property in allProperties %}{{ property.name }}: {{ property.optionalType }}{% ifnot property.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}{% endfor %}) {
+    public {% if parent %}{% if properties.count == 0 %}override {% endif %}{% endif %}init(
+        {% for property in allProperties %}{{ property.name }}: {{ property.optionalType }}{% ifnot property.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
+        {% endfor %}
+    ) {
         {% for property in properties %}
         self.{{ property.name }} = {{ property.name }}
         {% endfor %}

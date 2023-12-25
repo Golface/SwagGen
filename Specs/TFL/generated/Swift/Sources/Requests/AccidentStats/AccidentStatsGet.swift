@@ -19,7 +19,9 @@ extension TFL.AccidentStats {
                 /** The year for which to filter the accidents on. */
                 public var year: Int
 
-                public init(year: Int) {
+                public init(
+                    year: Int
+                ) {
                     self.year = year
                 }
             }

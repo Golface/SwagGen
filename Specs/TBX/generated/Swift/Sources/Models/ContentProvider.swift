@@ -33,7 +33,21 @@ public class ContentProvider: APIModel {
 
     public var whitelistDomains: [String]?
 
-    public init(description: String, shortName: String, active: Bool, apiKey: String, devicesLimit: Double, canLogoutDevice: Bool, canCreateTryAndBuy: Bool? = nil, hasSocialID: Bool? = nil, id: ObjectID? = nil, overrideRules: [OverrideRuleObject]? = nil, permittedURN: [String]? = nil, urlMaintenance: String? = nil, whitelistDomains: [String]? = nil) {
+    public init(
+        description: String, 
+        shortName: String, 
+        active: Bool, 
+        apiKey: String, 
+        devicesLimit: Double, 
+        canLogoutDevice: Bool, 
+        canCreateTryAndBuy: Bool? = nil, 
+        hasSocialID: Bool? = nil, 
+        id: ObjectID? = nil, 
+        overrideRules: [OverrideRuleObject]? = nil, 
+        permittedURN: [String]? = nil, 
+        urlMaintenance: String? = nil, 
+        whitelistDomains: [String]? = nil
+    ) {
         self.description = description
         self.shortName = shortName
         self.active = active

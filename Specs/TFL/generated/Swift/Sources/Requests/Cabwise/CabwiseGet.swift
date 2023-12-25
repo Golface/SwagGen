@@ -46,7 +46,18 @@ extension TFL.Cabwise {
                 /** Twenty Four Seven Only */
                 public var twentyFourSevenOnly: Bool?
 
-                public init(lat: Double, lon: Double, optype: String? = nil, wc: String? = nil, radius: Double? = nil, name: String? = nil, maxResults: Int? = nil, legacyFormat: Bool? = nil, forceXml: Bool? = nil, twentyFourSevenOnly: Bool? = nil) {
+                public init(
+                    lat: Double, 
+                    lon: Double, 
+                    optype: String? = nil, 
+                    wc: String? = nil, 
+                    radius: Double? = nil, 
+                    name: String? = nil, 
+                    maxResults: Int? = nil, 
+                    legacyFormat: Bool? = nil, 
+                    forceXml: Bool? = nil, 
+                    twentyFourSevenOnly: Bool? = nil
+                ) {
                     self.lat = lat
                     self.lon = lon
                     self.optype = optype

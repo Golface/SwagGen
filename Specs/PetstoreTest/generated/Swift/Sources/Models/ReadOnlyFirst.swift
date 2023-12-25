@@ -11,7 +11,10 @@ public class ReadOnlyFirst: APIModel {
 
     public var baz: String?
 
-    public init(bar: String? = nil, baz: String? = nil) {
+    public init(
+        bar: String? = nil, 
+        baz: String? = nil
+    ) {
         self.bar = bar
         self.baz = baz
     }

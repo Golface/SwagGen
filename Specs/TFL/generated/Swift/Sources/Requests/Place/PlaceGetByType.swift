@@ -23,7 +23,10 @@ extension TFL.Place {
                 /** An optional parameter to limit the results to active records only (Currently only the 'VariableMessageSign' place type is supported) */
                 public var activeOnly: Bool?
 
-                public init(types: [String], activeOnly: Bool? = nil) {
+                public init(
+                    types: [String], 
+                    activeOnly: Bool? = nil
+                ) {
                     self.types = types
                     self.activeOnly = activeOnly
                 }

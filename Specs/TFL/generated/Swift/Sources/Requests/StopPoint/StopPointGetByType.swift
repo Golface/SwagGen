@@ -20,7 +20,9 @@ extension TFL.StopPoint {
             A list of valid stop types can be obtained from the StopPoint/meta/stoptypes endpoint. */
                 public var types: [String]
 
-                public init(types: [String]) {
+                public init(
+                    types: [String]
+                ) {
                     self.types = types
                 }
             }

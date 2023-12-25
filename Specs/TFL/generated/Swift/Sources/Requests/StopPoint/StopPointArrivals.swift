@@ -19,7 +19,9 @@ extension TFL.StopPoint {
                 /** A StopPoint id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name) */
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

@@ -10,7 +10,9 @@ public class AppConfigSubscription: APIModel {
     /** The available public plans a user can subscribe to. */
     public var plans: [Plan]?
 
-    public init(plans: [Plan]? = nil) {
+    public init(
+        plans: [Plan]? = nil
+    ) {
         self.plans = plans
     }
 

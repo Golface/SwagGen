@@ -25,7 +25,10 @@ Creates one if it doesn't exist, overwrites one if it does.
                 /** The playhead position to record. */
                 public var position: Int
 
-                public init(itemId: String, position: Int) {
+                public init(
+                    itemId: String, 
+                    position: Int
+                ) {
                     self.itemId = itemId
                     self.position = position
                 }

@@ -22,7 +22,13 @@ public class ModelWithNullableProperties: APIModel {
     /** a not required and nullable property */
     public var notRequiredNullable: String?
 
-    public init(requiredNotNullable: String, requiredNullable: String?, requiredImplicitNotNullable: String, notRequiredNotNullable: String? = nil, notRequiredNullable: String? = nil) {
+    public init(
+        requiredNotNullable: String, 
+        requiredNullable: String?, 
+        requiredImplicitNotNullable: String, 
+        notRequiredNotNullable: String? = nil, 
+        notRequiredNullable: String? = nil
+    ) {
         self.requiredNotNullable = requiredNotNullable
         self.requiredNullable = requiredNullable
         self.requiredImplicitNotNullable = requiredImplicitNotNullable

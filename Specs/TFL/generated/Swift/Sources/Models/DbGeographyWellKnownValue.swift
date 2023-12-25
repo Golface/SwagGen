@@ -13,7 +13,11 @@ public class DbGeographyWellKnownValue: APIModel {
 
     public var wellKnownText: String?
 
-    public init(coordinateSystemId: Int? = nil, wellKnownBinary: File? = nil, wellKnownText: String? = nil) {
+    public init(
+        coordinateSystemId: Int? = nil, 
+        wellKnownBinary: File? = nil, 
+        wellKnownText: String? = nil
+    ) {
         self.coordinateSystemId = coordinateSystemId
         self.wellKnownBinary = wellKnownBinary
         self.wellKnownText = wellKnownText

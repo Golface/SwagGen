@@ -21,7 +21,10 @@ extension PetstoreTest.Pet {
                 /** Pet id to delete */
                 public var petId: Int
 
-                public init(apiKey: String? = nil, petId: Int) {
+                public init(
+                    apiKey: String? = nil, 
+                    petId: Int
+                ) {
                     self.apiKey = apiKey
                     self.petId = petId
                 }

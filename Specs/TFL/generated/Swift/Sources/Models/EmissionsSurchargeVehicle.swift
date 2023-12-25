@@ -25,7 +25,14 @@ public class EmissionsSurchargeVehicle: APIModel {
 
     public var vrm: String?
 
-    public init(colour: String? = nil, compliance: Compliance? = nil, make: String? = nil, model: String? = nil, type: String? = nil, vrm: String? = nil) {
+    public init(
+        colour: String? = nil, 
+        compliance: Compliance? = nil, 
+        make: String? = nil, 
+        model: String? = nil, 
+        type: String? = nil, 
+        vrm: String? = nil
+    ) {
         self.colour = colour
         self.compliance = compliance
         self.make = make

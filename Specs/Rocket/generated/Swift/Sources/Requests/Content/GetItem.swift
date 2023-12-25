@@ -99,7 +99,17 @@ See the `feature-flags.md` for available flag details.
  */
                 public var ff: [FeatureFlags]?
 
-                public init(id: String, maxRating: String? = nil, expand: Expand? = nil, selectSeason: SelectSeason? = nil, useCustomId: Bool? = nil, device: String? = nil, sub: String? = nil, segments: [String]? = nil, ff: [FeatureFlags]? = nil) {
+                public init(
+                    id: String, 
+                    maxRating: String? = nil, 
+                    expand: Expand? = nil, 
+                    selectSeason: SelectSeason? = nil, 
+                    useCustomId: Bool? = nil, 
+                    device: String? = nil, 
+                    sub: String? = nil, 
+                    segments: [String]? = nil, 
+                    ff: [FeatureFlags]? = nil
+                ) {
                     self.id = id
                     self.maxRating = maxRating
                     self.expand = expand

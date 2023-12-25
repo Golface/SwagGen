@@ -30,7 +30,14 @@ extension TFL.Line {
 
                 public var dateRangeEndDate: DateTime?
 
-                public init(ids: [String], detail: Bool? = nil, startDate: String, endDate: String, dateRangeStartDate: DateTime? = nil, dateRangeEndDate: DateTime? = nil) {
+                public init(
+                    ids: [String], 
+                    detail: Bool? = nil, 
+                    startDate: String, 
+                    endDate: String, 
+                    dateRangeStartDate: DateTime? = nil, 
+                    dateRangeEndDate: DateTime? = nil
+                ) {
                     self.ids = ids
                     self.detail = detail
                     self.startDate = startDate

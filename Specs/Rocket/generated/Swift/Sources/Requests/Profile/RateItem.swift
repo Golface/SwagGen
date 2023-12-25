@@ -24,7 +24,10 @@ Creates one if it doesn't exist, overwrites one if it does.
                 /** The item rating between 1 and 10 inclusive. */
                 public var rating: Int
 
-                public init(itemId: String, rating: Int) {
+                public init(
+                    itemId: String, 
+                    rating: Int
+                ) {
                     self.itemId = itemId
                     self.rating = rating
                 }

@@ -22,7 +22,10 @@ extension TFL.Road {
                 /** Optional, The end time to filter on. */
                 public var endDate: DateTime
 
-                public init(startDate: DateTime, endDate: DateTime) {
+                public init(
+                    startDate: DateTime, 
+                    endDate: DateTime
+                ) {
                     self.startDate = startDate
                     self.endDate = endDate
                 }

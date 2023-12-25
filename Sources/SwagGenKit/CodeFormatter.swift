@@ -169,7 +169,9 @@ public class CodeFormatter {
             let optionalPropertiesContext = schema.optionalProperties.map(getPropertyContext)
             context["requiredProperties"] = requiredPropertiesContext
             context["optionalProperties"] = optionalPropertiesContext
-            context["properties"] = requiredPropertiesContext + optionalPropertiesContext
+            let properties = requiredPropertiesContext + optionalPropertiesContext
+            context["properties"] = properties.filter(isDeprecated: false)
+            context["deprecatedProperties"] = properties.filter(isDeprecated: true)
             context["enums"] = schema.enums.map(getEnumContext)
             context["schemas"] = schema.properties.compactMap { property in
                 getInlineSchemaContext(property.schema, name: property.name)
@@ -179,13 +181,15 @@ public class CodeFormatter {
             let inheritedOptionalPropertiesContext = schema.inheritedOptionalProperties.map(getPropertyContext)
             context["requiredProperties"] = inheritedRequiredPropertiesContext
             context["optionalProperties"] = inheritedOptionalPropertiesContext
-            context["properties"] = inheritedRequiredPropertiesContext + inheritedOptionalPropertiesContext
+            let properties = inheritedRequiredPropertiesContext + inheritedOptionalPropertiesContext
+            context["properties"] = properties.filter(isDeprecated: false)
+            context["deprecatedProperties"] = properties.filter(isDeprecated: true)
             context["enums"] = schema.inheritedEnums.map(getEnumContext)
             context["schemas"] = schema.inheritedProperties.compactMap { property in
                 getInlineSchemaContext(property.schema, name: property.name)
             }
         }
-        context["allProperties"] = schema.inheritedProperties.map(getPropertyContext)
+        context["allProperties"] = schema.inheritedProperties.map(getPropertyContext).filter(isDeprecated: false)
 
         // fallback
         context["type"] = getSchemaType(name: "", schema: schema)
@@ -303,10 +307,12 @@ public class CodeFormatter {
             }
         }
         context["requestSchemas"] = requestSchemas
-        context["formProperties"] = formProperties
+        context["formProperties"] = formProperties.filter(isDeprecated: false)
 
         // TODO: separate
-        context["nonBodyParams"] = params.map(getParameterContext) + formProperties // params and form properties
+        let nonBodyParams = params.map(getParameterContext) + formProperties
+        context["nonBodyParams"] = nonBodyParams.filter(isDeprecated: false)
+        context["nonBodyDeprecatedParams"] = nonBodyParams.filter(isDeprecated: true)
 
         let securityRequirements = operation.securityRequirements ?? spec.securityRequirements
         context["securityRequirement"] = securityRequirements?.first.flatMap(getSecurityRequirementContext)
@@ -346,6 +352,8 @@ public class CodeFormatter {
         context["responseSchemas"] = responseSchemas
         context["hasResponseModels"] = !operation.responses.filter { $0.response.value.schema != nil }.isEmpty
 
+        context["deprecated"] = operation.deprecated
+        
         return context
     }
 
@@ -411,6 +419,8 @@ public class CodeFormatter {
             context["type"] = getSchemaType(name: parameter.name, schema: schema.schema)
         }
 
+        context["deprecated"] = parameter.deprecated
+        
         return context
     }
 
@@ -432,7 +442,9 @@ public class CodeFormatter {
         if case .array = property.schema.type {
             context["isArray"] = true
         }
-
+        
+        context["deprecated"] = property.deprecated
+        
         return context
     }
 
@@ -548,4 +560,20 @@ public class CodeFormatter {
     func getEscapedName(_ name: String) -> String {
         return "_\(name)"
     }
+}
+
+// MARK: - Filter Operator
+
+extension [Context] {
+    
+    func filter(isDeprecated: Bool) -> [Element] {
+        filter {
+            guard let deprecated = $0["deprecated"] as? Bool else {
+                return true
+            }
+            
+            return isDeprecated == deprecated
+        }
+    }
+    
 }

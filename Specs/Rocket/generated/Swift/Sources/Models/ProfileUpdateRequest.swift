@@ -21,7 +21,12 @@ If no account pin is defined this has no impact.
     /** The segments a profile should be placed under */
     public var segments: [String]?
 
-    public init(name: String? = nil, pinEnabled: Bool? = nil, purchaseEnabled: Bool? = nil, segments: [String]? = nil) {
+    public init(
+        name: String? = nil, 
+        pinEnabled: Bool? = nil, 
+        purchaseEnabled: Bool? = nil, 
+        segments: [String]? = nil
+    ) {
         self.name = name
         self.pinEnabled = pinEnabled
         self.purchaseEnabled = purchaseEnabled

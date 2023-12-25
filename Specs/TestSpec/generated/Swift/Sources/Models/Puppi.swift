@@ -9,7 +9,11 @@ public class Puppi: Dog {
 
     public var play: Bool?
 
-    public init(animal: String? = nil, barks: Bool? = nil, play: Bool? = nil) {
+    public init(
+        animal: String? = nil, 
+        barks: Bool? = nil, 
+        play: Bool? = nil
+    ) {
         self.play = play
         super.init(animal: animal, barks: barks)
     }

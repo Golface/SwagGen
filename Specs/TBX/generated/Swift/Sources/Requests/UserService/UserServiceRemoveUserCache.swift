@@ -22,7 +22,10 @@ extension TBX.UserService {
                 /** The customer country code */
                 public var country: String
 
-                public init(subscriberId: String, country: String) {
+                public init(
+                    subscriberId: String, 
+                    country: String
+                ) {
                     self.subscriberId = subscriberId
                     self.country = country
                 }
@@ -55,7 +58,9 @@ extension TBX.UserService {
 
                 public var status: Bool?
 
-                public init(status: Bool? = nil) {
+                public init(
+                    status: Bool? = nil
+                ) {
                     self.status = status
                 }
 

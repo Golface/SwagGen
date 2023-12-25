@@ -22,7 +22,14 @@ public class TryAndBuyObject: APIModel {
     /** Date when the last TryAndBuy finished */
     public var lastFinishedTryAndBuy: DateTime?
 
-    public init(active: Bool, createdAt: DateTime, expiration: DateTime, daysWithTryAndBuy: Double, numTryAndBuyExpired: Double, lastFinishedTryAndBuy: DateTime? = nil) {
+    public init(
+        active: Bool, 
+        createdAt: DateTime, 
+        expiration: DateTime, 
+        daysWithTryAndBuy: Double, 
+        numTryAndBuyExpired: Double, 
+        lastFinishedTryAndBuy: DateTime? = nil
+    ) {
         self.active = active
         self.createdAt = createdAt
         self.expiration = expiration

@@ -32,6 +32,9 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
         {% endif %}
         {% endfor %}
 
+        {% if deprecated %}
+        @available(iOS, obsoleted: 10, message: "This API is deprecated.")
+        {% endif %}
         public final class Request: APIRequest<Response> {
             {% for schema in requestSchemas %}
 
@@ -47,8 +50,16 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 {% endif %}
                 public var {{ param.name }}: {{ param.optionalType }}
                 {% endfor %}
+                {% for param in nonBodyDeprecatedParams %}
 
-                public init({% for param in nonBodyParams %}{{param.name}}: {{param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}{% endfor %}) {
+                /// This property is deprecated.
+                /// - `public var {{ param.name }}: {{ param.optionalType }}`
+                {% endfor %}
+
+                public init(
+                    {% for param in nonBodyParams %}{{param.name}}: {{param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
+                    {% endfor %}
+                ) {
                     {% for param in nonBodyParams %}
                     self.{{param.name}} = {{param.name}}
                     {% endfor %}

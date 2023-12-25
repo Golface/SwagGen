@@ -22,7 +22,10 @@ extension TFL.Line {
                 /** A single line id e.g. victoria */
                 public var id: String
 
-                public init(fromStopPointId: String, id: String) {
+                public init(
+                    fromStopPointId: String, 
+                    id: String
+                ) {
                     self.fromStopPointId = fromStopPointId
                     self.id = id
                 }

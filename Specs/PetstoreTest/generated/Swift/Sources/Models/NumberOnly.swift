@@ -9,7 +9,9 @@ public class NumberOnly: APIModel {
 
     public var justNumber: Double?
 
-    public init(justNumber: Double? = nil) {
+    public init(
+        justNumber: Double? = nil
+    ) {
         self.justNumber = justNumber
     }
 

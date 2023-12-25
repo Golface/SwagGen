@@ -13,7 +13,11 @@ public class ApiResponse: APIModel {
 
     public var type: String?
 
-    public init(code: Int? = nil, message: String? = nil, type: String? = nil) {
+    public init(
+        code: Int? = nil, 
+        message: String? = nil, 
+        type: String? = nil
+    ) {
         self.code = code
         self.message = message
         self.type = type

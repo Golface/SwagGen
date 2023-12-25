@@ -13,7 +13,11 @@ public class KnownJourney: APIModel {
 
     public var minute: String?
 
-    public init(hour: String? = nil, intervalId: Int? = nil, minute: String? = nil) {
+    public init(
+        hour: String? = nil, 
+        intervalId: Int? = nil, 
+        minute: String? = nil
+    ) {
         self.hour = hour
         self.intervalId = intervalId
         self.minute = minute

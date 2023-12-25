@@ -19,7 +19,10 @@ extension TBX.DeviceService {
 
                 public var code: String
 
-                public init(apiKey: String, code: String) {
+                public init(
+                    apiKey: String, 
+                    code: String
+                ) {
                     self.apiKey = apiKey
                     self.code = code
                 }

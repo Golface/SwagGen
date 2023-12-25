@@ -25,7 +25,11 @@ extension TFL.Line {
                 /** The destination stations's Naptan code */
                 public var toStopPointId: String
 
-                public init(fromStopPointId: String, id: String, toStopPointId: String) {
+                public init(
+                    fromStopPointId: String, 
+                    id: String, 
+                    toStopPointId: String
+                ) {
                     self.fromStopPointId = fromStopPointId
                     self.id = id
                     self.toStopPointId = toStopPointId

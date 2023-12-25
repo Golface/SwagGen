@@ -13,7 +13,11 @@ public class FaresMode: APIModel {
 
     public var name: String?
 
-    public init(description: String? = nil, id: Int? = nil, name: String? = nil) {
+    public init(
+        description: String? = nil, 
+        id: Int? = nil, 
+        name: String? = nil
+    ) {
         self.description = description
         self.id = id
         self.name = name

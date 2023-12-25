@@ -27,7 +27,18 @@ public class Customer: APIModel {
 
     public var updated: DateTime?
 
-    public init(subscriberID: String, banReason: String? = nil, banned: Bool? = nil, country: ObjectID? = nil, created: DateTime? = nil, hasNotDeviceLimit: Bool? = nil, id: ObjectID? = nil, identityProvider: ObjectID? = nil, lastLogin: DateTime? = nil, updated: DateTime? = nil) {
+    public init(
+        subscriberID: String, 
+        banReason: String? = nil, 
+        banned: Bool? = nil, 
+        country: ObjectID? = nil, 
+        created: DateTime? = nil, 
+        hasNotDeviceLimit: Bool? = nil, 
+        id: ObjectID? = nil, 
+        identityProvider: ObjectID? = nil, 
+        lastLogin: DateTime? = nil, 
+        updated: DateTime? = nil
+    ) {
         self.subscriberID = subscriberID
         self.banReason = banReason
         self.banned = banned

@@ -10,7 +10,9 @@ public class PasswordResetEmailRequest: APIModel {
     /** The email address of the primary account profile to reset the password for. */
     public var email: String
 
-    public init(email: String) {
+    public init(
+        email: String
+    ) {
         self.email = email
     }
 

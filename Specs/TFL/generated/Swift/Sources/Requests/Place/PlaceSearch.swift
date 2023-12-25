@@ -22,7 +22,10 @@ extension TFL.Place {
                 /** A comma-separated list of the types to return. Max. approx 12 types. */
                 public var types: [String]?
 
-                public init(name: String, types: [String]? = nil) {
+                public init(
+                    name: String, 
+                    types: [String]? = nil
+                ) {
                     self.name = name
                     self.types = types
                 }

@@ -9,7 +9,9 @@ public class List: APIModel {
 
     public var _123List: String?
 
-    public init(_123List: String? = nil) {
+    public init(
+        _123List: String? = nil
+    ) {
         self._123List = _123List
     }
 

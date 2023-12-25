@@ -40,7 +40,18 @@ public class RoadCorridor: APIModel {
     /** URL to retrieve this Corridor. */
     public var url: String?
 
-    public init(bounds: String? = nil, displayName: String? = nil, envelope: String? = nil, group: String? = nil, id: String? = nil, statusAggregationEndDate: DateTime? = nil, statusAggregationStartDate: DateTime? = nil, statusSeverity: String? = nil, statusSeverityDescription: String? = nil, url: String? = nil) {
+    public init(
+        bounds: String? = nil, 
+        displayName: String? = nil, 
+        envelope: String? = nil, 
+        group: String? = nil, 
+        id: String? = nil, 
+        statusAggregationEndDate: DateTime? = nil, 
+        statusAggregationStartDate: DateTime? = nil, 
+        statusSeverity: String? = nil, 
+        statusSeverityDescription: String? = nil, 
+        url: String? = nil
+    ) {
         self.bounds = bounds
         self.displayName = displayName
         self.envelope = envelope

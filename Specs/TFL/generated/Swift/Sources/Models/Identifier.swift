@@ -19,7 +19,14 @@ public class Identifier: APIModel {
 
     public var uri: String?
 
-    public init(crowding: Crowding? = nil, fullName: String? = nil, id: String? = nil, name: String? = nil, type: String? = nil, uri: String? = nil) {
+    public init(
+        crowding: Crowding? = nil, 
+        fullName: String? = nil, 
+        id: String? = nil, 
+        name: String? = nil, 
+        type: String? = nil, 
+        uri: String? = nil
+    ) {
         self.crowding = crowding
         self.fullName = fullName
         self.id = id

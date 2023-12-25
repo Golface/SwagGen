@@ -11,7 +11,10 @@ public class StationInterval: APIModel {
 
     public var intervals: [Interval]?
 
-    public init(id: String? = nil, intervals: [Interval]? = nil) {
+    public init(
+        id: String? = nil, 
+        intervals: [Interval]? = nil
+    ) {
         self.id = id
         self.intervals = intervals
     }

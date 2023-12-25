@@ -17,7 +17,13 @@ public class SearchMatch: APIModel {
 
     public var url: String?
 
-    public init(id: String? = nil, lat: Double? = nil, lon: Double? = nil, name: String? = nil, url: String? = nil) {
+    public init(
+        id: String? = nil, 
+        lat: Double? = nil, 
+        lon: Double? = nil, 
+        name: String? = nil, 
+        url: String? = nil
+    ) {
         self.id = id
         self.lat = lat
         self.lon = lon

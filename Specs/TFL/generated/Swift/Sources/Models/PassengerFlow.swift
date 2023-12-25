@@ -13,7 +13,10 @@ public class PassengerFlow: APIModel {
     /** Count of passenger flow towards a platform */
     public var value: Int?
 
-    public init(timeSlice: String? = nil, value: Int? = nil) {
+    public init(
+        timeSlice: String? = nil, 
+        value: Int? = nil
+    ) {
         self.timeSlice = timeSlice
         self.value = value
     }

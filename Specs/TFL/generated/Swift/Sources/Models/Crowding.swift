@@ -13,7 +13,10 @@ public class Crowding: APIModel {
     /** Train Loading on a scale 1-6, 1 being "Very quiet" and 6 being "Exceptionally busy" (static information) */
     public var trainLoadings: [TrainLoading]?
 
-    public init(passengerFlows: [PassengerFlow]? = nil, trainLoadings: [TrainLoading]? = nil) {
+    public init(
+        passengerFlows: [PassengerFlow]? = nil, 
+        trainLoadings: [TrainLoading]? = nil
+    ) {
         self.passengerFlows = passengerFlows
         self.trainLoadings = trainLoadings
     }

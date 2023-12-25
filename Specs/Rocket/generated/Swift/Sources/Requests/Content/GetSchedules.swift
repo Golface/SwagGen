@@ -72,7 +72,16 @@ See the `feature-flags.md` for available flag details.
  */
                 public var ff: [FeatureFlags]?
 
-                public init(channels: [String], date: DateDay, hour: Int, duration: Int, device: String? = nil, sub: String? = nil, segments: [String]? = nil, ff: [FeatureFlags]? = nil) {
+                public init(
+                    channels: [String], 
+                    date: DateDay, 
+                    hour: Int, 
+                    duration: Int, 
+                    device: String? = nil, 
+                    sub: String? = nil, 
+                    segments: [String]? = nil, 
+                    ff: [FeatureFlags]? = nil
+                ) {
                     self.channels = channels
                     self.date = date
                     self.hour = hour

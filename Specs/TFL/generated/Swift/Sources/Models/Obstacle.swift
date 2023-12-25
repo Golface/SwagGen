@@ -15,7 +15,12 @@ public class Obstacle: APIModel {
 
     public var type: String?
 
-    public init(incline: String? = nil, position: String? = nil, stopId: Int? = nil, type: String? = nil) {
+    public init(
+        incline: String? = nil, 
+        position: String? = nil, 
+        stopId: Int? = nil, 
+        type: String? = nil
+    ) {
         self.incline = incline
         self.position = position
         self.stopId = stopId

@@ -15,7 +15,12 @@ public class CarParkOccupancy: APIModel {
 
     public var name: String?
 
-    public init(bays: [Bay]? = nil, carParkDetailsUrl: String? = nil, id: String? = nil, name: String? = nil) {
+    public init(
+        bays: [Bay]? = nil, 
+        carParkDetailsUrl: String? = nil, 
+        id: String? = nil, 
+        name: String? = nil
+    ) {
         self.bays = bays
         self.carParkDetailsUrl = carParkDetailsUrl
         self.id = id

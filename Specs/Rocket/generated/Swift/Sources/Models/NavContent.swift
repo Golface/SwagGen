@@ -18,7 +18,11 @@ e.g wallpaper, poster, hero3x1, logo.
     /** The title of the embedded navigation content. */
     public var title: String?
 
-    public init(imageType: String? = nil, list: ItemList? = nil, title: String? = nil) {
+    public init(
+        imageType: String? = nil, 
+        list: ItemList? = nil, 
+        title: String? = nil
+    ) {
         self.imageType = imageType
         self.list = list
         self.title = title

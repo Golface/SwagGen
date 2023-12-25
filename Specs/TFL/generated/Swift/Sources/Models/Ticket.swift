@@ -23,7 +23,16 @@ public class Ticket: APIModel {
 
     public var ticketType: TicketType?
 
-    public init(cost: String? = nil, description: String? = nil, displayOrder: Int? = nil, messages: [Message]? = nil, mode: String? = nil, passengerType: String? = nil, ticketTime: TicketTime? = nil, ticketType: TicketType? = nil) {
+    public init(
+        cost: String? = nil, 
+        description: String? = nil, 
+        displayOrder: Int? = nil, 
+        messages: [Message]? = nil, 
+        mode: String? = nil, 
+        passengerType: String? = nil, 
+        ticketTime: TicketTime? = nil, 
+        ticketType: TicketType? = nil
+    ) {
         self.cost = cost
         self.description = description
         self.displayOrder = displayOrder

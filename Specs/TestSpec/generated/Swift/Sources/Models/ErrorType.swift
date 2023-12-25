@@ -11,7 +11,10 @@ public class ErrorType: APIModel {
 
     public var message: String
 
-    public init(code: Int, message: String) {
+    public init(
+        code: Int, 
+        message: String
+    ) {
         self.code = code
         self.message = message
     }

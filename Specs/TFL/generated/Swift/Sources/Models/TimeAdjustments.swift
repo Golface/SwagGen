@@ -15,7 +15,12 @@ public class TimeAdjustments: APIModel {
 
     public var latest: TimeAdjustment?
 
-    public init(earlier: TimeAdjustment? = nil, earliest: TimeAdjustment? = nil, later: TimeAdjustment? = nil, latest: TimeAdjustment? = nil) {
+    public init(
+        earlier: TimeAdjustment? = nil, 
+        earliest: TimeAdjustment? = nil, 
+        later: TimeAdjustment? = nil, 
+        latest: TimeAdjustment? = nil
+    ) {
         self.earlier = earlier
         self.earliest = earliest
         self.later = later

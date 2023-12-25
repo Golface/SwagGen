@@ -36,7 +36,15 @@ a page is static or not. Use the `isStatic` property instead.
     /** Key used to lookup a known page. */
     public var key: String?
 
-    public init(id: String, path: String, title: String, template: String, isStatic: Bool, isSystemPage: Bool, key: String? = nil) {
+    public init(
+        id: String, 
+        path: String, 
+        title: String, 
+        template: String, 
+        isStatic: Bool, 
+        isSystemPage: Bool, 
+        key: String? = nil
+    ) {
         self.id = id
         self.path = path
         self.title = title

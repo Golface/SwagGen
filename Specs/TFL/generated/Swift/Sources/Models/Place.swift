@@ -36,7 +36,18 @@ public class Place: APIModel {
     /** The unique location of this resource. */
     public var url: String?
 
-    public init(additionalProperties: [AdditionalProperties]? = nil, children: [Place]? = nil, childrenUrls: [String]? = nil, commonName: String? = nil, distance: Double? = nil, id: String? = nil, lat: Double? = nil, lon: Double? = nil, placeType: String? = nil, url: String? = nil) {
+    public init(
+        additionalProperties: [AdditionalProperties]? = nil, 
+        children: [Place]? = nil, 
+        childrenUrls: [String]? = nil, 
+        commonName: String? = nil, 
+        distance: Double? = nil, 
+        id: String? = nil, 
+        lat: Double? = nil, 
+        lon: Double? = nil, 
+        placeType: String? = nil, 
+        url: String? = nil
+    ) {
         self.additionalProperties = additionalProperties
         self.children = children
         self.childrenUrls = childrenUrls

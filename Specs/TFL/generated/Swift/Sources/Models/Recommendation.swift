@@ -43,7 +43,26 @@ public class Recommendation: APIModel {
 
     public var zones: String?
 
-    public init(cost: String? = nil, discountCard: String? = nil, fareType: String? = nil, gettingYourTicket: [Message]? = nil, id: Int? = nil, keyFeatures: [Message]? = nil, notes: [Message]? = nil, priceComparison: String? = nil, priceDescription: String? = nil, product: String? = nil, productType: String? = nil, rank: Int? = nil, recommendedTopUp: String? = nil, rule: Int? = nil, singleFare: Double? = nil, ticketTime: String? = nil, ticketType: String? = nil, zones: String? = nil) {
+    public init(
+        cost: String? = nil, 
+        discountCard: String? = nil, 
+        fareType: String? = nil, 
+        gettingYourTicket: [Message]? = nil, 
+        id: Int? = nil, 
+        keyFeatures: [Message]? = nil, 
+        notes: [Message]? = nil, 
+        priceComparison: String? = nil, 
+        priceDescription: String? = nil, 
+        product: String? = nil, 
+        productType: String? = nil, 
+        rank: Int? = nil, 
+        recommendedTopUp: String? = nil, 
+        rule: Int? = nil, 
+        singleFare: Double? = nil, 
+        ticketTime: String? = nil, 
+        ticketType: String? = nil, 
+        zones: String? = nil
+    ) {
         self.cost = cost
         self.discountCard = discountCard
         self.fareType = fareType

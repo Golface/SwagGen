@@ -15,7 +15,12 @@ public class FaresSection: APIModel {
 
     public var rows: [FareDetails]?
 
-    public init(header: String? = nil, index: Int? = nil, messages: [Message]? = nil, rows: [FareDetails]? = nil) {
+    public init(
+        header: String? = nil, 
+        index: Int? = nil, 
+        messages: [Message]? = nil, 
+        rows: [FareDetails]? = nil
+    ) {
         self.header = header
         self.index = index
         self.messages = messages

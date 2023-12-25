@@ -16,7 +16,10 @@ public class MapTest: APIModel {
 
     public var mapOfEnumString: [String: MapOfEnumString]?
 
-    public init(mapMapOfString: [String: [String: String]]? = nil, mapOfEnumString: [String: MapOfEnumString]? = nil) {
+    public init(
+        mapMapOfString: [String: [String: String]]? = nil, 
+        mapOfEnumString: [String: MapOfEnumString]? = nil
+    ) {
         self.mapMapOfString = mapMapOfString
         self.mapOfEnumString = mapOfEnumString
     }

@@ -19,7 +19,9 @@ extension TBX.UserService {
                 /** The customer ID */
                 public var customer: String
 
-                public init(customer: String) {
+                public init(
+                    customer: String
+                ) {
                     self.customer = customer
                 }
             }

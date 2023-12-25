@@ -22,7 +22,10 @@ extension PetstoreTest.User {
                 /** The password for login in clear text */
                 public var password: String
 
-                public init(username: String, password: String) {
+                public init(
+                    username: String, 
+                    password: String
+                ) {
                     self.username = username
                     self.password = password
                 }

@@ -22,7 +22,13 @@ public class PaginationOptions: APIModel {
     /** The number of items to return in a list page. */
     public var pageSize: Int?
 
-    public init(itemType: ItemType? = nil, maxRating: String? = nil, order: ListOrder? = nil, orderBy: ListOrderBy? = nil, pageSize: Int? = nil) {
+    public init(
+        itemType: ItemType? = nil, 
+        maxRating: String? = nil, 
+        order: ListOrder? = nil, 
+        orderBy: ListOrderBy? = nil, 
+        pageSize: Int? = nil
+    ) {
         self.itemType = itemType
         self.maxRating = maxRating
         self.order = order

@@ -23,7 +23,9 @@ extension PetstoreTest.Pet {
                 /** ID of pet to return */
                 public var petId: Int
 
-                public init(petId: Int) {
+                public init(
+                    petId: Int
+                ) {
                     self.petId = petId
                 }
             }

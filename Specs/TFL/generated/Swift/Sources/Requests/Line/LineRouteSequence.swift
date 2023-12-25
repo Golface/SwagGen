@@ -41,7 +41,12 @@ extension TFL.Line {
                 /** That excludes crowding from line disruptions. Can be true or false. */
                 public var excludeCrowding: Bool?
 
-                public init(id: String, direction: Direction, serviceTypes: [ServiceTypes]? = nil, excludeCrowding: Bool? = nil) {
+                public init(
+                    id: String, 
+                    direction: Direction, 
+                    serviceTypes: [ServiceTypes]? = nil, 
+                    excludeCrowding: Bool? = nil
+                ) {
                     self.id = id
                     self.direction = direction
                     self.serviceTypes = serviceTypes

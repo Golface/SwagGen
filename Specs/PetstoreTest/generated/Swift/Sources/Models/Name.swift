@@ -16,7 +16,12 @@ public class Name: APIModel {
 
     public var snakeCase: Int?
 
-    public init(name: Int, _123Number: Int? = nil, property: String? = nil, snakeCase: Int? = nil) {
+    public init(
+        name: Int, 
+        _123Number: Int? = nil, 
+        property: String? = nil, 
+        snakeCase: Int? = nil
+    ) {
         self.name = name
         self._123Number = _123Number
         self.property = property

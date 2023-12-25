@@ -13,7 +13,10 @@ public class Person: APIModel {
     /** The path to the person */
     public var path: String
 
-    public init(name: String, path: String) {
+    public init(
+        name: String, 
+        path: String
+    ) {
         self.name = name
         self.path = path
     }

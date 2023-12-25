@@ -19,7 +19,9 @@ extension TBX.UserService {
                 /** The token id */
                 public var token: String
 
-                public init(token: String) {
+                public init(
+                    token: String
+                ) {
                     self.token = token
                 }
             }

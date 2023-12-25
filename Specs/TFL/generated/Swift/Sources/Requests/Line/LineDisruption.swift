@@ -19,7 +19,9 @@ extension TFL.Line {
                 /** A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids. */
                 public var ids: [String]
 
-                public init(ids: [String]) {
+                public init(
+                    ids: [String]
+                ) {
                     self.ids = ids
                 }
             }

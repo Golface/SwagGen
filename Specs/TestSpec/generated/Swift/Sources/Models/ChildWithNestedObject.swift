@@ -13,7 +13,9 @@ public class ChildWithNestedObject: User {
 
         public var value: String?
 
-        public init(value: String? = nil) {
+        public init(
+            value: String? = nil
+        ) {
             self.value = value
         }
 
@@ -40,7 +42,11 @@ public class ChildWithNestedObject: User {
         }
     }
 
-    public init(id: Int? = nil, name: String? = nil, data: DataType? = nil) {
+    public init(
+        id: Int? = nil, 
+        name: String? = nil, 
+        data: DataType? = nil
+    ) {
         self.data = data
         super.init(id: id, name: name)
     }

@@ -50,7 +50,16 @@ See the `feature-flags.md` for available flag details.
  */
                 public var ff: [FeatureFlags]?
 
-                public init(page: Int? = nil, pageSize: Int? = nil, order: ListOrder? = nil, itemType: ItemType? = nil, device: String? = nil, sub: String? = nil, segments: [String]? = nil, ff: [FeatureFlags]? = nil) {
+                public init(
+                    page: Int? = nil, 
+                    pageSize: Int? = nil, 
+                    order: ListOrder? = nil, 
+                    itemType: ItemType? = nil, 
+                    device: String? = nil, 
+                    sub: String? = nil, 
+                    segments: [String]? = nil, 
+                    ff: [FeatureFlags]? = nil
+                ) {
                     self.page = page
                     self.pageSize = pageSize
                     self.order = order

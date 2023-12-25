@@ -21,7 +21,11 @@ extension TBX.DeviceService {
 
                 public var userToken: String
 
-                public init(apiKey: String, code: String, userToken: String) {
+                public init(
+                    apiKey: String, 
+                    code: String, 
+                    userToken: String
+                ) {
                     self.apiKey = apiKey
                     self.code = code
                     self.userToken = userToken

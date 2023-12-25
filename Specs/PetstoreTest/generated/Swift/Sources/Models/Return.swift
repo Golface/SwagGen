@@ -10,7 +10,9 @@ public class Return: APIModel {
 
     public var `return`: Int?
 
-    public init(`return`: Int? = nil) {
+    public init(
+        `return`: Int? = nil
+    ) {
         self.`return` = `return`
     }
 

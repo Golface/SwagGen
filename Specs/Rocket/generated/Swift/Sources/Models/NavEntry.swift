@@ -30,7 +30,14 @@ If the value begins with `http` then it's an external url.
  */
     public var path: String?
 
-    public init(children: [NavEntry]? = nil, content: NavContent? = nil, customFields: [String: Any]? = nil, featured: Bool? = nil, label: String? = nil, path: String? = nil) {
+    public init(
+        children: [NavEntry]? = nil, 
+        content: NavContent? = nil, 
+        customFields: [String: Any]? = nil, 
+        featured: Bool? = nil, 
+        label: String? = nil, 
+        path: String? = nil
+    ) {
         self.children = children
         self.content = content
         self.customFields = customFields

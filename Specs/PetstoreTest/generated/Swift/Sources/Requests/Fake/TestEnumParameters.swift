@@ -91,7 +91,16 @@ extension PetstoreTest.Fake {
                 /** Query parameter enum test (double) */
                 public var enumQueryDouble: EnumQueryDouble?
 
-                public init(enumHeaderStringArray: [EnumHeaderStringArray]? = nil, enumHeaderString: EnumHeaderString? = nil, enumQueryStringArray: [EnumQueryStringArray]? = nil, enumQueryString: EnumQueryString? = nil, enumQueryInteger: EnumQueryInteger? = nil, enumFormString: EnumFormString? = nil, enumFormStringArray: [EnumFormStringArray]? = nil, enumQueryDouble: EnumQueryDouble? = nil) {
+                public init(
+                    enumHeaderStringArray: [EnumHeaderStringArray]? = nil, 
+                    enumHeaderString: EnumHeaderString? = nil, 
+                    enumQueryStringArray: [EnumQueryStringArray]? = nil, 
+                    enumQueryString: EnumQueryString? = nil, 
+                    enumQueryInteger: EnumQueryInteger? = nil, 
+                    enumFormString: EnumFormString? = nil, 
+                    enumFormStringArray: [EnumFormStringArray]? = nil, 
+                    enumQueryDouble: EnumQueryDouble? = nil
+                ) {
                     self.enumHeaderStringArray = enumHeaderStringArray
                     self.enumHeaderString = enumHeaderString
                     self.enumQueryStringArray = enumQueryStringArray

@@ -25,7 +25,17 @@ public class RouteSequence: APIModel {
 
     public var stopPointSequences: [StopPointSequence]?
 
-    public init(direction: String? = nil, isOutboundOnly: Bool? = nil, lineId: String? = nil, lineName: String? = nil, lineStrings: [String]? = nil, mode: String? = nil, orderedLineRoutes: [OrderedRoute]? = nil, stations: [MatchedStop]? = nil, stopPointSequences: [StopPointSequence]? = nil) {
+    public init(
+        direction: String? = nil, 
+        isOutboundOnly: Bool? = nil, 
+        lineId: String? = nil, 
+        lineName: String? = nil, 
+        lineStrings: [String]? = nil, 
+        mode: String? = nil, 
+        orderedLineRoutes: [OrderedRoute]? = nil, 
+        stations: [MatchedStop]? = nil, 
+        stopPointSequences: [StopPointSequence]? = nil
+    ) {
         self.direction = direction
         self.isOutboundOnly = isOutboundOnly
         self.lineId = lineId

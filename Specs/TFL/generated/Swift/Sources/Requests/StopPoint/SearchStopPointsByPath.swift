@@ -35,7 +35,14 @@ extension TFL.StopPoint {
                 /** If true, returns results including HUBs. */
                 public var includeHubs: Bool?
 
-                public init(query: String, modes: [String]? = nil, faresOnly: Bool? = nil, maxResults: Int? = nil, lines: [String]? = nil, includeHubs: Bool? = nil) {
+                public init(
+                    query: String, 
+                    modes: [String]? = nil, 
+                    faresOnly: Bool? = nil, 
+                    maxResults: Int? = nil, 
+                    lines: [String]? = nil, 
+                    includeHubs: Bool? = nil
+                ) {
                     self.query = query
                     self.modes = modes
                     self.faresOnly = faresOnly

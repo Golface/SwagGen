@@ -47,7 +47,28 @@ public class MatchedStop: APIModel {
 
     public var zone: String?
 
-    public init(accessibilitySummary: String? = nil, direction: String? = nil, hasDisruption: Bool? = nil, icsId: String? = nil, id: String? = nil, lat: Double? = nil, lines: [Identifier]? = nil, lon: Double? = nil, modes: [String]? = nil, name: String? = nil, parentId: String? = nil, routeId: Int? = nil, stationId: String? = nil, status: Bool? = nil, stopLetter: String? = nil, stopType: String? = nil, topMostParentId: String? = nil, towards: String? = nil, url: String? = nil, zone: String? = nil) {
+    public init(
+        accessibilitySummary: String? = nil, 
+        direction: String? = nil, 
+        hasDisruption: Bool? = nil, 
+        icsId: String? = nil, 
+        id: String? = nil, 
+        lat: Double? = nil, 
+        lines: [Identifier]? = nil, 
+        lon: Double? = nil, 
+        modes: [String]? = nil, 
+        name: String? = nil, 
+        parentId: String? = nil, 
+        routeId: Int? = nil, 
+        stationId: String? = nil, 
+        status: Bool? = nil, 
+        stopLetter: String? = nil, 
+        stopType: String? = nil, 
+        topMostParentId: String? = nil, 
+        towards: String? = nil, 
+        url: String? = nil, 
+        zone: String? = nil
+    ) {
         self.accessibilitySummary = accessibilitySummary
         self.direction = direction
         self.hasDisruption = hasDisruption

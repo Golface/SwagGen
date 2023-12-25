@@ -23,7 +23,9 @@ extension PetstoreTest.Store {
                 /** ID of the order that needs to be deleted */
                 public var orderId: String
 
-                public init(orderId: String) {
+                public init(
+                    orderId: String
+                ) {
                     self.orderId = orderId
                 }
             }

@@ -13,7 +13,10 @@ public class Bookmark: APIModel {
     /** The date the bookmark was created. */
     public var creationDate: DateTime
 
-    public init(itemId: String, creationDate: DateTime) {
+    public init(
+        itemId: String, 
+        creationDate: DateTime
+    ) {
         self.itemId = itemId
         self.creationDate = creationDate
     }
