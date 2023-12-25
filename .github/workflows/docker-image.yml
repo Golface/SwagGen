@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build-contexts:
+        build-arg:
           - SWIFT_IMAGE=swift:5.9-jammy
           - SWIFT_IMAGE=arm64v8/swift:5.9-jammy
         platform:
@@ -57,7 +57,7 @@ jobs:
         with:
           context: .
           platforms: ${{ matrix.platform }}
-          build-contexts: ${{ matrix.build-contexts }}
+          build-arg: ${{ matrix.build-arg }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
