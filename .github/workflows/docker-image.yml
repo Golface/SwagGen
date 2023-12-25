@@ -17,12 +17,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build-arg:
-          - SWIFT_IMAGE=swift:5.9-jammy
-          - SWIFT_IMAGE=arm64v8/swift:5.9-jammy
-        platform:
-          - linux/amd64
-          - linux/arm64
+        items:
+          - build-arg: SWIFT_IMAGE=swift:5.9-jammy
+            platform: linux/amd64
+          - build-arg: SWIFT_IMAGE=arm64v8/swift:5.9-jammy
+            platform: linux/arm64
 
     permissions:
       contents: read
@@ -56,8 +55,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: ${{ matrix.platform }}
-          build-arg: ${{ matrix.build-arg }}
+          platforms: ${{ matrix.items.platform }}
+          build-arg: ${{ matrix.items.build-arg }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -69,7 +68,6 @@ jobs:
           channel-id: ${{ env.CHANNEL_ID }}
           payload: |
             {
-              "text": "Build and push Docker image succeeded",
               "blocks": [
                 {
                   "type": "header",
