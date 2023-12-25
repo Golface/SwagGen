@@ -18,9 +18,9 @@ jobs:
       fail-fast: false
       matrix:
         items:
-          - build-args: SWIFT_IMAGE=swift:5.9-jammy
+          - file: docker/5.9/amd64/Dockerfile
             platform: linux/amd64
-          - build-args: SWIFT_IMAGE=swift:5.9-jammy
+          - file: docker/5.9/arm64/Dockerfile
             platform: linux/arm64
 
     permissions:
@@ -56,7 +56,7 @@ jobs:
         with:
           context: .
           platforms: ${{ matrix.items.platform }}
-          build-args: ${{ matrix.items.build-args }}
+          file: ${{ matrix.items.file }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
