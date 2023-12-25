@@ -56,7 +56,7 @@ jobs:
         with:
           context: .
           platforms: ${{ matrix.items.platform }}
-          build-arg: ${{ matrix.items.build-arg }}
+          build-args: ${{ matrix.items.build-arg }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
