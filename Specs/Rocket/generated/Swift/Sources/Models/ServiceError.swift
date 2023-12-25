@@ -13,7 +13,10 @@ public class ServiceError: APIModel {
     /** An optional code classifying the error. Should be taken in the context of the http status code. */
     public var code: Int?
 
-    public init(message: String, code: Int? = nil) {
+    public init(
+        message: String, 
+        code: Int? = nil
+    ) {
         self.message = message
         self.code = code
     }

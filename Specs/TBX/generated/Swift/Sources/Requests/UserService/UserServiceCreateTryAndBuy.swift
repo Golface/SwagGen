@@ -25,7 +25,11 @@ extension TBX.UserService {
                 /** Only to this device */
                 public var device: String?
 
-                public init(customer: String, days: Double, device: String? = nil) {
+                public init(
+                    customer: String, 
+                    days: Double, 
+                    device: String? = nil
+                ) {
                     self.customer = customer
                     self.days = days
                     self.device = device

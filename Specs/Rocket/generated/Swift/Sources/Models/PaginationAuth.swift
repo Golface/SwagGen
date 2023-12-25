@@ -26,7 +26,10 @@ public class PaginationAuth: APIModel {
     /** The token scope required. */
     public var scope: Scope
 
-    public init(type: `Type`, scope: Scope) {
+    public init(
+        type: `Type`, 
+        scope: Scope
+    ) {
         self.type = type
         self.scope = scope
     }

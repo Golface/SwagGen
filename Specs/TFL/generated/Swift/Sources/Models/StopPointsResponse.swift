@@ -23,7 +23,13 @@ public class StopPointsResponse: APIModel {
     /** The total number of StopPoints available across all pages */
     public var total: Int?
 
-    public init(centrePoint: [Double]? = nil, page: Int? = nil, pageSize: Int? = nil, stopPoints: [StopPoint]? = nil, total: Int? = nil) {
+    public init(
+        centrePoint: [Double]? = nil, 
+        page: Int? = nil, 
+        pageSize: Int? = nil, 
+        stopPoints: [StopPoint]? = nil, 
+        total: Int? = nil
+    ) {
         self.centrePoint = centrePoint
         self.page = page
         self.pageSize = pageSize

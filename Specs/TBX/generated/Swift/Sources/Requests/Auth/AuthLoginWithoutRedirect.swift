@@ -24,7 +24,12 @@ extension TBX.Auth {
 
                 public var token: String?
 
-                public init(cp: String, idp: String, country: String? = nil, token: String? = nil) {
+                public init(
+                    cp: String, 
+                    idp: String, 
+                    country: String? = nil, 
+                    token: String? = nil
+                ) {
                     self.cp = cp
                     self.idp = idp
                     self.country = country

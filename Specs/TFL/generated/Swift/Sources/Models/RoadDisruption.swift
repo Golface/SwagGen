@@ -113,7 +113,39 @@ public class RoadDisruption: APIModel {
     /** URL to retrieve this road disruption */
     public var url: String?
 
-    public init(category: String? = nil, comments: String? = nil, corridorIds: [String]? = nil, currentUpdate: String? = nil, currentUpdateDateTime: DateTime? = nil, endDateTime: DateTime? = nil, geography: DbGeography? = nil, geometry: DbGeography? = nil, hasClosures: Bool? = nil, id: String? = nil, isProvisional: Bool? = nil, lastModifiedTime: DateTime? = nil, levelOfInterest: String? = nil, linkText: String? = nil, linkUrl: String? = nil, location: String? = nil, ordinal: Int? = nil, point: String? = nil, publishEndDate: DateTime? = nil, publishStartDate: DateTime? = nil, recurringSchedules: [RoadDisruptionSchedule]? = nil, roadDisruptionImpactAreas: [RoadDisruptionImpactArea]? = nil, roadDisruptionLines: [RoadDisruptionLine]? = nil, roadProject: RoadProject? = nil, severity: String? = nil, startDateTime: DateTime? = nil, status: String? = nil, streets: [Street]? = nil, subCategory: String? = nil, timeFrame: String? = nil, url: String? = nil) {
+    public init(
+        category: String? = nil, 
+        comments: String? = nil, 
+        corridorIds: [String]? = nil, 
+        currentUpdate: String? = nil, 
+        currentUpdateDateTime: DateTime? = nil, 
+        endDateTime: DateTime? = nil, 
+        geography: DbGeography? = nil, 
+        geometry: DbGeography? = nil, 
+        hasClosures: Bool? = nil, 
+        id: String? = nil, 
+        isProvisional: Bool? = nil, 
+        lastModifiedTime: DateTime? = nil, 
+        levelOfInterest: String? = nil, 
+        linkText: String? = nil, 
+        linkUrl: String? = nil, 
+        location: String? = nil, 
+        ordinal: Int? = nil, 
+        point: String? = nil, 
+        publishEndDate: DateTime? = nil, 
+        publishStartDate: DateTime? = nil, 
+        recurringSchedules: [RoadDisruptionSchedule]? = nil, 
+        roadDisruptionImpactAreas: [RoadDisruptionImpactArea]? = nil, 
+        roadDisruptionLines: [RoadDisruptionLine]? = nil, 
+        roadProject: RoadProject? = nil, 
+        severity: String? = nil, 
+        startDateTime: DateTime? = nil, 
+        status: String? = nil, 
+        streets: [Street]? = nil, 
+        subCategory: String? = nil, 
+        timeFrame: String? = nil, 
+        url: String? = nil
+    ) {
         self.category = category
         self.comments = comments
         self.corridorIds = corridorIds

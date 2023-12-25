@@ -19,7 +19,9 @@ extension TFL.Vehicle {
                 /** A comma-separated list of vehicle ids e.g. LX58CFV,LX11AZB,LX58CFE. Max approx. 25 ids. */
                 public var ids: [String]
 
-                public init(ids: [String]) {
+                public init(
+                    ids: [String]
+                ) {
                     self.ids = ids
                 }
             }

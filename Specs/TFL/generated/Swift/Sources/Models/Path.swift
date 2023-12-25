@@ -13,7 +13,11 @@ public class Path: APIModel {
 
     public var stopPoints: [Identifier]?
 
-    public init(elevation: [JpElevation]? = nil, lineString: String? = nil, stopPoints: [Identifier]? = nil) {
+    public init(
+        elevation: [JpElevation]? = nil, 
+        lineString: String? = nil, 
+        stopPoints: [Identifier]? = nil
+    ) {
         self.elevation = elevation
         self.lineString = lineString
         self.stopPoints = stopPoints

@@ -23,7 +23,11 @@ public class ProfileTokenRequest: APIModel {
     /** The pin associated with this profile, if any. */
     public var pin: String?
 
-    public init(profileId: String, scopes: [Scopes], pin: String? = nil) {
+    public init(
+        profileId: String, 
+        scopes: [Scopes], 
+        pin: String? = nil
+    ) {
         self.profileId = profileId
         self.scopes = scopes
         self.pin = pin

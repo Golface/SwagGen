@@ -11,7 +11,10 @@ public class Category: APIModel {
 
     public var name: String?
 
-    public init(id: Int? = nil, name: String? = nil) {
+    public init(
+        id: Int? = nil, 
+        name: String? = nil
+    ) {
         self.id = id
         self.name = name
     }

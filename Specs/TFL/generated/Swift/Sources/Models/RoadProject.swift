@@ -50,7 +50,25 @@ public class RoadProject: APIModel {
 
     public var schemeName: String?
 
-    public init(boroughsBenefited: [String]? = nil, constructionEndDate: DateTime? = nil, constructionStartDate: DateTime? = nil, consultationEndDate: DateTime? = nil, consultationPageUrl: String? = nil, consultationStartDate: DateTime? = nil, contactEmail: String? = nil, contactName: String? = nil, cycleSuperhighwayId: String? = nil, externalPageUrl: String? = nil, phase: Phase? = nil, projectDescription: String? = nil, projectId: String? = nil, projectName: String? = nil, projectPageUrl: String? = nil, projectSummaryPageUrl: String? = nil, schemeName: String? = nil) {
+    public init(
+        boroughsBenefited: [String]? = nil, 
+        constructionEndDate: DateTime? = nil, 
+        constructionStartDate: DateTime? = nil, 
+        consultationEndDate: DateTime? = nil, 
+        consultationPageUrl: String? = nil, 
+        consultationStartDate: DateTime? = nil, 
+        contactEmail: String? = nil, 
+        contactName: String? = nil, 
+        cycleSuperhighwayId: String? = nil, 
+        externalPageUrl: String? = nil, 
+        phase: Phase? = nil, 
+        projectDescription: String? = nil, 
+        projectId: String? = nil, 
+        projectName: String? = nil, 
+        projectPageUrl: String? = nil, 
+        projectSummaryPageUrl: String? = nil, 
+        schemeName: String? = nil
+    ) {
         self.boroughsBenefited = boroughsBenefited
         self.constructionEndDate = constructionEndDate
         self.constructionStartDate = constructionStartDate

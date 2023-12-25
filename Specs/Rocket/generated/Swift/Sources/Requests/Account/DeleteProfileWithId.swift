@@ -21,7 +21,9 @@ Note that you cannot delete the primary profile.
                 /** The identifier of the profile to delete. */
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

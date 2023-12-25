@@ -13,7 +13,11 @@ public class Pet: APIModel {
 
     public var tag: String?
 
-    public init(id: Int, name: String, tag: String? = nil) {
+    public init(
+        id: Int, 
+        name: String, 
+        tag: String? = nil
+    ) {
         self.id = id
         self.name = name
         self.tag = tag

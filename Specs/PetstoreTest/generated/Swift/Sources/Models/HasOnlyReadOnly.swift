@@ -11,7 +11,10 @@ public class HasOnlyReadOnly: APIModel {
 
     public var foo: String?
 
-    public init(bar: String? = nil, foo: String? = nil) {
+    public init(
+        bar: String? = nil, 
+        foo: String? = nil
+    ) {
         self.bar = bar
         self.foo = foo
     }

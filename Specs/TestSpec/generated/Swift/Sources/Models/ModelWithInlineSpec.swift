@@ -16,7 +16,9 @@ public class ModelWithInlineSpec: APIModel {
         /** name of the model */
         public var name: String?
 
-        public init(name: String? = nil) {
+        public init(
+            name: String? = nil
+        ) {
             self.name = name
         }
 
@@ -43,7 +45,9 @@ public class ModelWithInlineSpec: APIModel {
         }
     }
 
-    public init(myModel: MyModel? = nil) {
+    public init(
+        myModel: MyModel? = nil
+    ) {
         self.myModel = myModel
     }
 

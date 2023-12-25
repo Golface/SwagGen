@@ -40,7 +40,16 @@ extension TBX.AuthorizationService {
                 /** Priority Order */
                 public var priority: Double?
 
-                public init(urn: String, response: Bool, action: String? = nil, country: String? = nil, dateFrom: DateTime? = nil, dateUntil: DateTime? = nil, idp: String? = nil, priority: Double? = nil) {
+                public init(
+                    urn: String, 
+                    response: Bool, 
+                    action: String? = nil, 
+                    country: String? = nil, 
+                    dateFrom: DateTime? = nil, 
+                    dateUntil: DateTime? = nil, 
+                    idp: String? = nil, 
+                    priority: Double? = nil
+                ) {
                     self.urn = urn
                     self.response = response
                     self.action = action

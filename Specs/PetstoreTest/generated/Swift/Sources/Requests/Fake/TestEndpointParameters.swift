@@ -62,7 +62,22 @@ extension PetstoreTest.Fake {
                 /** None */
                 public var string: String?
 
-                public init(number: Double, double: Double, patternWithoutDelimiter: String, byte: File, binary: File? = nil, callback: String? = nil, date: DateDay? = nil, dateTime: DateTime? = nil, float: Float? = nil, int32: Int? = nil, int64: Int? = nil, integer: Int? = nil, password: String? = nil, string: String? = nil) {
+                public init(
+                    number: Double, 
+                    double: Double, 
+                    patternWithoutDelimiter: String, 
+                    byte: File, 
+                    binary: File? = nil, 
+                    callback: String? = nil, 
+                    date: DateDay? = nil, 
+                    dateTime: DateTime? = nil, 
+                    float: Float? = nil, 
+                    int32: Int? = nil, 
+                    int64: Int? = nil, 
+                    integer: Int? = nil, 
+                    password: String? = nil, 
+                    string: String? = nil
+                ) {
                     self.number = number
                     self.double = double
                     self.patternWithoutDelimiter = patternWithoutDelimiter

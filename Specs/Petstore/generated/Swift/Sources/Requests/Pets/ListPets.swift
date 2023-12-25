@@ -19,7 +19,9 @@ extension Petstore.Pets {
                 /** How many items to return at one time (max 100) */
                 public var limit: Int?
 
-                public init(limit: Int? = nil) {
+                public init(
+                    limit: Int? = nil
+                ) {
                     self.limit = limit
                 }
             }

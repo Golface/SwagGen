@@ -33,7 +33,10 @@ If undefined no cookies will be set.
  */
     public var cookieType: CookieType?
 
-    public init(token: String, cookieType: CookieType? = nil) {
+    public init(
+        token: String, 
+        cookieType: CookieType? = nil
+    ) {
         self.token = token
         self.cookieType = cookieType
     }

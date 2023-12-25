@@ -13,7 +13,11 @@ public class AccidentStatsOrderedSummary: APIModel {
 
     public var year: Int?
 
-    public init(accidents: Int? = nil, borough: String? = nil, year: Int? = nil) {
+    public init(
+        accidents: Int? = nil, 
+        borough: String? = nil, 
+        year: Int? = nil
+    ) {
         self.accidents = accidents
         self.borough = borough
         self.year = year

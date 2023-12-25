@@ -15,7 +15,12 @@ public class GeoPointBBox: APIModel {
 
     public var neLon: Double
 
-    public init(swLat: Double, swLon: Double, neLat: Double, neLon: Double) {
+    public init(
+        swLat: Double, 
+        swLon: Double, 
+        neLat: Double, 
+        neLon: Double
+    ) {
         self.swLat = swLat
         self.swLon = swLon
         self.neLat = neLat

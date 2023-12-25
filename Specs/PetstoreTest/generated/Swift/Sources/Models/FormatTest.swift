@@ -33,7 +33,21 @@ public class FormatTest: APIModel {
 
     public var uuid: ID?
 
-    public init(number: Double, byte: File, date: DateDay, password: String, binary: File? = nil, dateTime: DateTime? = nil, double: Double? = nil, float: Float? = nil, int32: Int? = nil, int64: Int? = nil, integer: Int? = nil, string: String? = nil, uuid: ID? = nil) {
+    public init(
+        number: Double, 
+        byte: File, 
+        date: DateDay, 
+        password: String, 
+        binary: File? = nil, 
+        dateTime: DateTime? = nil, 
+        double: Double? = nil, 
+        float: Float? = nil, 
+        int32: Int? = nil, 
+        int64: Int? = nil, 
+        integer: Int? = nil, 
+        string: String? = nil, 
+        uuid: ID? = nil
+    ) {
         self.number = number
         self.byte = byte
         self.date = date

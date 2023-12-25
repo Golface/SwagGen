@@ -9,7 +9,9 @@ public class PostcodeInput: APIModel {
 
     public var postcode: String?
 
-    public init(postcode: String? = nil) {
+    public init(
+        postcode: String? = nil
+    ) {
         self.postcode = postcode
     }
 

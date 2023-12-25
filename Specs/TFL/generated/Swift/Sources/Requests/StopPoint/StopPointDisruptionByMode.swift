@@ -21,7 +21,10 @@ extension TFL.StopPoint {
 
                 public var includeRouteBlockedStops: Bool?
 
-                public init(modes: [String], includeRouteBlockedStops: Bool? = nil) {
+                public init(
+                    modes: [String], 
+                    includeRouteBlockedStops: Bool? = nil
+                ) {
                     self.modes = modes
                     self.includeRouteBlockedStops = includeRouteBlockedStops
                 }

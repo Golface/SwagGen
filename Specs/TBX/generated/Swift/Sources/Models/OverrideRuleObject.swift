@@ -27,7 +27,16 @@ public class OverrideRuleObject: APIModel {
     /** List of IDPs to override */
     public var idp: [String]?
 
-    public init(urn: [String], response: Bool, priority: Double, action: [String]? = nil, country: [String]? = nil, dateFrom: DateTime? = nil, dateUntil: DateTime? = nil, idp: [String]? = nil) {
+    public init(
+        urn: [String], 
+        response: Bool, 
+        priority: Double, 
+        action: [String]? = nil, 
+        country: [String]? = nil, 
+        dateFrom: DateTime? = nil, 
+        dateUntil: DateTime? = nil, 
+        idp: [String]? = nil
+    ) {
         self.urn = urn
         self.response = response
         self.priority = priority

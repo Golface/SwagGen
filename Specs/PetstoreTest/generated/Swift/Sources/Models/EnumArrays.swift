@@ -21,7 +21,10 @@ public class EnumArrays: APIModel {
 
     public var justSymbol: JustSymbol?
 
-    public init(arrayEnum: [ArrayEnum]? = nil, justSymbol: JustSymbol? = nil) {
+    public init(
+        arrayEnum: [ArrayEnum]? = nil, 
+        justSymbol: JustSymbol? = nil
+    ) {
         self.arrayEnum = arrayEnum
         self.justSymbol = justSymbol
     }

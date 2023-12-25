@@ -9,7 +9,9 @@ public class ResponseError: APIModel {
 
     public var error: ErrorObject
 
-    public init(error: ErrorObject) {
+    public init(
+        error: ErrorObject
+    ) {
         self.error = error
     }
 

@@ -20,7 +20,14 @@ public class AppConfig: APIModel {
 
     public var subscription: AppConfigSubscription?
 
-    public init(classification: [String: Classification]? = nil, general: AppConfigGeneral? = nil, navigation: Navigation? = nil, playback: AppConfigPlayback? = nil, sitemap: [PageSummary]? = nil, subscription: AppConfigSubscription? = nil) {
+    public init(
+        classification: [String: Classification]? = nil, 
+        general: AppConfigGeneral? = nil, 
+        navigation: Navigation? = nil, 
+        playback: AppConfigPlayback? = nil, 
+        sitemap: [PageSummary]? = nil, 
+        subscription: AppConfigSubscription? = nil
+    ) {
         self.classification = classification
         self.general = general
         self.navigation = navigation

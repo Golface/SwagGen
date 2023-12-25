@@ -33,7 +33,21 @@ public class FareBounds: APIModel {
 
     public var via: String?
 
-    public init(description: String? = nil, displayName: String? = nil, displayOrder: Int? = nil, from: String? = nil, id: Int? = nil, isPopularFare: Bool? = nil, isPopularTravelCard: Bool? = nil, isTour: Bool? = nil, messages: [Message]? = nil, `operator`: String? = nil, routeCode: String? = nil, to: String? = nil, via: String? = nil) {
+    public init(
+        description: String? = nil, 
+        displayName: String? = nil, 
+        displayOrder: Int? = nil, 
+        from: String? = nil, 
+        id: Int? = nil, 
+        isPopularFare: Bool? = nil, 
+        isPopularTravelCard: Bool? = nil, 
+        isTour: Bool? = nil, 
+        messages: [Message]? = nil, 
+        `operator`: String? = nil, 
+        routeCode: String? = nil, 
+        to: String? = nil, 
+        via: String? = nil
+    ) {
         self.description = description
         self.displayName = displayName
         self.displayOrder = displayOrder

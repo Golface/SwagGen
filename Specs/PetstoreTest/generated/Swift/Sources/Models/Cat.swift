@@ -9,7 +9,11 @@ public class Cat: Animal {
 
     public var declawed: Bool?
 
-    public init(className: String, color: String? = nil, declawed: Bool? = nil) {
+    public init(
+        className: String, 
+        color: String? = nil, 
+        declawed: Bool? = nil
+    ) {
         self.declawed = declawed
         super.init(className: className, color: color)
     }

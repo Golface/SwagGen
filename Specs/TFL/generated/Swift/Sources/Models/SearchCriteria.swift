@@ -18,7 +18,11 @@ public class SearchCriteria: APIModel {
 
     public var timeAdjustments: TimeAdjustments?
 
-    public init(dateTime: DateTime? = nil, dateTimeType: DateTimeType? = nil, timeAdjustments: TimeAdjustments? = nil) {
+    public init(
+        dateTime: DateTime? = nil, 
+        dateTimeType: DateTimeType? = nil, 
+        timeAdjustments: TimeAdjustments? = nil
+    ) {
         self.dateTime = dateTime
         self.dateTimeType = dateTimeType
         self.timeAdjustments = timeAdjustments

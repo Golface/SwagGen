@@ -21,7 +21,9 @@ This supports partial updates so you can send just the properties you wish to up
                 /** The identifier of the profile to update. */
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

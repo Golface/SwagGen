@@ -29,7 +29,19 @@ public class Fare: APIModel {
 
     public var zone: String?
 
-    public init(cap: Double? = nil, cost: String? = nil, description: String? = nil, id: Int? = nil, mode: String? = nil, passengerType: String? = nil, ticketTime: String? = nil, ticketType: String? = nil, validFrom: DateTime? = nil, validUntil: DateTime? = nil, zone: String? = nil) {
+    public init(
+        cap: Double? = nil, 
+        cost: String? = nil, 
+        description: String? = nil, 
+        id: Int? = nil, 
+        mode: String? = nil, 
+        passengerType: String? = nil, 
+        ticketTime: String? = nil, 
+        ticketType: String? = nil, 
+        validFrom: DateTime? = nil, 
+        validUntil: DateTime? = nil, 
+        zone: String? = nil
+    ) {
         self.cap = cap
         self.cost = cost
         self.description = description

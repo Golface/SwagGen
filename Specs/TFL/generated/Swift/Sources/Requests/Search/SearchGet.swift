@@ -20,7 +20,9 @@ extension TFL.Search {
                 /** The search query */
                 public var query: String
 
-                public init(query: String) {
+                public init(
+                    query: String
+                ) {
                     self.query = query
                 }
             }

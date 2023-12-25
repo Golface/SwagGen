@@ -19,7 +19,9 @@ extension Rocket.Account {
                 /** The identifier of the profile to return. */
                 public var id: String
 
-                public init(id: String) {
+                public init(
+                    id: String
+                ) {
                     self.id = id
                 }
             }

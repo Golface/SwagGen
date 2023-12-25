@@ -45,7 +45,17 @@ pin also exists. This is then applied across all profiles.
  */
     public var minRatingPlaybackGuard: ClassificationSummary?
 
-    public init(id: String, name: String, isActive: Bool, pinEnabled: Bool, purchaseEnabled: Bool, marketingEnabled: Bool, segments: [String], maxRatingContentFilter: ClassificationSummary? = nil, minRatingPlaybackGuard: ClassificationSummary? = nil) {
+    public init(
+        id: String, 
+        name: String, 
+        isActive: Bool, 
+        pinEnabled: Bool, 
+        purchaseEnabled: Bool, 
+        marketingEnabled: Bool, 
+        segments: [String], 
+        maxRatingContentFilter: ClassificationSummary? = nil, 
+        minRatingPlaybackGuard: ClassificationSummary? = nil
+    ) {
         self.id = id
         self.name = name
         self.isActive = isActive

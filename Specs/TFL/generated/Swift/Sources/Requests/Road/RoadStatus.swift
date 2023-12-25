@@ -23,7 +23,11 @@ extension TFL.Road {
 
                 public var dateRangeNullableEndDate: DateTime?
 
-                public init(ids: [String], dateRangeNullableStartDate: DateTime? = nil, dateRangeNullableEndDate: DateTime? = nil) {
+                public init(
+                    ids: [String], 
+                    dateRangeNullableStartDate: DateTime? = nil, 
+                    dateRangeNullableEndDate: DateTime? = nil
+                ) {
                     self.ids = ids
                     self.dateRangeNullableStartDate = dateRangeNullableStartDate
                     self.dateRangeNullableEndDate = dateRangeNullableEndDate

@@ -27,7 +27,13 @@ If you want to disable this guard pass an empty string or `null`.
     /** Whether usage tracking is associated with an account or anonymous. */
     public var trackingEnabled: Bool?
 
-    public init(defaultPaymentInstrumentId: String? = nil, firstName: String? = nil, lastName: String? = nil, minRatingPlaybackGuard: String? = nil, trackingEnabled: Bool? = nil) {
+    public init(
+        defaultPaymentInstrumentId: String? = nil, 
+        firstName: String? = nil, 
+        lastName: String? = nil, 
+        minRatingPlaybackGuard: String? = nil, 
+        trackingEnabled: Bool? = nil
+    ) {
         self.defaultPaymentInstrumentId = defaultPaymentInstrumentId
         self.firstName = firstName
         self.lastName = lastName

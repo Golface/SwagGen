@@ -134,7 +134,32 @@ extension TFL.Journey {
                 /** A boolean to indicate whether to optimize journeys using walking */
                 public var walkingOptimization: Bool?
 
-                public init(from: String, to: String, via: String? = nil, nationalSearch: Bool? = nil, date: String? = nil, time: String? = nil, timeIs: TimeIs? = nil, journeyPreference: JourneyPreference? = nil, mode: [String]? = nil, accessibilityPreference: [AccessibilityPreference]? = nil, fromName: String? = nil, toName: String? = nil, viaName: String? = nil, maxTransferMinutes: String? = nil, maxWalkingMinutes: String? = nil, walkingSpeed: WalkingSpeed? = nil, cyclePreference: CyclePreference? = nil, adjustment: String? = nil, bikeProficiency: [BikeProficiency]? = nil, alternativeCycle: Bool? = nil, alternativeWalking: Bool? = nil, applyHtmlMarkup: Bool? = nil, useMultiModalCall: Bool? = nil, walkingOptimization: Bool? = nil) {
+                public init(
+                    from: String, 
+                    to: String, 
+                    via: String? = nil, 
+                    nationalSearch: Bool? = nil, 
+                    date: String? = nil, 
+                    time: String? = nil, 
+                    timeIs: TimeIs? = nil, 
+                    journeyPreference: JourneyPreference? = nil, 
+                    mode: [String]? = nil, 
+                    accessibilityPreference: [AccessibilityPreference]? = nil, 
+                    fromName: String? = nil, 
+                    toName: String? = nil, 
+                    viaName: String? = nil, 
+                    maxTransferMinutes: String? = nil, 
+                    maxWalkingMinutes: String? = nil, 
+                    walkingSpeed: WalkingSpeed? = nil, 
+                    cyclePreference: CyclePreference? = nil, 
+                    adjustment: String? = nil, 
+                    bikeProficiency: [BikeProficiency]? = nil, 
+                    alternativeCycle: Bool? = nil, 
+                    alternativeWalking: Bool? = nil, 
+                    applyHtmlMarkup: Bool? = nil, 
+                    useMultiModalCall: Bool? = nil, 
+                    walkingOptimization: Bool? = nil
+                ) {
                     self.from = from
                     self.to = to
                     self.via = via

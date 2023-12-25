@@ -9,7 +9,11 @@ public class Dog: Animal {
 
     public var breed: String?
 
-    public init(className: String, color: String? = nil, breed: String? = nil) {
+    public init(
+        className: String, 
+        color: String? = nil, 
+        breed: String? = nil
+    ) {
         self.breed = breed
         super.init(className: className, color: color)
     }

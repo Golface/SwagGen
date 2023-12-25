@@ -13,7 +13,11 @@ public class MSO: APIModel {
 
     public var idp: [XAny]
 
-    public init(countryCode: String, country: String, idp: [XAny]) {
+    public init(
+        countryCode: String, 
+        country: String, 
+        idp: [XAny]
+    ) {
         self.countryCode = countryCode
         self.country = country
         self.idp = idp

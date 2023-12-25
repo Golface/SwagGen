@@ -23,7 +23,9 @@ extension PetstoreTest.Pet {
                 /** Tags to filter by */
                 public var tags: [String]
 
-                public init(tags: [String]) {
+                public init(
+                    tags: [String]
+                ) {
                     self.tags = tags
                 }
             }

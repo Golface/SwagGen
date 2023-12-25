@@ -19,7 +19,9 @@ extension TFL.StopPoint {
                 /** stopPointId is required to get the taxi ranks. */
                 public var stopPointId: String
 
-                public init(stopPointId: String) {
+                public init(
+                    stopPointId: String
+                ) {
                     self.stopPointId = stopPointId
                 }
             }

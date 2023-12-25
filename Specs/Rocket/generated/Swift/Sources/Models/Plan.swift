@@ -84,7 +84,27 @@ public class Plan: APIModel {
     /** The price of a plan. If a free plan then undefined. */
     public var price: Float?
 
-    public init(id: String, title: String, tagline: String, type: `Type`, isFeatured: Bool, isActive: Bool, isPrivate: Bool, revenueType: RevenueType, subscriptionCode: String, alias: String, benefits: [String], billingPeriodType: BillingPeriodType, billingPeriodFrequency: Int, hasTrialPeriod: Bool, trialPeriodDays: Int, termsAndConditions: String, currency: String, customFields: [String: Any]? = nil, price: Float? = nil) {
+    public init(
+        id: String, 
+        title: String, 
+        tagline: String, 
+        type: `Type`, 
+        isFeatured: Bool, 
+        isActive: Bool, 
+        isPrivate: Bool, 
+        revenueType: RevenueType, 
+        subscriptionCode: String, 
+        alias: String, 
+        benefits: [String], 
+        billingPeriodType: BillingPeriodType, 
+        billingPeriodFrequency: Int, 
+        hasTrialPeriod: Bool, 
+        trialPeriodDays: Int, 
+        termsAndConditions: String, 
+        currency: String, 
+        customFields: [String: Any]? = nil, 
+        price: Float? = nil
+    ) {
         self.id = id
         self.title = title
         self.tagline = tagline

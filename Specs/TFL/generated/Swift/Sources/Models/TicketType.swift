@@ -11,7 +11,10 @@ public class TicketType: APIModel {
 
     public var type: String?
 
-    public init(description: String? = nil, type: String? = nil) {
+    public init(
+        description: String? = nil, 
+        type: String? = nil
+    ) {
         self.description = description
         self.type = type
     }

@@ -23,7 +23,10 @@ extension TestSpec {
                 /** Updated status of the pet */
                 public var status: String?
 
-                public init(name: String? = nil, status: String? = nil) {
+                public init(
+                    name: String? = nil, 
+                    status: String? = nil
+                ) {
                     self.name = name
                     self.status = status
                 }
@@ -68,7 +71,12 @@ extension TestSpec {
                 /** Cookie that tracks pets */
                 public var hasPets: Bool
 
-                public init(userId: String, petId: String, apiKey: String, hasPets: Bool) {
+                public init(
+                    userId: String, 
+                    petId: String, 
+                    apiKey: String, 
+                    hasPets: Bool
+                ) {
                     self.userId = userId
                     self.petId = petId
                     self.apiKey = apiKey

@@ -31,7 +31,12 @@ public class EnumTest: APIModel {
 
     public var outerEnum: OuterEnum?
 
-    public init(enumInteger: EnumInteger? = nil, enumNumber: EnumNumber? = nil, enumString: EnumString? = nil, outerEnum: OuterEnum? = nil) {
+    public init(
+        enumInteger: EnumInteger? = nil, 
+        enumNumber: EnumNumber? = nil, 
+        enumString: EnumString? = nil, 
+        outerEnum: OuterEnum? = nil
+    ) {
         self.enumInteger = enumInteger
         self.enumNumber = enumNumber
         self.enumString = enumString

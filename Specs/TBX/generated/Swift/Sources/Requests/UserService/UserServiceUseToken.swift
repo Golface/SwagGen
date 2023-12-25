@@ -28,7 +28,12 @@ extension TBX.UserService {
                 /** Only for activatable devices type * DEPRECATED * */
                 public var identifier: String?
 
-                public init(token: String, deviceType: String, description: String, identifier: String? = nil) {
+                public init(
+                    token: String, 
+                    deviceType: String, 
+                    description: String, 
+                    identifier: String? = nil
+                ) {
                     self.token = token
                     self.deviceType = deviceType
                     self.description = description

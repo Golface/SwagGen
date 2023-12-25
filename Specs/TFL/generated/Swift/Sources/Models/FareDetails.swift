@@ -49,7 +49,29 @@ public class FareDetails: APIModel {
 
     public var via: String?
 
-    public init(boundsId: Int? = nil, displayName: String? = nil, displayOrder: Int? = nil, endDate: DateTime? = nil, from: String? = nil, fromStation: String? = nil, isTour: Bool? = nil, messages: [Message]? = nil, mode: String? = nil, `operator`: String? = nil, passengerType: String? = nil, routeCode: String? = nil, routeDescription: String? = nil, specialFare: Bool? = nil, startDate: DateTime? = nil, throughFare: Bool? = nil, ticketsAvailable: [Ticket]? = nil, to: String? = nil, toStation: String? = nil, validatorInformation: String? = nil, via: String? = nil) {
+    public init(
+        boundsId: Int? = nil, 
+        displayName: String? = nil, 
+        displayOrder: Int? = nil, 
+        endDate: DateTime? = nil, 
+        from: String? = nil, 
+        fromStation: String? = nil, 
+        isTour: Bool? = nil, 
+        messages: [Message]? = nil, 
+        mode: String? = nil, 
+        `operator`: String? = nil, 
+        passengerType: String? = nil, 
+        routeCode: String? = nil, 
+        routeDescription: String? = nil, 
+        specialFare: Bool? = nil, 
+        startDate: DateTime? = nil, 
+        throughFare: Bool? = nil, 
+        ticketsAvailable: [Ticket]? = nil, 
+        to: String? = nil, 
+        toStation: String? = nil, 
+        validatorInformation: String? = nil, 
+        via: String? = nil
+    ) {
         self.boundsId = boundsId
         self.displayName = displayName
         self.displayOrder = displayOrder

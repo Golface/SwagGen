@@ -11,7 +11,10 @@ public class RoadDisruptionSchedule: APIModel {
 
     public var startTime: DateTime?
 
-    public init(endTime: DateTime? = nil, startTime: DateTime? = nil) {
+    public init(
+        endTime: DateTime? = nil, 
+        startTime: DateTime? = nil
+    ) {
         self.endTime = endTime
         self.startTime = startTime
     }

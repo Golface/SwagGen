@@ -19,7 +19,12 @@ public class ErrorObject: APIModel {
     /** This is completed if the IDP returns an error */
     public var externalMessage: String?
 
-    public init(errorCode: String, message: String, externalCode: String? = nil, externalMessage: String? = nil) {
+    public init(
+        errorCode: String, 
+        message: String, 
+        externalCode: String? = nil, 
+        externalMessage: String? = nil
+    ) {
         self.errorCode = errorCode
         self.message = message
         self.externalCode = externalCode

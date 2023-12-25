@@ -18,7 +18,12 @@ public class RouteOption: APIModel {
     /** Name such as "72" */
     public var name: String?
 
-    public init(directions: [String]? = nil, id: String? = nil, lineIdentifier: Identifier? = nil, name: String? = nil) {
+    public init(
+        directions: [String]? = nil, 
+        id: String? = nil, 
+        lineIdentifier: Identifier? = nil, 
+        name: String? = nil
+    ) {
         self.directions = directions
         self.id = id
         self.lineIdentifier = lineIdentifier

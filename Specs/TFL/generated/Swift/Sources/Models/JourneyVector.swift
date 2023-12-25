@@ -15,7 +15,12 @@ public class JourneyVector: APIModel {
 
     public var via: String?
 
-    public init(from: String? = nil, to: String? = nil, uri: String? = nil, via: String? = nil) {
+    public init(
+        from: String? = nil, 
+        to: String? = nil, 
+        uri: String? = nil, 
+        via: String? = nil
+    ) {
         self.from = from
         self.to = to
         self.uri = uri

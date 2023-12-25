@@ -28,7 +28,12 @@ extension TBX.UserService {
                 /** The client IP, is necessary to prevent many user use the same token */
                 public var ip: String
 
-                public init(customer: String, urn: String, action: String, ip: String) {
+                public init(
+                    customer: String, 
+                    urn: String, 
+                    action: String, 
+                    ip: String
+                ) {
                     self.customer = customer
                     self.urn = urn
                     self.action = action

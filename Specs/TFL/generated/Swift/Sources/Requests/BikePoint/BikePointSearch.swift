@@ -21,7 +21,9 @@ extension TFL.BikePoint {
                 /** The search term e.g. "St. James" */
                 public var query: String
 
-                public init(query: String) {
+                public init(
+                    query: String
+                ) {
                     self.query = query
                 }
             }

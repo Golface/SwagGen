@@ -13,7 +13,10 @@ public class PasswordResetRequest: APIModel {
     /** The new password for the primary account profile. */
     public var password: String
 
-    public init(email: String, password: String) {
+    public init(
+        email: String, 
+        password: String
+    ) {
         self.email = email
         self.password = password
     }

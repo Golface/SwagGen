@@ -28,7 +28,13 @@ extension TFL.Place {
 
                 public var locationLon: Double
 
-                public init(type: [String], lat: String, lon: String, locationLat: Double, locationLon: Double) {
+                public init(
+                    type: [String], 
+                    lat: String, 
+                    lon: String, 
+                    locationLat: Double, 
+                    locationLon: Double
+                ) {
                     self.type = type
                     self.lat = lat
                     self.lon = lon

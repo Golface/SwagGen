@@ -54,7 +54,21 @@ public class InstructionStep: APIModel {
 
     public var turnDirection: String?
 
-    public init(cumulativeDistance: Int? = nil, cumulativeTravelTime: Int? = nil, description: String? = nil, descriptionHeading: String? = nil, distance: Int? = nil, latitude: Double? = nil, longitude: Double? = nil, pathAttribute: PathAttribute? = nil, skyDirection: Int? = nil, skyDirectionDescription: SkyDirectionDescription? = nil, streetName: String? = nil, trackType: TrackType? = nil, turnDirection: String? = nil) {
+    public init(
+        cumulativeDistance: Int? = nil, 
+        cumulativeTravelTime: Int? = nil, 
+        description: String? = nil, 
+        descriptionHeading: String? = nil, 
+        distance: Int? = nil, 
+        latitude: Double? = nil, 
+        longitude: Double? = nil, 
+        pathAttribute: PathAttribute? = nil, 
+        skyDirection: Int? = nil, 
+        skyDirectionDescription: SkyDirectionDescription? = nil, 
+        streetName: String? = nil, 
+        trackType: TrackType? = nil, 
+        turnDirection: String? = nil
+    ) {
         self.cumulativeDistance = cumulativeDistance
         self.cumulativeTravelTime = cumulativeTravelTime
         self.description = description

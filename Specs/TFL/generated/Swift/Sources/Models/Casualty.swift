@@ -17,7 +17,13 @@ public class Casualty: APIModel {
 
     public var severity: String?
 
-    public init(age: Int? = nil, ageBand: String? = nil, `class`: String? = nil, mode: String? = nil, severity: String? = nil) {
+    public init(
+        age: Int? = nil, 
+        ageBand: String? = nil, 
+        `class`: String? = nil, 
+        mode: String? = nil, 
+        severity: String? = nil
+    ) {
         self.age = age
         self.ageBand = ageBand
         self.`class` = `class`

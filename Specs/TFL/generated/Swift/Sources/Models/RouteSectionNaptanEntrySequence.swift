@@ -11,7 +11,10 @@ public class RouteSectionNaptanEntrySequence: APIModel {
 
     public var stopPoint: StopPoint?
 
-    public init(ordinal: Int? = nil, stopPoint: StopPoint? = nil) {
+    public init(
+        ordinal: Int? = nil, 
+        stopPoint: StopPoint? = nil
+    ) {
         self.ordinal = ordinal
         self.stopPoint = stopPoint
     }

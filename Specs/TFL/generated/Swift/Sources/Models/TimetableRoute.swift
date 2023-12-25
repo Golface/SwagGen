@@ -11,7 +11,10 @@ public class TimetableRoute: APIModel {
 
     public var stationIntervals: [StationInterval]?
 
-    public init(schedules: [Schedule]? = nil, stationIntervals: [StationInterval]? = nil) {
+    public init(
+        schedules: [Schedule]? = nil, 
+        stationIntervals: [StationInterval]? = nil
+    ) {
         self.schedules = schedules
         self.stationIntervals = stationIntervals
     }

@@ -10,7 +10,9 @@ public class ChangePasswordRequest: APIModel {
     /** The new password for the account. */
     public var password: String
 
-    public init(password: String) {
+    public init(
+        password: String
+    ) {
         self.password = password
     }
 

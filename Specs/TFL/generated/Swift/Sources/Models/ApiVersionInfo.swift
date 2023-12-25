@@ -15,7 +15,12 @@ public class ApiVersionInfo: APIModel {
 
     public var version: String?
 
-    public init(assemblies: [String]? = nil, label: String? = nil, timestamp: DateTime? = nil, version: String? = nil) {
+    public init(
+        assemblies: [String]? = nil, 
+        label: String? = nil, 
+        timestamp: DateTime? = nil, 
+        version: String? = nil
+    ) {
         self.assemblies = assemblies
         self.label = label
         self.timestamp = timestamp

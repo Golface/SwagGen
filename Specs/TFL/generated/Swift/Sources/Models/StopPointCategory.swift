@@ -11,7 +11,10 @@ public class StopPointCategory: APIModel {
 
     public var category: String?
 
-    public init(availableKeys: [String]? = nil, category: String? = nil) {
+    public init(
+        availableKeys: [String]? = nil, 
+        category: String? = nil
+    ) {
         self.availableKeys = availableKeys
         self.category = category
     }

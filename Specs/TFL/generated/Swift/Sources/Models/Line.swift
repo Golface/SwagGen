@@ -27,7 +27,18 @@ public class Line: APIModel {
 
     public var serviceTypes: [LineServiceTypeInfo]?
 
-    public init(created: DateTime? = nil, crowding: Crowding? = nil, disruptions: [Disruption]? = nil, id: String? = nil, lineStatuses: [LineStatus]? = nil, modeName: String? = nil, modified: DateTime? = nil, name: String? = nil, routeSections: [MatchedRoute]? = nil, serviceTypes: [LineServiceTypeInfo]? = nil) {
+    public init(
+        created: DateTime? = nil, 
+        crowding: Crowding? = nil, 
+        disruptions: [Disruption]? = nil, 
+        id: String? = nil, 
+        lineStatuses: [LineStatus]? = nil, 
+        modeName: String? = nil, 
+        modified: DateTime? = nil, 
+        name: String? = nil, 
+        routeSections: [MatchedRoute]? = nil, 
+        serviceTypes: [LineServiceTypeInfo]? = nil
+    ) {
         self.created = created
         self.crowding = crowding
         self.disruptions = disruptions

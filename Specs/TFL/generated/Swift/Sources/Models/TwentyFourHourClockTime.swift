@@ -11,7 +11,10 @@ public class TwentyFourHourClockTime: APIModel {
 
     public var minute: String?
 
-    public init(hour: String? = nil, minute: String? = nil) {
+    public init(
+        hour: String? = nil, 
+        minute: String? = nil
+    ) {
         self.hour = hour
         self.minute = minute
     }

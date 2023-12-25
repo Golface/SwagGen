@@ -22,7 +22,10 @@ extension TFL.Road {
                 /** Optional, defaults to false. When true, removes every property/node except for id, point, severity, severityDescription, startDate, endDate, corridor details, location and comments. */
                 public var stripContent: Bool?
 
-                public init(disruptionIds: [String], stripContent: Bool? = nil) {
+                public init(
+                    disruptionIds: [String], 
+                    stripContent: Bool? = nil
+                ) {
                     self.disruptionIds = disruptionIds
                     self.stripContent = stripContent
                 }

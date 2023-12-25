@@ -41,7 +41,24 @@ public class Leg: APIModel {
 
     public var speed: String?
 
-    public init(arrivalPoint: Point? = nil, arrivalTime: DateTime? = nil, departurePoint: Point? = nil, departureTime: DateTime? = nil, disruptions: [Disruption]? = nil, distance: Double? = nil, duration: Int? = nil, hasFixedLocations: Bool? = nil, instruction: Instruction? = nil, isDisrupted: Bool? = nil, mode: Identifier? = nil, obstacles: [Obstacle]? = nil, path: Path? = nil, plannedWorks: [PlannedWork]? = nil, routeOptions: [RouteOption]? = nil, speed: String? = nil) {
+    public init(
+        arrivalPoint: Point? = nil, 
+        arrivalTime: DateTime? = nil, 
+        departurePoint: Point? = nil, 
+        departureTime: DateTime? = nil, 
+        disruptions: [Disruption]? = nil, 
+        distance: Double? = nil, 
+        duration: Int? = nil, 
+        hasFixedLocations: Bool? = nil, 
+        instruction: Instruction? = nil, 
+        isDisrupted: Bool? = nil, 
+        mode: Identifier? = nil, 
+        obstacles: [Obstacle]? = nil, 
+        path: Path? = nil, 
+        plannedWorks: [PlannedWork]? = nil, 
+        routeOptions: [RouteOption]? = nil, 
+        speed: String? = nil
+    ) {
         self.arrivalPoint = arrivalPoint
         self.arrivalTime = arrivalTime
         self.departurePoint = departurePoint

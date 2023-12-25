@@ -15,7 +15,12 @@ public class Bay: APIModel {
 
     public var occupied: Int?
 
-    public init(bayCount: Int? = nil, bayType: String? = nil, free: Int? = nil, occupied: Int? = nil) {
+    public init(
+        bayCount: Int? = nil, 
+        bayType: String? = nil, 
+        free: Int? = nil, 
+        occupied: Int? = nil
+    ) {
         self.bayCount = bayCount
         self.bayType = bayType
         self.free = free

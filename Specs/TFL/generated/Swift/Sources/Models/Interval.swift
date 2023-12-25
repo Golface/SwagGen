@@ -11,7 +11,10 @@ public class Interval: APIModel {
 
     public var timeToArrival: Double?
 
-    public init(stopId: String? = nil, timeToArrival: Double? = nil) {
+    public init(
+        stopId: String? = nil, 
+        timeToArrival: Double? = nil
+    ) {
         self.stopId = stopId
         self.timeToArrival = timeToArrival
     }

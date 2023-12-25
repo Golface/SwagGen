@@ -11,7 +11,10 @@ public class LineServiceTypeInfo: APIModel {
 
     public var uri: String?
 
-    public init(name: String? = nil, uri: String? = nil) {
+    public init(
+        name: String? = nil, 
+        uri: String? = nil
+    ) {
         self.name = name
         self.uri = uri
     }

@@ -22,7 +22,10 @@ extension TFL.Place {
                 /** Defaults to false. If true child places e.g. individual charging stations at a charge point while be included, otherwise just the URLs of any child places will be returned */
                 public var includeChildren: Bool?
 
-                public init(id: String, includeChildren: Bool? = nil) {
+                public init(
+                    id: String, 
+                    includeChildren: Bool? = nil
+                ) {
                     self.id = id
                     self.includeChildren = includeChildren
                 }

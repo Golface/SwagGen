@@ -17,7 +17,13 @@ public class Message: APIModel {
 
     public var url: String?
 
-    public init(bulletOrder: Int? = nil, header: Bool? = nil, linkText: String? = nil, messageText: String? = nil, url: String? = nil) {
+    public init(
+        bulletOrder: Int? = nil, 
+        header: Bool? = nil, 
+        linkText: String? = nil, 
+        messageText: String? = nil, 
+        url: String? = nil
+    ) {
         self.bulletOrder = bulletOrder
         self.header = header
         self.linkText = linkText

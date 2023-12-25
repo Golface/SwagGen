@@ -28,7 +28,10 @@ extension TFL.Line {
                 /** A comma separated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified */
                 public var serviceTypes: [ServiceTypes]?
 
-                public init(modes: [String], serviceTypes: [ServiceTypes]? = nil) {
+                public init(
+                    modes: [String], 
+                    serviceTypes: [ServiceTypes]? = nil
+                ) {
                     self.modes = modes
                     self.serviceTypes = serviceTypes
                 }

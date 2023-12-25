@@ -28,7 +28,15 @@ Options: CACHE_ACCESS / IDP_ACCESS / ACTIVITY_ACCESS / PERMISSION_ACCESS / ETIME
     /** The response received from the IDP */
     public var idpAccess: Bool?
 
-    public init(urn: String, access: Bool, isTryandbuy: Bool, reason: String, error: ErrorObject? = nil, expiration: DateTime? = nil, idpAccess: Bool? = nil) {
+    public init(
+        urn: String, 
+        access: Bool, 
+        isTryandbuy: Bool, 
+        reason: String, 
+        error: ErrorObject? = nil, 
+        expiration: DateTime? = nil, 
+        idpAccess: Bool? = nil
+    ) {
         self.urn = urn
         self.access = access
         self.isTryandbuy = isTryandbuy

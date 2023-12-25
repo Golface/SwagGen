@@ -31,7 +31,16 @@ public class MatchedRoute: APIModel {
     /** eg: Regular, Night */
     public var serviceType: String?
 
-    public init(destination: String? = nil, destinationName: String? = nil, direction: String? = nil, name: String? = nil, originationName: String? = nil, originator: String? = nil, routeCode: String? = nil, serviceType: String? = nil) {
+    public init(
+        destination: String? = nil, 
+        destinationName: String? = nil, 
+        direction: String? = nil, 
+        name: String? = nil, 
+        originationName: String? = nil, 
+        originator: String? = nil, 
+        routeCode: String? = nil, 
+        serviceType: String? = nil
+    ) {
         self.destination = destination
         self.destinationName = destinationName
         self.direction = direction

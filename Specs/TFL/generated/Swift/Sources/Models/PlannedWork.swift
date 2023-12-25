@@ -15,7 +15,12 @@ public class PlannedWork: APIModel {
 
     public var lastUpdateDateTime: DateTime?
 
-    public init(createdDateTime: DateTime? = nil, description: String? = nil, id: String? = nil, lastUpdateDateTime: DateTime? = nil) {
+    public init(
+        createdDateTime: DateTime? = nil, 
+        description: String? = nil, 
+        id: String? = nil, 
+        lastUpdateDateTime: DateTime? = nil
+    ) {
         self.createdDateTime = createdDateTime
         self.description = description
         self.id = id

@@ -27,7 +27,14 @@ public class Order: APIModel {
     /** Order Status */
     public var status: Status?
 
-    public init(complete: Bool? = nil, id: Int? = nil, petId: Int? = nil, quantity: Int? = nil, shipDate: DateTime? = nil, status: Status? = nil) {
+    public init(
+        complete: Bool? = nil, 
+        id: Int? = nil, 
+        petId: Int? = nil, 
+        quantity: Int? = nil, 
+        shipDate: DateTime? = nil, 
+        status: Status? = nil
+    ) {
         self.complete = complete
         self.id = id
         self.petId = petId

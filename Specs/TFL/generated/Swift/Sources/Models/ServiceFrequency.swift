@@ -11,7 +11,10 @@ public class ServiceFrequency: APIModel {
 
     public var lowestFrequency: Double?
 
-    public init(highestFrequency: Double? = nil, lowestFrequency: Double? = nil) {
+    public init(
+        highestFrequency: Double? = nil, 
+        lowestFrequency: Double? = nil
+    ) {
         self.highestFrequency = highestFrequency
         self.lowestFrequency = lowestFrequency
     }

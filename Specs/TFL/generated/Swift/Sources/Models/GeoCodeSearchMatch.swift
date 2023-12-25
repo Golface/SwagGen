@@ -23,7 +23,15 @@ public class GeoCodeSearchMatch: APIModel {
 
     public var url: String?
 
-    public init(address: String? = nil, id: String? = nil, lat: Double? = nil, lon: Double? = nil, name: String? = nil, types: [String]? = nil, url: String? = nil) {
+    public init(
+        address: String? = nil, 
+        id: String? = nil, 
+        lat: Double? = nil, 
+        lon: Double? = nil, 
+        name: String? = nil, 
+        types: [String]? = nil, 
+        url: String? = nil
+    ) {
         self.address = address
         self.id = id
         self.lat = lat

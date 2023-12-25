@@ -22,7 +22,15 @@ public class ItineraryResult: APIModel {
 
     public var stopMessages: [String]?
 
-    public init(cycleHireDockingStationData: JourneyPlannerCycleHireDockingStationData? = nil, journeyVector: JourneyVector? = nil, journeys: [Journey]? = nil, lines: [Line]? = nil, recommendedMaxAgeMinutes: Int? = nil, searchCriteria: SearchCriteria? = nil, stopMessages: [String]? = nil) {
+    public init(
+        cycleHireDockingStationData: JourneyPlannerCycleHireDockingStationData? = nil, 
+        journeyVector: JourneyVector? = nil, 
+        journeys: [Journey]? = nil, 
+        lines: [Line]? = nil, 
+        recommendedMaxAgeMinutes: Int? = nil, 
+        searchCriteria: SearchCriteria? = nil, 
+        stopMessages: [String]? = nil
+    ) {
         self.cycleHireDockingStationData = cycleHireDockingStationData
         self.journeyVector = journeyVector
         self.journeys = journeys

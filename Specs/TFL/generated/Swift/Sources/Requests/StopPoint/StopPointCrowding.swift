@@ -32,7 +32,11 @@ extension TFL.StopPoint {
                 /** The direction of travel. Can be inbound or outbound. */
                 public var direction: Direction
 
-                public init(id: String, line: String, direction: Direction) {
+                public init(
+                    id: String, 
+                    line: String, 
+                    direction: Direction
+                ) {
                     self.id = id
                     self.line = line
                     self.direction = direction

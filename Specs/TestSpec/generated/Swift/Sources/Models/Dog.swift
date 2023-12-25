@@ -9,7 +9,10 @@ public class Dog: Animal {
 
     public var barks: Bool?
 
-    public init(animal: String? = nil, barks: Bool? = nil) {
+    public init(
+        animal: String? = nil, 
+        barks: Bool? = nil
+    ) {
         self.barks = barks
         super.init(animal: animal)
     }

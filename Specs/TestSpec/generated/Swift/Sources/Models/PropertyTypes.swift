@@ -13,7 +13,11 @@ public class PropertyTypes: APIModel {
 
     public var float: Float?
 
-    public init(decimal: Decimal? = nil, double: Double? = nil, float: Float? = nil) {
+    public init(
+        decimal: Decimal? = nil, 
+        double: Double? = nil, 
+        float: Float? = nil
+    ) {
         self.decimal = decimal
         self.double = double
         self.float = float

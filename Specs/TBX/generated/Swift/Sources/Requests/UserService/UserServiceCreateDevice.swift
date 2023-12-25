@@ -31,7 +31,13 @@ extension TBX.UserService {
                 /** Extra data to device */
                 public var attributes: String?
 
-                public init(subscriberId: String, country: String, type: String, description: String, attributes: String? = nil) {
+                public init(
+                    subscriberId: String, 
+                    country: String, 
+                    type: String, 
+                    description: String, 
+                    attributes: String? = nil
+                ) {
                     self.subscriberId = subscriberId
                     self.country = country
                     self.type = type

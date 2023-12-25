@@ -25,7 +25,11 @@ extension TBX.Auth {
                 /** *deprecated* if this parameter is sent the response will be a JSONP */
                 public var callback: String?
 
-                public init(cp: String, url: String? = nil, callback: String? = nil) {
+                public init(
+                    cp: String, 
+                    url: String? = nil, 
+                    callback: String? = nil
+                ) {
                     self.cp = cp
                     self.url = url
                     self.callback = callback

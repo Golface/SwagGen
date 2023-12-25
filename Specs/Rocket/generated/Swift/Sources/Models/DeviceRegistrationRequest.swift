@@ -16,7 +16,11 @@ public class DeviceRegistrationRequest: APIModel {
     /** The device type e.g. web_browser. */
     public var type: String
 
-    public init(id: String, name: String, type: String) {
+    public init(
+        id: String, 
+        name: String, 
+        type: String
+    ) {
         self.id = id
         self.name = name
         self.type = type

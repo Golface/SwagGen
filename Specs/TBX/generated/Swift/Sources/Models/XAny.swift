@@ -7,7 +7,8 @@ import Foundation
 
 public class XAny: APIModel {
 
-    public init() {
+    public init(
+    ) {
     }
 
     public required init(from decoder: Decoder) throws {

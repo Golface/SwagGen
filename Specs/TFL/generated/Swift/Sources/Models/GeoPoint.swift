@@ -11,7 +11,10 @@ public class GeoPoint: APIModel {
 
     public var lon: Double
 
-    public init(lat: Double, lon: Double) {
+    public init(
+        lat: Double, 
+        lon: Double
+    ) {
         self.lat = lat
         self.lon = lon
     }

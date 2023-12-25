@@ -20,7 +20,10 @@ extension TBX.Auth {
 
                 public var state: String?
 
-                public init(code: String? = nil, state: String? = nil) {
+                public init(
+                    code: String? = nil, 
+                    state: String? = nil
+                ) {
                     self.code = code
                     self.state = state
                 }

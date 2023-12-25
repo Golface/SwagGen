@@ -20,7 +20,9 @@ extension TFL.Line {
                 /** The level of severity (eg: a number from 0 to 14) */
                 public var severity: Int
 
-                public init(severity: Int) {
+                public init(
+                    severity: Int
+                ) {
                     self.severity = severity
                 }
             }

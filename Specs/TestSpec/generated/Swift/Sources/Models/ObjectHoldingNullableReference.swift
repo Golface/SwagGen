@@ -9,7 +9,9 @@ public class ObjectHoldingNullableReference: APIModel {
 
     public var thisPropertyShouldBeOptional: SomeNullableObject?
 
-    public init(thisPropertyShouldBeOptional: SomeNullableObject?) {
+    public init(
+        thisPropertyShouldBeOptional: SomeNullableObject?
+    ) {
         self.thisPropertyShouldBeOptional = thisPropertyShouldBeOptional
     }
 

@@ -22,7 +22,10 @@ extension TestSpec {
                 /** The id of the pet */
                 public var userId: String
 
-                public init(petId: String, userId: String) {
+                public init(
+                    petId: String, 
+                    userId: String
+                ) {
                     self.petId = petId
                     self.userId = userId
                 }

@@ -9,6 +9,7 @@ public struct Parameter {
     public let example: Any?
     public let type: ParameterType
     public let json: [String: Any]
+    public let deprecated: Bool
 }
 
 public struct ParameterSchema {
@@ -50,5 +51,7 @@ extension Parameter: JSONObjectConvertible {
             let parameterSchema = ParameterSchema(schema: schema, serializationStyle: serializationStyle, explode: explode)
             type = .schema(parameterSchema)
         }
+        
+        deprecated = (jsonDictionary.json(atKeyPath: "deprecated")) ?? false
     }
 }

@@ -20,7 +20,10 @@ extension TFL.Place {
 
                 public var postcodeInputPostcode: String?
 
-                public init(postcode: String, postcodeInputPostcode: String? = nil) {
+                public init(
+                    postcode: String, 
+                    postcodeInputPostcode: String? = nil
+                ) {
                     self.postcode = postcode
                     self.postcodeInputPostcode = postcodeInputPostcode
                 }

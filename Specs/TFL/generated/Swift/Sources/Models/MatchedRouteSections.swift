@@ -9,7 +9,9 @@ public class MatchedRouteSections: APIModel {
 
     public var id: Int?
 
-    public init(id: Int? = nil) {
+    public init(
+        id: Int? = nil
+    ) {
         self.id = id
     }
 

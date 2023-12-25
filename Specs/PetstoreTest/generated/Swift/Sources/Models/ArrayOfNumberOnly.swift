@@ -9,7 +9,9 @@ public class ArrayOfNumberOnly: APIModel {
 
     public var arrayNumber: [Double]?
 
-    public init(arrayNumber: [Double]? = nil) {
+    public init(
+        arrayNumber: [Double]? = nil
+    ) {
         self.arrayNumber = arrayNumber
     }
 

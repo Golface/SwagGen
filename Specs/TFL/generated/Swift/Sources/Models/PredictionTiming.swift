@@ -19,7 +19,14 @@ public class PredictionTiming: APIModel {
 
     public var source: DateTime?
 
-    public init(countdownServerAdjustment: String? = nil, insert: DateTime? = nil, read: DateTime? = nil, received: DateTime? = nil, sent: DateTime? = nil, source: DateTime? = nil) {
+    public init(
+        countdownServerAdjustment: String? = nil, 
+        insert: DateTime? = nil, 
+        read: DateTime? = nil, 
+        received: DateTime? = nil, 
+        sent: DateTime? = nil, 
+        source: DateTime? = nil
+    ) {
         self.countdownServerAdjustment = countdownServerAdjustment
         self.insert = insert
         self.read = read
