@@ -72,10 +72,17 @@ jobs:
               "text": "Build and push Docker image succeeded",
               "blocks": [
                 {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "New Docker image 🤖"
+                  }
+                },
+                {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "A new Docker image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} was built and deployed\n${{ steps.build_and_push_docker_image.outputs }}"
+                    "text": "An image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} was built and deployed\n${{ toJson(steps.build_and_push_docker_image.outputs) }}"
                   }
                 }
               ]
