@@ -85,3 +85,29 @@ jobs:
                 }
               ]
             }
+
+      - name: Send a failure message on Slack channel
+        id: slack_failure
+        if: ${{ failure() }}
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          channel-id: ${{ env.CHANNEL_ID }}
+          payload: |
+              {
+                "blocks": [
+                  {
+                    "type": "header",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Failed to build Docker image :bangbang:"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "Failed to build ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
+                    }
+                  }
+                ]
+              }
