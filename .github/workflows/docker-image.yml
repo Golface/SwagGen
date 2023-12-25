@@ -80,7 +80,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "An image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} was built and deployed\n${{ toJson(steps.build_and_push_docker_image.outputs) }}"
+                    "text": "An image ${{ env.DOCKER_METADATA_OUTPUT_TAGS }} was built and deployed"
                   }
                 }
               ]
