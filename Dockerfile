@@ -1,4 +1,4 @@
-ARG SWIFT_IMAGE=swift:5.9-jammy
+ARG SWIFT_IMAGE
 FROM $SWIFT_IMAGE
 
 RUN mkdir /workspace
