@@ -73,7 +73,7 @@ jobs:
           platforms: ${{ matrix.items.platform }}
           file: ${{ matrix.items.file }}
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}-${{ matrix.items.platform }}
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Send a message on Slack channel
