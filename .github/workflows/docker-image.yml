@@ -83,21 +83,21 @@ jobs:
           channel-id: ${{ env.CHANNEL_ID }}
           payload: |
             {
+              "text": "New Docker image* 🤖",
+              "attachments": [
+                {
+                  "pretext": "Images in ${{ github.repository }} were built and pushed",
+                  "color": "28a745",
+                  "fields": [
+                    {
+                      "title": "Status",
+                      "short": true,
+                      "value": "Completed"
+                    }
+                  ]
+                }
+              ],
               "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "section",
-                    "text": "*New Docker image* 🤖"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "Images in ${{ github.repository }} were built and deployed"
-                  }
-                },
                 {
                   "type": "context",
                   "elements": [
@@ -122,21 +122,21 @@ jobs:
           channel-id: ${{ env.CHANNEL_ID }}
           payload: |
               {
+                "text": "Failed to build Docker image :bangbang:",
+                "attachments": [
+                  {
+                    "pretext": "Failed to build ${{ github.repository }} image",
+                    "color": "a72828",
+                    "fields": [
+                      {
+                        "title": "Status",
+                        "short": true,
+                        "value": "Failed"
+                      }
+                    ]
+                  }
+                ],
                 "blocks": [
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "Failed to build Docker image :bangbang:"
-                    }
-                  },
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "Failed to build ${{ github.repository }} image"
-                    }
-                  },
                   {
                     "type": "context",
                     "elements": [
