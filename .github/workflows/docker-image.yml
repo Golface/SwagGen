@@ -95,8 +95,21 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "An image ${{ join(steps.meta.outputs.tags, ',') }} was built and deployed"
+                    "text": "Images in ${{ github.repository }} were built and deployed"
                   }
+                },
+                {
+                  "type": "context",
+                  "elements": [
+                    {
+                    "type": "mrkdwn",
+                    "text": "From **${{ github.repository }}**"
+                  },
+                    {
+                      "type": "mrkdwn",
+                      "text": "Ref name: **${{ github.ref_name }}**"
+                    }
+                  ]
                 }
               ]
             }
@@ -121,7 +134,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "Failed to build ${{ join(steps.meta.outputs.tags, ',') }}"
+                      "text": "Failed to build ${{ github.repository }} image"
                     }
                   },
                   {
