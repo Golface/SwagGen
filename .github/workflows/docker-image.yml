@@ -21,8 +21,10 @@ jobs:
       matrix:
         items:
           - file: docker/5.9/amd64/Dockerfile
+            arch: amd64
             platform: linux/amd64
           - file: docker/5.9/arm64/Dockerfile
+            arch: arm64
             platform: linux/arm64
 
     permissions:
@@ -73,7 +75,7 @@ jobs:
           platforms: ${{ matrix.items.platform }}
           file: ${{ matrix.items.file }}
           push: true
-          tags: ${{ steps.meta.outputs.tags }}-${{ matrix.items.platform }}
+          tags: ${{ steps.meta.outputs.tags }}-${{ matrix.items.arch }}
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Send a message on Slack channel
