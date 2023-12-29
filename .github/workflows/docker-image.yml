@@ -85,10 +85,10 @@ jobs:
             {
               "blocks": [
                 {
-                  "type": "header",
+                  "type": "section",
                   "text": {
-                    "type": "plain_text",
-                    "text": "New Docker image 🤖"
+                    "type": "section",
+                    "text": "*New Docker image* 🤖"
                   }
                 },
                 {
@@ -142,11 +142,11 @@ jobs:
                     "elements": [
                       {
                       "type": "mrkdwn",
-                      "text": "From **${{ github.repository }}**"
+                      "text": "From _${{ github.repository }}_"
                     },
                       {
                         "type": "mrkdwn",
-                        "text": "Ref name: **${{ github.ref_name }}**"
+                        "text": "Ref name: _${{ github.ref_name }}_"
                       }
                     ]
                   }
