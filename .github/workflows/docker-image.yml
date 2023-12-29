@@ -103,11 +103,11 @@ jobs:
                   "elements": [
                     {
                     "type": "mrkdwn",
-                    "text": "From **${{ github.repository }}**"
+                    "text": "From _${{ github.repository }}_"
                   },
                     {
                       "type": "mrkdwn",
-                      "text": "Ref name: **${{ github.ref_name }}**"
+                      "text": "Ref name: _${{ github.ref_name }}_"
                     }
                   ]
                 }
