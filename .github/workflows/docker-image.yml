@@ -95,7 +95,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "An image ${{ join(env.DOCKER_METADATA_OUTPUT_JSON.tags, ',') }} was built and deployed"
+                    "text": "An image ${{ join(steps.meta.outputs.tags, ',') }} was built and deployed"
                   }
                 }
               ]
@@ -111,7 +111,7 @@ jobs:
               {
                 "blocks": [
                   {
-                    "type": "header",
+                    "type": "section",
                     "text": {
                       "type": "plain_text",
                       "text": "Failed to build Docker image :bangbang:"
@@ -121,8 +121,21 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "Failed to build ${{ join(env.DOCKER_METADATA_OUTPUT_JSON.tags, ',') }}"
+                      "text": "Failed to build ${{ join(steps.meta.outputs.tags, ',') }}"
                     }
+                  },
+                  {
+                    "type": "context",
+                    "elements": [
+                      {
+                      "type": "mrkdwn",
+                      "text": "From **${{ github.repository }}**"
+                    },
+                      {
+                        "type": "mrkdwn",
+                        "text": "Ref name: **${{ github.ref_name }}**"
+                      }
+                    ]
                   }
                 ]
               }
