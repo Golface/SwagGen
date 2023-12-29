@@ -83,15 +83,14 @@ jobs:
           channel-id: ${{ env.CHANNEL_ID }}
           payload: |
             {
-              "text": "New Docker image* 🤖",
+              "text": "New Docker image 🤖",
               "attachments": [
                 {
                   "pretext": "Images in ${{ github.repository }} were built and pushed",
                   "color": "28a745",
                   "fields": [
                     {
-                      "type": "mrkdwn",
-                      "text": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
+                      "value": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
                     },
                     {
                       "title": "Status",
@@ -99,10 +98,7 @@ jobs:
                       "value": "Completed"
                     }
                   ],
-                  "footer": {
-                    "type": "mrkdwn",
-                    "text": "Ref name: _${{ github.ref_name }}_"
-                  }
+                  "footer": "Ref name: ${{ github.ref_name }}"
                 }
               ]
             }
@@ -122,8 +118,7 @@ jobs:
                     "color": "a72828",
                     "fields": [
                       {
-                        "type": "mrkdwn",
-                        "text": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
+                        "value": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
                       },
                       {
                         "title": "Status",
@@ -131,10 +126,7 @@ jobs:
                         "value": "Failed"
                       }
                     ],
-                    "footer": {
-                      "type": "mrkdwn",
-                      "text": "Ref name: _${{ github.ref_name }}_"
-                    }
+                    "footer": "Ref name: ${{ github.ref_name }}"
                   }
                 ]
               }
