@@ -95,7 +95,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "An image ${{ env.DOCKER_METADATA_OUTPUT_TAGS }} was built and deployed"
+                    "text": "An image ${{ join(env.DOCKER_METADATA_OUTPUT_JSON.tags, ',') }} was built and deployed"
                   }
                 }
               ]
@@ -121,7 +121,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "Failed to build ${{ env.GITHUB_REGISTRY }}/${{ env.IMAGE_NAME }}"
+                      "text": "Failed to build ${{ join(env.DOCKER_METADATA_OUTPUT_JSON.tags, ',') }}"
                     }
                   }
                 ]
