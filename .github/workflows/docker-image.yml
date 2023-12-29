@@ -90,26 +90,19 @@ jobs:
                   "color": "28a745",
                   "fields": [
                     {
+                      "type": "mrkdwn",
+                      "text": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
+                    },
+                    {
                       "title": "Status",
                       "short": true,
                       "value": "Completed"
                     }
-                  ]
-                }
-              ],
-              "blocks": [
-                {
-                  "type": "context",
-                  "elements": [
-                    {
+                  ],
+                  "footer": {
                     "type": "mrkdwn",
-                    "text": "From _${{ github.repository }}_"
-                  },
-                    {
-                      "type": "mrkdwn",
-                      "text": "Ref name: _${{ github.ref_name }}_"
-                    }
-                  ]
+                    "text": "Ref name: _${{ github.ref_name }}_"
+                  }
                 }
               ]
             }
@@ -129,26 +122,19 @@ jobs:
                     "color": "a72828",
                     "fields": [
                       {
+                        "type": "mrkdwn",
+                        "text": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
+                      },
+                      {
                         "title": "Status",
                         "short": true,
                         "value": "Failed"
                       }
-                    ]
-                  }
-                ],
-                "blocks": [
-                  {
-                    "type": "context",
-                    "elements": [
-                      {
+                    ],
+                    "footer": {
                       "type": "mrkdwn",
-                      "text": "From _${{ github.repository }}_"
-                    },
-                      {
-                        "type": "mrkdwn",
-                        "text": "Ref name: _${{ github.ref_name }}_"
-                      }
-                    ]
+                      "text": "Ref name: _${{ github.ref_name }}_"
+                    }
                   }
                 ]
               }
