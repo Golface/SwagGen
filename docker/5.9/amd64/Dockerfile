@@ -1,6 +1,6 @@
 FROM swift:5.9-jammy
 
-RUN mkdir /workspace/swaggen
+RUN mkdir -p /workspace/swaggen
 WORKDIR /workspace/swaggen
 
 COPY . /workspace/swaggen
