@@ -2,11 +2,13 @@ name: Create and publish a Docker image
 
 on:
   push:
-    branches: ['master']
+    branches: ['master', 'build-push-to-artifact-registry']
     tags: ['v*']
 
 env:
-  REGISTRY: ghcr.io
+  GITHUB_REGISTRY: ghcr.io
+  GAR_PROJECT_ID: ${{ vars.GAR_PROJECT_ID }}
+  GAR_REGISTRY: ${{ vars.GAR_LOCATION }}-docker.pkg.dev
   IMAGE_NAME: ${{ github.repository }}
   SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
   CHANNEL_ID: ${{ vars.SLACK_CHANNEL_ID }}
@@ -19,8 +21,10 @@ jobs:
       matrix:
         items:
           - file: docker/5.9/amd64/Dockerfile
+            arch: amd64
             platform: linux/amd64
           - file: docker/5.9/arm64/Dockerfile
+            arch: arm64
             platform: linux/arm64
 
     permissions:
@@ -40,15 +44,28 @@ jobs:
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
-          registry: ${{ env.REGISTRY }}
+          registry: ${{ env.GITHUB_REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Log in to Google Artifact Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.GAR_REGISTRY }}
+          username: _json_key
+          password: ${{ secrets.GAR_JSON_KEY }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: |
+            ${{ env.GITHUB_REGISTRY }}/${{ env.IMAGE_NAME }}
+            ${{ env.GAR_REGISTRY }}/${{ env.GAR_PROJECT_ID }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=ref,event=branch
+            type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker image
         id: build_and_push_docker_image
@@ -58,7 +75,7 @@ jobs:
           platforms: ${{ matrix.items.platform }}
           file: ${{ matrix.items.file }}
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}-${{ matrix.items.arch }}
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Send a message on Slack channel
@@ -68,20 +85,22 @@ jobs:
           channel-id: ${{ env.CHANNEL_ID }}
           payload: |
             {
-              "blocks": [
+              "text": "New Docker image 🤖",
+              "attachments": [
                 {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "New Docker image 🤖"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "An image ${{ env.DOCKER_METADATA_OUTPUT_TAGS }} was built and deployed"
-                  }
+                  "pretext": "Images in ${{ github.repository }} were built and pushed",
+                  "color": "28a745",
+                  "fields": [
+                    {
+                      "value": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
+                    },
+                    {
+                      "title": "Status",
+                      "short": true,
+                      "value": "Completed"
+                    }
+                  ],
+                  "footer": "Ref name: ${{ github.ref_name }}"
                 }
               ]
             }
@@ -94,20 +113,22 @@ jobs:
           channel-id: ${{ env.CHANNEL_ID }}
           payload: |
               {
-                "blocks": [
+                "text": "Failed to build Docker image :bangbang:",
+                "attachments": [
                   {
-                    "type": "header",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "Failed to build Docker image :bangbang:"
-                    }
-                  },
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "Failed to build ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
-                    }
+                    "pretext": "Failed to build ${{ github.repository }} image",
+                    "color": "a72828",
+                    "fields": [
+                      {
+                        "value": "See <https://github.com/Golface/SwagGen/actions/runs/${{ github.run_id }}|GitHub Actions log> in Golface/SwagGen"
+                      },
+                      {
+                        "title": "Status",
+                        "short": true,
+                        "value": "Failed"
+                      }
+                    ],
+                    "footer": "Ref name: ${{ github.ref_name }}"
                   }
                 ]
               }
