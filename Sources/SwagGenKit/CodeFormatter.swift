@@ -268,11 +268,11 @@ public class CodeFormatter {
 
         let params = operation.parameters.map { $0.value }
 
-        context["params"] = params.map(getParameterContext)
-        context["pathParams"] = operation.getParameters(type: .path).map(getParameterContext)
-        context["queryParams"] = operation.getParameters(type: .query).map(getParameterContext)
-        context["headerParams"] = operation.getParameters(type: .header).map(getParameterContext)
-        context["cookieParams"] = operation.getParameters(type: .cookie).map(getParameterContext)
+        context["params"] = params.map(getParameterContext).filter(isDeprecated: false)
+        context["pathParams"] = operation.getParameters(type: .path).map(getParameterContext).filter(isDeprecated: false)
+        context["queryParams"] = operation.getParameters(type: .query).map(getParameterContext).filter(isDeprecated: false)
+        context["headerParams"] = operation.getParameters(type: .header).map(getParameterContext).filter(isDeprecated: false)
+        context["cookieParams"] = operation.getParameters(type: .cookie).map(getParameterContext).filter(isDeprecated: false)
 
         context["hasBody"] = operation.requestBody != nil
 
