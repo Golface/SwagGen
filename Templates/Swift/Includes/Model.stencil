@@ -61,7 +61,11 @@ public {{ options.modelType }} {{ type }}: {% if parent %}{{ parent.type }}{% el
     /** {{ property.description }} */
     {% endif %}
     {% if options.nullCodable and options.mutableModels and property.required == false %}@NullCodable{% endif %}
-    public {% if options.mutableModels %}var{% else %}let{% endif %} {{ property.name }}: {{ property.metadata.genType ?? property.optionalType }}
+    {% if property.metadata.genType and property.metadata.genType != "" %}
+    public {% if options.mutableModels %}var{% else %}let{% endif %} {{ property.name }}: {{ property.metadata.genType }}
+    {% else %}
+    public {% if options.mutableModels %}var{% else %}let{% endif %} {{ property.name }}: {{ property.optionalType }}
+    {% endif %}
     {% endfor %}
     {% for property in deprecatedProperties %}
 
