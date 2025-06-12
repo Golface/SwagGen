@@ -123,22 +123,22 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 {% for param in formProperties %}
                 {% if param.optional %}
                 if let {{ param.name }} = options.{{ param.encodedValue }} {
-                    {% if param.type == "UploadFile" %}
-                    params["{{ param.value }}"] = UploadFile(
-                        type: .data({{ param.name }}.data),
-                        fileName: {{ param.name }}.fileName,
-                        mimeType: {{ param.name }}.mimeType
-                    )
-                    {% else %}
-                    params["{{ param.value }}"] = {{ param.name }}
-                    {% endif %}
+                  {% if param.type == "UploadFile" %}
+                  params["{{ param.value }}"] = UploadFile(
+                    type: .data({{ param.name }}.data),
+                    fileName: {{ param.name }}.fileName,
+                    mimeType: {{ param.name }}.mimeType
+                  )
+                  {% else %}
+                  params["{{ param.value }}"] = {{ param.name }}
+                  {% endif %}
                 }
                 {% else %}
                 {% if param.type == "UploadFile" %}
                 params["{{ param.value }}"] = UploadFile(
-                    type: .data(options.{{ param.encodedValue }}.data),
-                    fileName: options.{{ param.encodedValue }}.fileName,
-                    mimeType: options.{{ param.encodedValue }}.mimeType
+                  type: .data(options.{{ param.encodedValue }}.data),
+                  fileName: options.{{ param.encodedValue }}.fileName,
+                  mimeType: options.{{ param.encodedValue }}.mimeType
                 )
                 {% else %}
                 params["{{ param.value }}"] = options.{{ param.encodedValue }}
