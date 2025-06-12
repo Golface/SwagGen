@@ -48,7 +48,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 {% if param.description %}
                 /** {{ param.description }} */
                 {% endif %}
-                public var {{ param.name }}: {{ param.optionalType }}
+                public var {{ param.name }}: {{ param.extensions.x-genType ?? param.optionalType }}
                 {% endfor %}
                 {% for param in nonBodyDeprecatedParams %}
 
@@ -57,7 +57,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 {% endfor %}
 
                 public init(
-                    {% for param in nonBodyParams %}{{param.name}}: {{param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
+                    {% for param in nonBodyParams %}{{param.name}}: {{param.extensions.x-genType ?? param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
                     {% endfor %}
                 ) {
                     {% for param in nonBodyParams %}
@@ -87,7 +87,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
             {% if nonBodyParams %}
 
             /// convenience initialiser so an Option doesn't have to be created
-            public convenience init({% for param in nonBodyParams %}{{ param.name }}: {{ param.optionalType }}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}{% endfor %}{% if nonBodyParams and body %}, {% endif %}{% if body %}{{ body.name}}: {{ body.optionalType}}{% ifnot body.required %} = nil{% endif %}{% endif %}) {
+            public convenience init({% for param in nonBodyParams %}{{ param.name }}: {{ param.extensions.x-genType ?? param.optionalType }}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}{% endfor %}{% if nonBodyParams and body %}, {% endif %}{% if body %}{{ body.name}}: {{ body.optionalType}}{% ifnot body.required %} = nil{% endif %}{% endif %}) {
                 {% if nonBodyParams %}
                 let options = Options({% for param in nonBodyParams %}{{param.name}}: {{param.name}}{% ifnot forloop.last %}, {% endif %}{% endfor %})
                 {% endif %}
@@ -123,7 +123,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 {% for param in formProperties %}
                 {% if param.optional %}
                 if let {{ param.name }} = options.{{ param.encodedValue }} {
-                  {% if param.type == "UploadFile" %}
+                  {% if param.extensions.x-genType == "UploadFile" %}
                   params["{{ param.value }}"] = UploadFile(
                     type: .data({{ param.name }}.data),
                     fileName: {{ param.name }}.fileName,
@@ -134,7 +134,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                   {% endif %}
                 }
                 {% else %}
-                {% if param.type == "UploadFile" %}
+                {% if param.extensions.x-genType == "UploadFile" %}
                 params["{{ param.value }}"] = UploadFile(
                   type: .data(options.{{ param.encodedValue }}.data),
                   fileName: options.{{ param.encodedValue }}.fileName,
