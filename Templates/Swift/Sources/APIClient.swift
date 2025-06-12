@@ -256,11 +256,11 @@ extension APIRequest {
             }
         }
 
-        if !formParams.isEmpty {
+        if !formParams.isEmpty, !service.isUpload {
             urlRequest = try URLEncoding.httpBody.encode(urlRequest, with: formParams)
         }
 
-        if let encodeBody = encodeBody {
+        if let encodeBody = encodeBody, !service.isUpload {
             urlRequest.httpBody = try encodeBody(encoder)
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         }
