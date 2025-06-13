@@ -439,6 +439,10 @@ public class CodeFormatter {
         context["value"] = property.name
         context["type"] = getSchemaType(name: property.name, schema: property.schema)
 
+        if let customTypeName = property.schema.metadata.json["x-genType"] as? String {
+            context["type"] = customTypeName
+        }
+        
         if case .array = property.schema.type {
             context["isArray"] = true
         }
