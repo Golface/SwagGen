@@ -45,10 +45,10 @@ extension TBX.Auth {
             public override var formParameters: [String: Any] {
                 var params: [String: Any] = [:]
                 if let relayState = options.relayState {
-                  params["RelayState"] = options.relayState
+                  params["RelayState"] = relayState
                 }
                 if let sAMLResponse = options.sAMLResponse {
-                  params["SAMLResponse"] = options.sAMLResponse
+                  params["SAMLResponse"] = sAMLResponse
                 }
                 return params
             }

@@ -142,13 +142,13 @@ extension PetstoreTest.Fake {
             public override var formParameters: [String: Any] {
                 var params: [String: Any] = [:]
                 if let enumFormString = options.enumFormString?.encode() {
-                  params["enum_form_string"] = options.enumFormString?.encode()
+                  params["enum_form_string"] = enumFormString
                 }
                 if let enumFormStringArray = options.enumFormStringArray?.encode() {
-                  params["enum_form_string_array"] = options.enumFormStringArray?.encode()
+                  params["enum_form_string_array"] = enumFormStringArray
                 }
                 if let enumQueryDouble = options.enumQueryDouble?.encode() {
-                  params["enum_query_double"] = options.enumQueryDouble?.encode()
+                  params["enum_query_double"] = enumQueryDouble
                 }
                 return params
             }

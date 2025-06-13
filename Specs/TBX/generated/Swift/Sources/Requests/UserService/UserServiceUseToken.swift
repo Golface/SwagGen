@@ -63,7 +63,7 @@ extension TBX.UserService {
                 params["deviceType"] = options.deviceType
                 params["description"] = options.description
                 if let identifier = options.identifier {
-                  params["identifier"] = options.identifier
+                  params["identifier"] = identifier
                 }
                 return params
             }

@@ -79,22 +79,22 @@ extension TBX.AuthorizationService {
                 params["urn"] = options.urn
                 params["response"] = options.response
                 if let action = options.action {
-                  params["action"] = options.action
+                  params["action"] = action
                 }
                 if let country = options.country {
-                  params["country"] = options.country
+                  params["country"] = country
                 }
                 if let dateFrom = options.dateFrom?.encode() {
-                  params["dateFrom"] = options.dateFrom?.encode()
+                  params["dateFrom"] = dateFrom
                 }
                 if let dateUntil = options.dateUntil?.encode() {
-                  params["dateUntil"] = options.dateUntil?.encode()
+                  params["dateUntil"] = dateUntil
                 }
                 if let idp = options.idp {
-                  params["idp"] = options.idp
+                  params["idp"] = idp
                 }
                 if let priority = options.priority {
-                  params["priority"] = options.priority
+                  params["priority"] = priority
                 }
                 return params
             }

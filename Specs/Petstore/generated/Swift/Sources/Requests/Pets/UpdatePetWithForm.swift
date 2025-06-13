@@ -56,10 +56,10 @@ extension Petstore.Pets {
             public override var formParameters: [String: Any] {
                 var params: [String: Any] = [:]
                 if let name = options.name {
-                  params["name"] = options.name
+                  params["name"] = name
                 }
                 if let status = options.status {
-                  params["status"] = options.status
+                  params["status"] = status
                 }
                 return params
             }
