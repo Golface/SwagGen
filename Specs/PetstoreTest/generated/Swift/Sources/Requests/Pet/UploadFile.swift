@@ -56,10 +56,10 @@ extension PetstoreTest.Pet {
             public override var formParameters: [String: Any] {
                 var params: [String: Any] = [:]
                 if let additionalMetadata = options.additionalMetadata {
-                  params["additionalMetadata"] = additionalMetadata
+                  params["additionalMetadata"] = options.additionalMetadata
                 }
                 if let file = options.file?.encode() {
-                  params["file"] = file
+                  params["file"] = options.file?.encode()
                 }
                 return params
             }

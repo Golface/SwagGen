@@ -66,7 +66,7 @@ extension TBX.UserService {
                 params["type"] = options.type
                 params["description"] = options.description
                 if let attributes = options.attributes {
-                  params["attributes"] = attributes
+                  params["attributes"] = options.attributes
                 }
                 return params
             }

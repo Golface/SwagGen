@@ -57,7 +57,7 @@ extension TBX.UserService {
                 var params: [String: Any] = [:]
                 params["days"] = options.days
                 if let device = options.device {
-                  params["device"] = device
+                  params["device"] = options.device
                 }
                 return params
             }

@@ -70,13 +70,13 @@ extension TBX.UserService {
                 params["country"] = options.country
                 params["type"] = options.type
                 if let attributes = options.attributes {
-                  params["attributes"] = attributes
+                  params["attributes"] = options.attributes
                 }
                 if let credits = options.credits {
-                  params["credits"] = credits
+                  params["credits"] = options.credits
                 }
                 if let expiration = options.expiration?.encode() {
-                  params["expiration"] = expiration
+                  params["expiration"] = options.expiration?.encode()
                 }
                 return params
             }

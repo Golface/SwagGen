@@ -115,34 +115,34 @@ extension PetstoreTest.Fake {
                 params["pattern_without_delimiter"] = options.patternWithoutDelimiter
                 params["byte"] = options.byte.encode()
                 if let binary = options.binary?.encode() {
-                  params["binary"] = binary
+                  params["binary"] = options.binary?.encode()
                 }
                 if let callback = options.callback {
-                  params["callback"] = callback
+                  params["callback"] = options.callback
                 }
                 if let date = options.date?.encode() {
-                  params["date"] = date
+                  params["date"] = options.date?.encode()
                 }
                 if let dateTime = options.dateTime?.encode() {
-                  params["dateTime"] = dateTime
+                  params["dateTime"] = options.dateTime?.encode()
                 }
                 if let float = options.float {
-                  params["float"] = float
+                  params["float"] = options.float
                 }
                 if let int32 = options.int32 {
-                  params["int32"] = int32
+                  params["int32"] = options.int32
                 }
                 if let int64 = options.int64 {
-                  params["int64"] = int64
+                  params["int64"] = options.int64
                 }
                 if let integer = options.integer {
-                  params["integer"] = integer
+                  params["integer"] = options.integer
                 }
                 if let password = options.password {
-                  params["password"] = password
+                  params["password"] = options.password
                 }
                 if let string = options.string {
-                  params["string"] = string
+                  params["string"] = options.string
                 }
                 return params
             }
