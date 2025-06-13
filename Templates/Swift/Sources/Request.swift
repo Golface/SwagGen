@@ -60,13 +60,11 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 /// - `public var {{ param.name }}: {{ param.optionalType }}`
                 {% endfor %}
 
-                public init({% for param in nonBodyParams %}
-{% if param.extensions.x-genType and param.extensions.x-genType != "" %}
-{{param.name}}: {{param.extensions.x-genType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
-{% else %}
-{{param.name}}: {{param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
-{% endif %}
-{% endfor %}) {
+                public init(
+                    {% for param in nonBodyParams %}
+                    {% if param.extensions.x-genType and param.extensions.x-genType != "" %}{{param.name}}: {{param.extensions.x-genType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
+                    {% else %}{{param.name}}: {{param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}{% endif %}{% endfor %}
+                ) {
                     {% for param in nonBodyParams %}
                     self.{{param.name}} = {{param.name}}
                     {% endfor %}
@@ -94,14 +92,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
             {% if nonBodyParams %}
 
             /// convenience initialiser so an Option doesn't have to be created
-            public convenience init({% for param in nonBodyParams %}
-            {% if param.extensions.x-genType and param.extensions.x-genType != "" %}
-            {{ param.name }}: {{ param.extensions.x-genType }}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
-            {% else %}
-            {{ param.name }}: {{ param.optionalType }}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
-            {% endif %}
-            {% endfor %}{% if nonBodyParams and body %}, {% endif %}{% if body %}{{ body.name}}: {{ body.optionalType}}{% ifnot body.required %} = nil{% endif %}{% endif %})
-            {
+            public convenience init({% for param in nonBodyParams %}{% if param.extensions.x-genType and param.extensions.x-genType != "" %}{{ param.name }}: {{ param.extensions.x-genType }}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}{% else %}{{ param.name }}: {{ param.optionalType }}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}{% endif %}{% endfor %}{% if nonBodyParams and body %}, {% endif %}{% if body %}{{ body.name}}: {{ body.optionalType}}{% ifnot body.required %} = nil{% endif %}{% endif %}) {
                 {% if nonBodyParams %}
                 let options = Options({% for param in nonBodyParams %}{{param.name}}: {{param.name}}{% ifnot forloop.last %}, {% endif %}{% endfor %})
                 {% endif %}
