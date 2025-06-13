@@ -57,8 +57,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 {% endfor %}
 
                 public init(
-                    {% for param in nonBodyParams %}
-                    {{param.name}}: {{param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
+                    {% for param in nonBodyParams %}{{param.name}}: {{param.optionalType}}{% ifnot param.required %} = nil{% endif %}{% ifnot forloop.last %}, {% endif %}
                     {% endfor %}
                 ) {
                     {% for param in nonBodyParams %}
@@ -124,7 +123,7 @@ extension {{ options.name }}{% if tag %}.{{ options.tagPrefix }}{{ tag|upperCame
                 {% for param in formProperties %}
                 {% if param.optional %}
                 if let {{ param.name }} = options.{{ param.encodedValue }} {
-                  params["{{ param.value }}"] = options.{{ param.encodedValue }}
+                  params["{{ param.value }}"] = {{ param.name }}
                 }
                 {% else %}
                 params["{{ param.value }}"] = options.{{ param.encodedValue }}
